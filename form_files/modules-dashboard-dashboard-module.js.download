@@ -1,0 +1,726 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["modules-dashboard-dashboard-module"],{
+
+/***/ "./src/app/modules/dashboard/dashboard-routing.module.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/modules/dashboard/dashboard-routing.module.ts ***!
+  \***************************************************************/
+/*! exports provided: DashboardRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardRoutingModule", function() { return DashboardRoutingModule; });
+/* harmony import */ var _dashboard_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard.component */ "./src/app/modules/dashboard/dashboard.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+
+
+
+
+var routes = [
+    {
+        path: '',
+        component: _dashboard_component__WEBPACK_IMPORTED_MODULE_0__["DashboardComponent"]
+    }
+];
+var DashboardRoutingModule = /** @class */ (function () {
+    function DashboardRoutingModule() {
+    }
+    DashboardRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: DashboardRoutingModule });
+    DashboardRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function DashboardRoutingModule_Factory(t) { return new (t || DashboardRoutingModule)(); }, imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]] });
+    return DashboardRoutingModule;
+}());
+
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](DashboardRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](DashboardRoutingModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
+        args: [{
+                imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
+                exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/dashboard/dashboard.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/modules/dashboard/dashboard.component.ts ***!
+  \**********************************************************/
+/*! exports provided: DashboardComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardComponent", function() { return DashboardComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _app_shared_helpers_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @app/shared/helpers/helpers */ "./src/app/shared/helpers/helpers.ts");
+/* harmony import */ var _linkTiles_definition__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./linkTiles.definition */ "./src/app/modules/dashboard/linkTiles.definition.ts");
+/* harmony import */ var _shared_modules_link_tiles_link_tiles_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/modules/link-tiles/link-tiles.component */ "./src/app/shared/modules/link-tiles/link-tiles.component.ts");
+
+
+
+
+
+var DashboardComponent = /** @class */ (function () {
+    function DashboardComponent() {
+        this.localizeMenu = _app_shared_helpers_helpers__WEBPACK_IMPORTED_MODULE_1__["localizeMenu"];
+        this.currentLanguage = abp.localization.currentLanguage.name;
+        this.linkTilesDefinition = new _linkTiles_definition__WEBPACK_IMPORTED_MODULE_2__["default"]();
+    }
+    DashboardComponent.prototype.ngOnInit = function () {
+    };
+    DashboardComponent.ɵfac = function DashboardComponent_Factory(t) { return new (t || DashboardComponent)(); };
+    DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DashboardComponent, selectors: [["app-dashboard"]], decls: 1, vars: 1, consts: [[3, "linkTilesDefinition"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-link-tiles", 0);
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("linkTilesDefinition", ctx.linkTilesDefinition);
+        } }, directives: [_shared_modules_link_tiles_link_tiles_component__WEBPACK_IMPORTED_MODULE_3__["LinkTilesComponent"]], encapsulation: 2 });
+    return DashboardComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DashboardComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-dashboard',
+                templateUrl: './dashboard.component.html',
+                styleUrls: []
+            }]
+    }], function () { return []; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/dashboard/dashboard.module.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/modules/dashboard/dashboard.module.ts ***!
+  \*******************************************************/
+/*! exports provided: DashboardModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardModule", function() { return DashboardModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _dashboard_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dashboard-routing.module */ "./src/app/modules/dashboard/dashboard-routing.module.ts");
+/* harmony import */ var _dashboard_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dashboard.component */ "./src/app/modules/dashboard/dashboard.component.ts");
+/* harmony import */ var _app_shared_modules_link_tiles_link_tiles_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @app/shared/modules/link-tiles/link-tiles.module */ "./src/app/shared/modules/link-tiles/link-tiles.module.ts");
+
+
+
+
+
+
+var DashboardModule = /** @class */ (function () {
+    function DashboardModule() {
+    }
+    DashboardModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: DashboardModule });
+    DashboardModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function DashboardModule_Factory(t) { return new (t || DashboardModule)(); }, imports: [[
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _app_shared_modules_link_tiles_link_tiles_module__WEBPACK_IMPORTED_MODULE_4__["LinkTilesModule"],
+                _dashboard_routing_module__WEBPACK_IMPORTED_MODULE_2__["DashboardRoutingModule"]
+            ]] });
+    return DashboardModule;
+}());
+
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](DashboardModule, { declarations: [_dashboard_component__WEBPACK_IMPORTED_MODULE_3__["DashboardComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+        _app_shared_modules_link_tiles_link_tiles_module__WEBPACK_IMPORTED_MODULE_4__["LinkTilesModule"],
+        _dashboard_routing_module__WEBPACK_IMPORTED_MODULE_2__["DashboardRoutingModule"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DashboardModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                declarations: [_dashboard_component__WEBPACK_IMPORTED_MODULE_3__["DashboardComponent"]],
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                    _app_shared_modules_link_tiles_link_tiles_module__WEBPACK_IMPORTED_MODULE_4__["LinkTilesModule"],
+                    _dashboard_routing_module__WEBPACK_IMPORTED_MODULE_2__["DashboardRoutingModule"]
+                ]
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/dashboard/linkTiles.definition.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/modules/dashboard/linkTiles.definition.ts ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _app_shared_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @app/shared/class */ "./src/app/shared/class/index.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+var LinkTilesDefinition = /** @class */ (function (_super) {
+    __extends(LinkTilesDefinition, _super);
+    function LinkTilesDefinition() {
+        var _this = _super.call(this) || this;
+        _this.definition = [
+            {
+                background: 'https://images.unsplash.com/photo-1547683905-f686c993aae5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+                url: 'https://en.wikipedia.org/wiki/Flood',
+                id: '',
+                name: {
+                    en: 'Floods'
+                },
+                description: {
+                    en: 'A flood is an overflow of water'
+                }
+            },
+            {
+                background: 'https://images.unsplash.com/photo-1534189899631-018d5a28514b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+                url: 'https://en.wikipedia.org/wiki/Heat_wave',
+                id: '',
+                name: {
+                    en: 'Heatwave'
+                },
+                description: {
+                    en: 'A heat wave, or heatwave'
+                }
+            },
+            {
+                background: 'https://images.unsplash.com/photo-1585628859990-06c70bbf2868?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+                url: 'https://en.wikipedia.org/wiki/Carbon_neutrality',
+                id: '',
+                name: {
+                    en: 'Net Zero'
+                },
+                description: {
+                    en: 'Carbon neutrality is a state of net-zero'
+                }
+            },
+            {
+                background: 'https://images.unsplash.com/photo-1549381380-a78b5749320c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=737&q=80',
+                url: 'https://en.wikipedia.org/wiki/Air_quality_index',
+                id: '',
+                name: {
+                    en: 'Air Quality'
+                },
+                description: {
+                    en: 'An air quality index (AQI) is used by government agencies'
+                }
+            },
+            {
+                background: 'https://images.unsplash.com/photo-1503542724004-53e16040c0c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+                url: 'https://en.wikipedia.org/wiki/Institute_for_Sustainable_Communities',
+                id: '',
+                name: {
+                    en: 'Sustainable Communities'
+                },
+                description: {
+                    en: 'The Institute for Sustainable Communities (ISC) is an independent'
+                }
+            },
+            {
+                background: 'https://images.unsplash.com/photo-1516490981167-dc990a242afe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80',
+                url: 'https://en.wikipedia.org/wiki/Storm',
+                id: '',
+                name: {
+                    en: 'major storms'
+                },
+                description: {
+                    en: 'Heavy storm'
+                }
+            },
+            {
+                background: 'https://images.unsplash.com/photo-1556229167-7ed11195e641?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+                url: 'https://en.wikipedia.org/wiki/Water_supply_and_sanitation_in_Canada',
+                id: '',
+                name: {
+                    en: 'Clear Water And Sanitation'
+                },
+                description: {
+                    en: 'Water supply and sanitation in Canada'
+                }
+            },
+            {
+                background: 'https://images.unsplash.com/photo-1532330384785-f94c84352e91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1411&q=80',
+                url: 'https://en.wikipedia.org/wiki/Transport',
+                id: '',
+                name: {
+                    en: 'Transportation'
+                },
+                description: {
+                    en: 'Transport infrastructure consists of the fixed installations'
+                }
+            }
+        ];
+        return _this;
+    }
+    return LinkTilesDefinition;
+}(_app_shared_class__WEBPACK_IMPORTED_MODULE_0__["LinkTilesDefinitionCore"]));
+/* harmony default export */ __webpack_exports__["default"] = (LinkTilesDefinition);
+
+
+/***/ }),
+
+/***/ "./src/app/shared/class/api-extension.class.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/shared/class/api-extension.class.ts ***!
+  \*****************************************************/
+/*! exports provided: ApiException */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApiException", function() { return ApiException; });
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+/**
+ * This class is from ABP's service-proxies.ts
+ * Since all services to call API is in service-proxies.ts,
+ * we want to re-use the code in there and put in the separate file
+ * that can be imported in new angular service to be created.
+ *
+ * This class is an Object to hadnler API exceptions.
+ */
+var ApiException = /** @class */ (function (_super) {
+    __extends(ApiException, _super);
+    function ApiException(message, status, response, headers, result) {
+        var _this = _super.call(this) || this;
+        _this.isApiException = true;
+        _this.message = message;
+        _this.status = status;
+        _this.response = response;
+        _this.headers = headers;
+        _this.result = result;
+        return _this;
+    }
+    ApiException.isApiException = function (obj) {
+        return obj.isApiException === true;
+    };
+    return ApiException;
+}(Error));
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/class/details-definition-core.class.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/shared/class/details-definition-core.class.ts ***!
+  \***************************************************************/
+/*! exports provided: DetailViewDefinitionCore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailViewDefinitionCore", function() { return DetailViewDefinitionCore; });
+var DetailViewDefinitionCore = /** @class */ (function () {
+    function DetailViewDefinitionCore() {
+    }
+    DetailViewDefinitionCore.prototype.getDefinition = function () {
+        return this.definition;
+    };
+    return DetailViewDefinitionCore;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/class/file-state-container.class.ts":
+/*!************************************************************!*\
+  !*** ./src/app/shared/class/file-state-container.class.ts ***!
+  \************************************************************/
+/*! exports provided: FileStateContainer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FileStateContainer", function() { return FileStateContainer; });
+/**
+ * A class to handle File State of an entity.
+ * A File State Container that store the current file state and identify
+ * which files are going to send for saving/removing to API.
+ */
+var FileStateContainer = /** @class */ (function () {
+    function FileStateContainer(initFiles, multi) {
+        if (initFiles === void 0) { initFiles = []; }
+        if (multi === void 0) { multi = false; }
+        /**
+         * This will hold old previous file that needs to remove.
+         */
+        this.previousFile = [];
+        /**
+         * This will hold new file that needs to save.
+         */
+        this.newFile = [];
+        /**
+         * Identifier if file is multi or single.
+         */
+        this.multi = false;
+        this.previousFile = initFiles;
+        this.multi = multi;
+    }
+    FileStateContainer.prototype.add = function (fileId) {
+        this.previousFile = this.newFile || [];
+        if (this.multi) {
+            // TODO: handle multi file
+        }
+        else {
+            this.newFile = [];
+            this.newFile = [fileId];
+        }
+    };
+    FileStateContainer.prototype.reset = function () {
+        this.newFile = [];
+        this.previousFile = [];
+    };
+    FileStateContainer.prototype.get = function () {
+        return this.newFile;
+    };
+    FileStateContainer.prototype.getPrevious = function () {
+        return this.previousFile;
+    };
+    return FileStateContainer;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/class/form-definition-core.class.ts":
+/*!************************************************************!*\
+  !*** ./src/app/shared/class/form-definition-core.class.ts ***!
+  \************************************************************/
+/*! exports provided: FormDefinitionCore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormDefinitionCore", function() { return FormDefinitionCore; });
+var FormDefinitionCore = /** @class */ (function () {
+    function FormDefinitionCore() {
+    }
+    FormDefinitionCore.prototype.getDefinition = function () {
+        return this.definition;
+    };
+    return FormDefinitionCore;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/class/index.ts":
+/*!***************************************!*\
+  !*** ./src/app/shared/class/index.ts ***!
+  \***************************************/
+/*! exports provided: APIServiceBase, ApiException, FileStateContainer, TableDefinitionCore, ReportDefinitionCore, MapDefinitionCore, FormDefinitionCore, DetailViewDefinitionCore, LinkTilesDefinitionCore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _api_service_base_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api-service-base.class */ "./src/app/shared/class/api-service-base.class.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "APIServiceBase", function() { return _api_service_base_class__WEBPACK_IMPORTED_MODULE_0__["APIServiceBase"]; });
+
+/* harmony import */ var _api_extension_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api-extension.class */ "./src/app/shared/class/api-extension.class.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ApiException", function() { return _api_extension_class__WEBPACK_IMPORTED_MODULE_1__["ApiException"]; });
+
+/* harmony import */ var _file_state_container_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./file-state-container.class */ "./src/app/shared/class/file-state-container.class.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FileStateContainer", function() { return _file_state_container_class__WEBPACK_IMPORTED_MODULE_2__["FileStateContainer"]; });
+
+/* harmony import */ var _table_definition_core_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./table-definition-core.class */ "./src/app/shared/class/table-definition-core.class.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TableDefinitionCore", function() { return _table_definition_core_class__WEBPACK_IMPORTED_MODULE_3__["TableDefinitionCore"]; });
+
+/* harmony import */ var _report_definition_core_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./report-definition-core.class */ "./src/app/shared/class/report-definition-core.class.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ReportDefinitionCore", function() { return _report_definition_core_class__WEBPACK_IMPORTED_MODULE_4__["ReportDefinitionCore"]; });
+
+/* harmony import */ var _map_definition_core_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./map-definition-core.class */ "./src/app/shared/class/map-definition-core.class.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MapDefinitionCore", function() { return _map_definition_core_class__WEBPACK_IMPORTED_MODULE_5__["MapDefinitionCore"]; });
+
+/* harmony import */ var _form_definition_core_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./form-definition-core.class */ "./src/app/shared/class/form-definition-core.class.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FormDefinitionCore", function() { return _form_definition_core_class__WEBPACK_IMPORTED_MODULE_6__["FormDefinitionCore"]; });
+
+/* harmony import */ var _details_definition_core_class__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./details-definition-core.class */ "./src/app/shared/class/details-definition-core.class.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DetailViewDefinitionCore", function() { return _details_definition_core_class__WEBPACK_IMPORTED_MODULE_7__["DetailViewDefinitionCore"]; });
+
+/* harmony import */ var _link_tiles_definition_core_class__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./link-tiles-definition-core.class */ "./src/app/shared/class/link-tiles-definition-core.class.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "LinkTilesDefinitionCore", function() { return _link_tiles_definition_core_class__WEBPACK_IMPORTED_MODULE_8__["LinkTilesDefinitionCore"]; });
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/class/link-tiles-definition-core.class.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/shared/class/link-tiles-definition-core.class.ts ***!
+  \******************************************************************/
+/*! exports provided: LinkTilesDefinitionCore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinkTilesDefinitionCore", function() { return LinkTilesDefinitionCore; });
+var LinkTilesDefinitionCore = /** @class */ (function () {
+    function LinkTilesDefinitionCore() {
+    }
+    LinkTilesDefinitionCore.prototype.getDefinition = function () {
+        return this.definition;
+    };
+    return LinkTilesDefinitionCore;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/class/map-definition-core.class.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/shared/class/map-definition-core.class.ts ***!
+  \***********************************************************/
+/*! exports provided: MapDefinitionCore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapDefinitionCore", function() { return MapDefinitionCore; });
+var MapDefinitionCore = /** @class */ (function () {
+    function MapDefinitionCore() {
+    }
+    MapDefinitionCore.prototype.getDefinition = function () {
+        return this.definition;
+    };
+    return MapDefinitionCore;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/class/report-definition-core.class.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/shared/class/report-definition-core.class.ts ***!
+  \**************************************************************/
+/*! exports provided: ReportDefinitionCore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReportDefinitionCore", function() { return ReportDefinitionCore; });
+var ReportDefinitionCore = /** @class */ (function () {
+    function ReportDefinitionCore() {
+    }
+    ReportDefinitionCore.prototype.getDefinition = function () {
+        return this.definition;
+    };
+    return ReportDefinitionCore;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/class/table-definition-core.class.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/shared/class/table-definition-core.class.ts ***!
+  \*************************************************************/
+/*! exports provided: TableDefinitionCore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableDefinitionCore", function() { return TableDefinitionCore; });
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var TableDefinitionCore = /** @class */ (function () {
+    function TableDefinitionCore() {
+        this.canCreate = true;
+    }
+    TableDefinitionCore.prototype.getDefinition = function () {
+        return __assign(__assign({}, this.definition), { canCreate: this.canCreate });
+    };
+    return TableDefinitionCore;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/modules/link-tiles/link-tiles.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/shared/modules/link-tiles/link-tiles.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: LinkTilesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinkTilesComponent", function() { return LinkTilesComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _app_shared_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @app/shared/class */ "./src/app/shared/class/index.ts");
+/* harmony import */ var _app_shared_helpers_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @app/shared/helpers/helpers */ "./src/app/shared/helpers/helpers.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+
+
+
+
+
+var _c0 = function (a0) { return { backgroundImage: a0 }; };
+var _c1 = function (a0) { return { backgroundColor: a0 }; };
+function LinkTilesComponent_ng_container_1_ng_container_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+} if (rf & 2) {
+    var tile_r4 = ctx.$implicit;
+    var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", tile_r4 == null ? null : tile_r4.url, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"])("ngStyle", (tile_r4 == null ? null : tile_r4.background == null ? null : tile_r4.background.includes("http")) ? _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](4, _c0, "url(" + (tile_r4 == null ? null : tile_r4.background) + ")") : _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](6, _c1, tile_r4 == null ? null : tile_r4.background));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r3.localizeMenu(ctx_r3.currentLanguage, tile_r4 == null ? null : tile_r4.name));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r3.localizeMenu(ctx_r3.currentLanguage, tile_r4 == null ? null : tile_r4.description), " ");
+} }
+function LinkTilesComponent_ng_container_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, LinkTilesComponent_ng_container_1_ng_container_1_Template, 7, 8, "ng-container", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+} if (rf & 2) {
+    var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.linkTilesDefinition == null ? null : ctx_r0.linkTilesDefinition.definition);
+} }
+function LinkTilesComponent_ng_template_2_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h4");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Tiles not found");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+var LinkTilesComponent = /** @class */ (function () {
+    function LinkTilesComponent() {
+        this.localizeMenu = _app_shared_helpers_helpers__WEBPACK_IMPORTED_MODULE_2__["localizeMenu"];
+        this.currentLanguage = abp.localization.currentLanguage.name;
+    }
+    LinkTilesComponent.prototype.ngOnInit = function () {
+    };
+    LinkTilesComponent.ɵfac = function LinkTilesComponent_Factory(t) { return new (t || LinkTilesComponent)(); };
+    LinkTilesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LinkTilesComponent, selectors: [["app-link-tiles"]], inputs: { linkTilesDefinition: "linkTilesDefinition" }, decls: 4, vars: 2, consts: [[1, "d-flex", "flex-row", "flex-wrap", "flex-center", "w-100-p", "tiles"], [4, "ngIf", "ngIfElse"], ["tilesNotFoundTemplate", ""], [4, "ngFor", "ngForOf"], ["target", "_blank", 1, "tile", "text-decoration-none", "d-flex", "flex-center", "c-pointer", "w-100-p", 3, "href", "ngStyle"], [1, "content", "d-flex", "flex-column", "flex-center", "text-white", "w-100-p", "h-100-p", "py-16", "px-8"], [1, "font-size-20", "font-weight-700", "w-100-p", "text-center", "title"], [1, "font-size-14", "font-weight-300", "w-100-p", "text-center", "description"]], template: function LinkTilesComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, LinkTilesComponent_ng_container_1_Template, 2, 1, "ng-container", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, LinkTilesComponent_ng_template_2_Template, 2, 0, "ng-template", null, 2, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        } if (rf & 2) {
+            var _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", (ctx.linkTilesDefinition == null ? null : ctx.linkTilesDefinition.definition == null ? null : ctx.linkTilesDefinition.definition.length) > 0)("ngIfElse", _r1);
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgStyle"]], styles: ["[_nghost-%COMP%]   .tiles[_ngcontent-%COMP%] {\n  gap: 24px;\n}\n[_nghost-%COMP%]   .tiles[_ngcontent-%COMP%]   .tile[_ngcontent-%COMP%] {\n  position: relative;\n  width: 300px;\n  height: 200px;\n  background-color: var(--primary-color);\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  z-index: 1;\n  overflow: hidden;\n  color: #fff;\n}\n[_nghost-%COMP%]   .tiles[_ngcontent-%COMP%]   .tile[_ngcontent-%COMP%]::before, [_nghost-%COMP%]   .tiles[_ngcontent-%COMP%]   .tile[_ngcontent-%COMP%]::after {\n  position: absolute;\n  content: \"\";\n  width: 100%;\n  height: 100%;\n  left: 0px;\n  z-index: 1;\n  transition: ease-in-out 0.3s;\n}\n[_nghost-%COMP%]   .tiles[_ngcontent-%COMP%]   .tile[_ngcontent-%COMP%]::before {\n  top: 0px;\n  background-color: rgba(50, 50, 50, 0.75);\n}\n[_nghost-%COMP%]   .tiles[_ngcontent-%COMP%]   .tile[_ngcontent-%COMP%]::after {\n  top: 100%;\n  background-color: var(--primary-color);\n}\n[_nghost-%COMP%]   .tiles[_ngcontent-%COMP%]   .tile[_ngcontent-%COMP%]:hover::after {\n  top: 0px;\n}\n[_nghost-%COMP%]   .tiles[_ngcontent-%COMP%]   .tile[_ngcontent-%COMP%]:hover   .content[_ngcontent-%COMP%]   .description[_ngcontent-%COMP%] {\n  padding-top: 20px;\n  opacity: 1;\n  height: 100%;\n}\n[_nghost-%COMP%]   .tiles[_ngcontent-%COMP%]   .tile[_ngcontent-%COMP%]   .content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  transition: ease-in-out 0.2s;\n}\n[_nghost-%COMP%]   .tiles[_ngcontent-%COMP%]   .tile[_ngcontent-%COMP%]   .content[_ngcontent-%COMP%]   .title[_ngcontent-%COMP%], [_nghost-%COMP%]   .tiles[_ngcontent-%COMP%]   .tile[_ngcontent-%COMP%]   .content[_ngcontent-%COMP%]   .description[_ngcontent-%COMP%] {\n  text-transform: capitalize;\n}\n[_nghost-%COMP%]   .tiles[_ngcontent-%COMP%]   .tile[_ngcontent-%COMP%]   .content[_ngcontent-%COMP%]   .description[_ngcontent-%COMP%] {\n  position: relative;\n  height: 0px;\n  width: 100%;\n  opacity: 0;\n  transition: ease-in-out 0.2s;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL21vZHVsZXMvbGluay10aWxlcy9NOi9yZXBvcy9EZXBsb3lTb2x1dGlvbnNDbGltYXRlQ2hhbmdlL2Rzc19jY2lwX3Byb3RvL3RhL2FuZ3VsYXIvc3JjL2FwcC9zaGFyZWQvbW9kdWxlcy9saW5rLXRpbGVzL2xpbmstdGlsZXMuY29tcG9uZW50Lmxlc3MiLCJzcmMvYXBwL3NoYXJlZC9tb2R1bGVzL2xpbmstdGlsZXMvbGluay10aWxlcy5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUVJLFNBQUE7QUNGSjtBREFBO0VBS00sa0JBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLHNDQUFBO0VBQ0EsNEJBQUE7RUFDQSxzQkFBQTtFQUNBLDJCQUFBO0VBQ0EsVUFBQTtFQUNBLGdCQUFBO0VBQ0EsV0FBQTtBQ0ZOO0FESU07O0VBQ0Usa0JBQUE7RUFDQSxXQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxTQUFBO0VBQ0EsVUFBQTtFQUNBLDRCQUFBO0FDRFI7QURJTTtFQUNFLFFBQUE7RUFDQSx3Q0FBQTtBQ0ZSO0FES007RUFDRSxTQUFBO0VBQ0Esc0NBQUE7QUNIUjtBRE9RO0VBQ0UsUUFBQTtBQ0xWO0FER007RUFPTSxpQkFBQTtFQUNBLFVBQUE7RUFDQSxZQUFBO0FDUFo7QUR0Q0E7RUFtRFEsa0JBQUE7RUFDQSxVQUFBO0VBQ0EsNEJBQUE7QUNWUjtBRDNDQTs7RUF3RFUsMEJBQUE7QUNUVjtBRC9DQTtFQTREVSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxXQUFBO0VBQ0EsVUFBQTtFQUNBLDRCQUFBO0FDVlYiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvbW9kdWxlcy9saW5rLXRpbGVzL2xpbmstdGlsZXMuY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0ICcuLy4uLy4uLy4uLy4uL3N0eWxlcy92YXJpYWJsZXMubGVzcyc7XG5cbjpob3N0IHtcbiAgLnRpbGVzIHtcbiAgICBnYXA6IDI0cHg7XG5cbiAgICAudGlsZSB7XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB3aWR0aDogMzAwcHg7XG4gICAgICBoZWlnaHQ6IDIwMHB4O1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tcHJpbWFyeS1jb2xvcik7XG4gICAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgICAgIHotaW5kZXg6IDE7XG4gICAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgICAgY29sb3I6ICNmZmY7XG5cbiAgICAgICY6OmJlZm9yZSwgJjo6YWZ0ZXIge1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIGNvbnRlbnQ6IFwiXCI7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgIGxlZnQ6IDBweDsgICAgICAgIFxuICAgICAgICB6LWluZGV4OiAxO1xuICAgICAgICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCAwLjNzO1xuICAgICAgfVxuXG4gICAgICAmOjpiZWZvcmUge1xuICAgICAgICB0b3A6IDBweDsgICAgICAgIFxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBAY29sb3ItYmxhY2stb3BhcXVlLTI7XG4gICAgICB9XG5cbiAgICAgICY6OmFmdGVyIHtcbiAgICAgICAgdG9wOiAxMDAlOyAgICAgICAgXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXByaW1hcnktY29sb3IpO1xuICAgICAgfVxuXG4gICAgICAmOmhvdmVyIHtcbiAgICAgICAgJjo6YWZ0ZXIge1xuICAgICAgICAgIHRvcDogMHB4O1xuICAgICAgICB9XG5cbiAgICAgICAgLmNvbnRlbnQge1xuICAgICAgICAgIC5kZXNjcmlwdGlvbiB7XG4gICAgICAgICAgICBwYWRkaW5nLXRvcDogMjBweDtcbiAgICAgICAgICAgIG9wYWNpdHk6IDE7ICAgICAgICAgICAgXG4gICAgICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICB9XG5cbiAgICAgIC5jb250ZW50IHtcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB6LWluZGV4OiAyO1xuICAgICAgICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCAwLjJzO1xuXG4gICAgICAgIC50aXRsZSwgLmRlc2NyaXB0aW9uIHtcbiAgICAgICAgICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTtcbiAgICAgICAgfVxuXG4gICAgICAgIC5kZXNjcmlwdGlvbiB7XG4gICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICAgIGhlaWdodDogMHB4O1xuICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgIG9wYWNpdHk6IDA7XG4gICAgICAgICAgdHJhbnNpdGlvbjogZWFzZS1pbi1vdXQgMC4ycztcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuXG4vLyBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDczMHB4KSB7XG4vLyAgIDpob3N0IHtcbi8vICAgICAudGlsZXMge1xuLy8gICAgICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7XG4vLyAgICAgfVxuLy8gICB9XG4vLyB9XG4iLCI6aG9zdCAudGlsZXMge1xuICBnYXA6IDI0cHg7XG59XG46aG9zdCAudGlsZXMgLnRpbGUge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHdpZHRoOiAzMDBweDtcbiAgaGVpZ2h0OiAyMDBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tcHJpbWFyeS1jb2xvcik7XG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgei1pbmRleDogMTtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgY29sb3I6ICNmZmY7XG59XG46aG9zdCAudGlsZXMgLnRpbGU6OmJlZm9yZSxcbjpob3N0IC50aWxlcyAudGlsZTo6YWZ0ZXIge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGNvbnRlbnQ6IFwiXCI7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIGxlZnQ6IDBweDtcbiAgei1pbmRleDogMTtcbiAgdHJhbnNpdGlvbjogZWFzZS1pbi1vdXQgMC4zcztcbn1cbjpob3N0IC50aWxlcyAudGlsZTo6YmVmb3JlIHtcbiAgdG9wOiAwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoNTAsIDUwLCA1MCwgMC43NSk7XG59XG46aG9zdCAudGlsZXMgLnRpbGU6OmFmdGVyIHtcbiAgdG9wOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1wcmltYXJ5LWNvbG9yKTtcbn1cbjpob3N0IC50aWxlcyAudGlsZTpob3Zlcjo6YWZ0ZXIge1xuICB0b3A6IDBweDtcbn1cbjpob3N0IC50aWxlcyAudGlsZTpob3ZlciAuY29udGVudCAuZGVzY3JpcHRpb24ge1xuICBwYWRkaW5nLXRvcDogMjBweDtcbiAgb3BhY2l0eTogMTtcbiAgaGVpZ2h0OiAxMDAlO1xufVxuOmhvc3QgLnRpbGVzIC50aWxlIC5jb250ZW50IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB6LWluZGV4OiAyO1xuICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCAwLjJzO1xufVxuOmhvc3QgLnRpbGVzIC50aWxlIC5jb250ZW50IC50aXRsZSxcbjpob3N0IC50aWxlcyAudGlsZSAuY29udGVudCAuZGVzY3JpcHRpb24ge1xuICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTtcbn1cbjpob3N0IC50aWxlcyAudGlsZSAuY29udGVudCAuZGVzY3JpcHRpb24ge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGhlaWdodDogMHB4O1xuICB3aWR0aDogMTAwJTtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogZWFzZS1pbi1vdXQgMC4ycztcbn1cbiJdfQ== */"] });
+    return LinkTilesComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](LinkTilesComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-link-tiles',
+                templateUrl: './link-tiles.component.html',
+                styleUrls: ['./link-tiles.component.less']
+            }]
+    }], function () { return []; }, { linkTilesDefinition: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+
+
+/***/ }),
+
+/***/ "./src/app/shared/modules/link-tiles/link-tiles.module.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/shared/modules/link-tiles/link-tiles.module.ts ***!
+  \****************************************************************/
+/*! exports provided: LinkTilesModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinkTilesModule", function() { return LinkTilesModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _link_tiles_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./link-tiles.component */ "./src/app/shared/modules/link-tiles/link-tiles.component.ts");
+
+
+
+
+var LinkTilesModule = /** @class */ (function () {
+    function LinkTilesModule() {
+    }
+    LinkTilesModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: LinkTilesModule });
+    LinkTilesModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function LinkTilesModule_Factory(t) { return new (t || LinkTilesModule)(); }, imports: [[
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+            ]] });
+    return LinkTilesModule;
+}());
+
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](LinkTilesModule, { declarations: [_link_tiles_component__WEBPACK_IMPORTED_MODULE_2__["LinkTilesComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]], exports: [_link_tiles_component__WEBPACK_IMPORTED_MODULE_2__["LinkTilesComponent"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](LinkTilesModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                declarations: [
+                    _link_tiles_component__WEBPACK_IMPORTED_MODULE_2__["LinkTilesComponent"]
+                ],
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+                ],
+                exports: [
+                    _link_tiles_component__WEBPACK_IMPORTED_MODULE_2__["LinkTilesComponent"]
+                ]
+            }]
+    }], null, null); })();
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=modules-dashboard-dashboard-module.js.map

@@ -1,0 +1,1873 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["modules-sustainabilitygroup-sustainabilitygroup-module"],{
+
+/***/ "./src/app/modules/sustainabilitygroup/create-edit/form.definition.ts":
+/*!****************************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/create-edit/form.definition.ts ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _app_shared_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @app/shared/class */ "./src/app/shared/class/index.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+var FormDefinition = /** @class */ (function (_super) {
+    __extends(FormDefinition, _super);
+    function FormDefinition() {
+        var _this = _super.call(this) || this;
+        _this.definition = {
+            domainEntity: 'SustainabilityGroup',
+            rows: [
+                {
+                    items: [
+                        {
+                            itemType: 'input',
+                            dataField: 'name',
+                            dataType: 'System.String',
+                            span: 2,
+                            required: true,
+                            name: {
+                                en: 'Name'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        }
+                    ],
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'input',
+                            dataField: 'descriptionShort',
+                            dataType: 'System.String',
+                            span: 2,
+                            required: true,
+                            name: {
+                                en: 'Description Short'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        }
+                    ],
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'textarea',
+                            dataField: 'descriptionFull',
+                            dataType: 'HTML',
+                            span: 2,
+                            required: true,
+                            name: {
+                                en: 'Description Full'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        }
+                    ],
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'button',
+                            buttonType: 'reset',
+                            required: false,
+                            name: {
+                                en: 'Reset'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        },
+                        {
+                            itemType: 'button',
+                            buttonType: 'submit',
+                            required: false,
+                            name: {
+                                en: 'Save'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        }
+                    ],
+                    description: {
+                        en: ''
+                    }
+                }
+            ],
+            id: 'SustainabilityGroup-webform',
+            name: {
+                en: 'Sustainability Group Form'
+            },
+            description: {
+                en: ''
+            }
+        };
+        return _this;
+    }
+    return FormDefinition;
+}(_app_shared_class__WEBPACK_IMPORTED_MODULE_0__["FormDefinitionCore"]));
+/* harmony default export */ __webpack_exports__["default"] = (FormDefinition);
+
+
+/***/ }),
+
+/***/ "./src/app/modules/sustainabilitygroup/create-edit/sustainabilitygroup-create-edit-manual.component.ts":
+/*!*************************************************************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/create-edit/sustainabilitygroup-create-edit-manual.component.ts ***!
+  \*************************************************************************************************************/
+/*! exports provided: SustainabilityGroupCreateEditManualComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SustainabilityGroupCreateEditManualComponent", function() { return SustainabilityGroupCreateEditManualComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @app/shared/common/app-component-base */ "./src/app/shared/common/app-component-base.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+var SustainabilityGroupCreateEditManualComponent = /** @class */ (function (_super) {
+    __extends(SustainabilityGroupCreateEditManualComponent, _super);
+    function SustainabilityGroupCreateEditManualComponent(injector) {
+        return _super.call(this, injector) || this;
+    }
+    SustainabilityGroupCreateEditManualComponent.prototype.ngOnInit = function () {
+    };
+    SustainabilityGroupCreateEditManualComponent.ɵfac = function SustainabilityGroupCreateEditManualComponent_Factory(t) { return new (t || SustainabilityGroupCreateEditManualComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"])); };
+    SustainabilityGroupCreateEditManualComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SustainabilityGroupCreateEditManualComponent, selectors: [["app-sustainabilitygroup-create-edit-manual"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]], decls: 0, vars: 0, template: function SustainabilityGroupCreateEditManualComponent_Template(rf, ctx) { }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zdXN0YWluYWJpbGl0eWdyb3VwL2NyZWF0ZS1lZGl0L3N1c3RhaW5hYmlsaXR5Z3JvdXAtY3JlYXRlLWVkaXQtbWFudWFsLmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGtDQUFrQyIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvc3VzdGFpbmFiaWxpdHlncm91cC9jcmVhdGUtZWRpdC9zdXN0YWluYWJpbGl0eWdyb3VwLWNyZWF0ZS1lZGl0LW1hbnVhbC5jb21wb25lbnQubGVzcyJ9 */"] });
+    return SustainabilityGroupCreateEditManualComponent;
+}(_app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_1__["AppComponentBase"]));
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SustainabilityGroupCreateEditManualComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-sustainabilitygroup-create-edit-manual',
+                templateUrl: './sustainabilitygroup-create-edit-manual.component.html',
+                styleUrls: ['./sustainabilitygroup-create-edit-manual.component.less'],
+                providers: []
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/sustainabilitygroup/create-edit/sustainabilitygroup-create-edit.component.ts":
+/*!******************************************************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/create-edit/sustainabilitygroup-create-edit.component.ts ***!
+  \******************************************************************************************************/
+/*! exports provided: SustainabilityGroupCreateEditComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SustainabilityGroupCreateEditComponent", function() { return SustainabilityGroupCreateEditComponent; });
+/* harmony import */ var _app_shared_AppConsts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @app/shared/AppConsts */ "./src/app/shared/AppConsts.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @app/shared/common/app-component-base */ "./src/app/shared/common/app-component-base.ts");
+/* harmony import */ var _app_shared_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @app/shared/service */ "./src/app/shared/service/index.ts");
+/* harmony import */ var _sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../sustainabilitygroup.service */ "./src/app/modules/sustainabilitygroup/sustainabilitygroup.service.ts");
+/* harmony import */ var _app_shared_modules_text_editor_text_editor_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @app/shared/modules/text-editor/text-editor.component */ "./src/app/shared/modules/text-editor/text-editor.component.ts");
+/* harmony import */ var _form_definition__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./form.definition */ "./src/app/modules/sustainabilitygroup/create-edit/form.definition.ts");
+/* harmony import */ var _app_shared_modules_form_components_address_search_services_address_search_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @app/shared/modules/form/components/address-search/services/address-search.service */ "./src/app/shared/modules/form/components/address-search/services/address-search.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _sustainabilitygroup_create_edit_manual_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sustainabilitygroup-create-edit-manual.component */ "./src/app/modules/sustainabilitygroup/create-edit/sustainabilitygroup-create-edit-manual.component.ts");
+/* harmony import */ var _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../shared/modules/svg/svg.component */ "./src/app/shared/modules/svg/svg.component.ts");
+/* harmony import */ var _shared_modules_form_form_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../shared/modules/form/form.component */ "./src/app/shared/modules/form/form.component.ts");
+/* harmony import */ var _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../shared/modules/modal/modal.component */ "./src/app/shared/modules/modal/modal.component.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _c0 = ["textEditor"];
+function SustainabilityGroupCreateEditComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "app-svg", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} }
+var _c1 = function (a0) { return { "hidden": a0 }; };
+function SustainabilityGroupCreateEditComponent_app_form_1_Template(rf, ctx) { if (rf & 1) {
+    var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-form", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("formLoaded", function SustainabilityGroupCreateEditComponent_app_form_1_Template_app_form_formLoaded_0_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r4); var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r3.onFormLoaded($event); })("submit", function SustainabilityGroupCreateEditComponent_app_form_1_Template_app_form_submit_0_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r4); var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r5.onSubmitStateChange($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("initialData", ctx_r1.editData)("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](4, _c1, ctx_r1.isLoading))("onBeforeSubmit", ctx_r1.onBeforeSubmit)("formDefinition", ctx_r1.formDefinition);
+} }
+function SustainabilityGroupCreateEditComponent_app_modal_2_Template(rf, ctx) { if (rf & 1) {
+    var _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-modal", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("hideModal", function SustainabilityGroupCreateEditComponent_app_modal_2_Template_app_modal_hideModal_0_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r7); var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r6.onModalHide($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("modalHeader", ctx_r2.modalHeader)("modalContent", ctx_r2.modalContent);
+} }
+var SustainabilityGroupCreateEditComponent = /** @class */ (function (_super) {
+    __extends(SustainabilityGroupCreateEditComponent, _super);
+    function SustainabilityGroupCreateEditComponent(injector, activatedRoute, router, SustainabilityGroupService, addressSearchService) {
+        var _this = _super.call(this, injector) || this;
+        _this.activatedRoute = activatedRoute;
+        _this.router = router;
+        _this.SustainabilityGroupService = SustainabilityGroupService;
+        _this.addressSearchService = addressSearchService;
+        _this.culture = 'en';
+        _this.defaultCentreLngLat = _app_shared_AppConsts__WEBPACK_IMPORTED_MODULE_0__["AppConsts"].mapDefaultLngLat;
+        _this.centreLatLng = null;
+        //Modal Display Content
+        _this.modalHeader = 'Reset';
+        _this.modalContent = 'Confirm Reset';
+        _this.address = '';
+        _this.addressData = {};
+        _this.onBeforeSubmit = function (data) {
+            var _a;
+            data['culture'] = _this.culture;
+            if (data['date']) {
+                data['date'] = (_a = data['date']) === null || _a === void 0 ? void 0 : _a.singleDate.jsDate;
+            }
+            data['id'] = _this.id;
+            return __assign(__assign({}, data), _this.addressData);
+        };
+        _this.id = _this.activatedRoute.snapshot.params.id;
+        _this.isCreate = _this.activatedRoute.snapshot.data.isCreate;
+        if (_this.localization['currentCulture']) {
+            _this.culture = _this.localization['currentCulture'].name;
+        }
+        return _this;
+    }
+    SustainabilityGroupCreateEditComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (!this.isCreate) {
+            this.getData();
+        }
+        else {
+            this.formDefinition = new _form_definition__WEBPACK_IMPORTED_MODULE_7__["default"]();
+        }
+        this.addressSearchService.addressSearchEvent.subscribe(function (res) {
+            var _a, _b;
+            console.log(res);
+            var mapPlaceTypes = {
+                'postcode': 'postalCode',
+                "region": "province",
+                "neighborhood": "street",
+                "address": "street",
+                "country": "country",
+                "place": "city"
+            };
+            var mapData = {};
+            // if (this.mapData && this.mapData.hasOwnProperty('features')) {
+            (_a = res.data) === null || _a === void 0 ? void 0 : _a.map(function (el) {
+                if (mapPlaceTypes.hasOwnProperty(el.place_type[0])) {
+                    _this.addressData[mapPlaceTypes[el.place_type[0]]] = el.text;
+                }
+            });
+            var streetData = (_b = _this.mapData) === null || _b === void 0 ? void 0 : _b.features.find(function (el) { return el.place_type.includes('address'); });
+            if (streetData) {
+                mapData['street'] = ((streetData.address || '') + " " + streetData.text).trim();
+            }
+            // }
+        });
+    };
+    SustainabilityGroupCreateEditComponent.prototype.onFormLoaded = function (e) {
+    };
+    SustainabilityGroupCreateEditComponent.prototype.getData = function () {
+        var _this = this;
+        // this.isLoading = true;
+        this.SustainabilityGroupService.getFull(this.id).subscribe(function (res) {
+            if (res && !res.hasOwnProperty('error')) {
+                _this.editData = res;
+                // this.populateForm(res);
+                _this.formDefinition = new _form_definition__WEBPACK_IMPORTED_MODULE_7__["default"]();
+            }
+            // this.isLoading = false;
+        }, function () {
+            _this.router.navigate(['/sustainabilitygroup']);
+        });
+    };
+    SustainabilityGroupCreateEditComponent.prototype.onSubmitStateChange = function (evt) {
+        switch (evt.state) {
+            case 'success':
+                this.router.navigate(["/sustainabilitygroup/" + evt.data.id]);
+                break;
+            case 'error':
+                this.isLoading = false;
+                break;
+            case 'submit':
+                this.isLoading = true;
+                break;
+            default:
+                break;
+        }
+    };
+    SustainabilityGroupCreateEditComponent.prototype.onModalHide = function (action) {
+        if (action) {
+            this.address = null;
+            // this.resetForm();
+        }
+        this.modalShow = false;
+    };
+    SustainabilityGroupCreateEditComponent.ɵfac = function SustainabilityGroupCreateEditComponent_Factory(t) { return new (t || SustainabilityGroupCreateEditComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_5__["SustainabilityGroupService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_app_shared_modules_form_components_address_search_services_address_search_service__WEBPACK_IMPORTED_MODULE_8__["AddressSearchService"])); };
+    SustainabilityGroupCreateEditComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: SustainabilityGroupCreateEditComponent, selectors: [["app-sustainabilitygroup-create-edit"]], viewQuery: function SustainabilityGroupCreateEditComponent_Query(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, true);
+        } if (rf & 2) {
+            var _t;
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.textEditor = _t.first);
+        } }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([_app_shared_service__WEBPACK_IMPORTED_MODULE_4__["MapboxService"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵInheritDefinitionFeature"]], decls: 4, vars: 3, consts: [["class", "m-loader", 4, "ngIf"], [3, "initialData", "ngClass", "onBeforeSubmit", "formDefinition", "formLoaded", "submit", 4, "ngIf"], [3, "modalHeader", "modalContent", "hideModal", 4, "ngIf"], [1, "m-loader"], ["name", "loader"], [3, "initialData", "ngClass", "onBeforeSubmit", "formDefinition", "formLoaded", "submit"], [3, "modalHeader", "modalContent", "hideModal"]], template: function SustainabilityGroupCreateEditComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, SustainabilityGroupCreateEditComponent_div_0_Template, 2, 0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, SustainabilityGroupCreateEditComponent_app_form_1_Template, 1, 6, "app-form", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, SustainabilityGroupCreateEditComponent_app_modal_2_Template, 1, 2, "app-modal", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "app-sustainabilitygroup-create-edit-manual");
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.isLoading);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.formDefinition);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.modalShow);
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"], _sustainabilitygroup_create_edit_manual_component__WEBPACK_IMPORTED_MODULE_10__["SustainabilityGroupCreateEditManualComponent"], _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_11__["SvgComponent"], _shared_modules_form_form_component__WEBPACK_IMPORTED_MODULE_12__["FormComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgClass"], _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_13__["ModalComponent"]], styles: [".mapbox-container[_ngcontent-%COMP%] {\n  position: relative;\n  height: 500px;\n}\n.mapbox-container[_ngcontent-%COMP%]   mgl-map[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zdXN0YWluYWJpbGl0eWdyb3VwL2NyZWF0ZS1lZGl0L006L3JlcG9zL0RlcGxveVNvbHV0aW9uc0NsaW1hdGVDaGFuZ2UvZHNzX2NjaXBfcHJvdG8vdGEvYW5ndWxhci9zcmMvYXBwL21vZHVsZXMvc3VzdGFpbmFiaWxpdHlncm91cC9jcmVhdGUtZWRpdC9zdXN0YWluYWJpbGl0eWdyb3VwLWNyZWF0ZS1lZGl0LmNvbXBvbmVudC5sZXNzIiwic3JjL2FwcC9tb2R1bGVzL3N1c3RhaW5hYmlsaXR5Z3JvdXAvY3JlYXRlLWVkaXQvc3VzdGFpbmFiaWxpdHlncm91cC1jcmVhdGUtZWRpdC5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNDLGtCQUFBO0VBQ0EsYUFBQTtBQ0NEO0FESEE7RUFJRSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0FDRUYiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3N1c3RhaW5hYmlsaXR5Z3JvdXAvY3JlYXRlLWVkaXQvc3VzdGFpbmFiaWxpdHlncm91cC1jcmVhdGUtZWRpdC5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXBib3gtY29udGFpbmVyIHtcblx0cG9zaXRpb246IHJlbGF0aXZlO1xuXHRoZWlnaHQ6IDUwMHB4O1xuXHRtZ2wtbWFwIHtcblx0XHR3aWR0aDogMTAwJTtcblx0XHRoZWlnaHQ6IDEwMCU7XG5cdFx0cG9zaXRpb246IGFic29sdXRlO1xuXHR9XG59XG4iLCIubWFwYm94LWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgaGVpZ2h0OiA1MDBweDtcbn1cbi5tYXBib3gtY29udGFpbmVyIG1nbC1tYXAge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG59XG4iXX0= */"] });
+    return SustainabilityGroupCreateEditComponent;
+}(_app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_3__["AppComponentBase"]));
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](SustainabilityGroupCreateEditComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+                selector: 'app-sustainabilitygroup-create-edit',
+                templateUrl: './sustainabilitygroup-create-edit.component.html',
+                styleUrls: ['./sustainabilitygroup-create-edit.component.less'],
+                providers: [_app_shared_service__WEBPACK_IMPORTED_MODULE_4__["MapboxService"]]
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }, { type: _sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_5__["SustainabilityGroupService"] }, { type: _app_shared_modules_form_components_address_search_services_address_search_service__WEBPACK_IMPORTED_MODULE_8__["AddressSearchService"] }]; }, { textEditor: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
+            args: ['textEditor']
+        }] }); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/sustainabilitygroup/export/export.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/export/export.component.ts ***!
+  \************************************************************************/
+/*! exports provided: ExportComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExportComponent", function() { return ExportComponent; });
+/* harmony import */ var _sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../sustainabilitygroup.service */ "./src/app/modules/sustainabilitygroup/sustainabilitygroup.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! file-saver */ "./node_modules/file-saver/dist/FileSaver.min.js");
+/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _shared_modules_import_export_file_export_file_export_file_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/modules/import-export-file/export-file/export-file.component */ "./src/app/shared/modules/import-export-file/export-file/export-file.component.ts");
+/* harmony import */ var _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/modules/svg/svg.component */ "./src/app/shared/modules/svg/svg.component.ts");
+/* harmony import */ var _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../shared/modules/modal/modal.component */ "./src/app/shared/modules/modal/modal.component.ts");
+
+
+
+
+
+
+
+
+
+
+
+function ExportComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "app-svg", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+} }
+function ExportComponent_ng_container_2_Template(rf, ctx) { if (rf & 1) {
+    var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "app-modal", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("hideModal", function ExportComponent_ng_container_2_Template_app_modal_hideModal_1_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r3); var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](); return ctx_r2.onHideModal($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerEnd"]();
+} if (rf & 2) {
+    var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("modalHeader", ctx_r1.infoMsgModel == null ? null : ctx_r1.infoMsgModel.header)("modalContent", ctx_r1.infoMsgModel == null ? null : ctx_r1.infoMsgModel.content)("showNoBtn", false);
+} }
+var ExportComponent = /** @class */ (function () {
+    function ExportComponent(location, SustainabilityGroupService) {
+        this.location = location;
+        this.SustainabilityGroupService = SustainabilityGroupService;
+        this.isLoading = false;
+        this.infoMsgModel = {
+            show: false,
+            header: '',
+            content: '',
+        };
+    }
+    ExportComponent.prototype.ngOnInit = function () {
+    };
+    ExportComponent.prototype.submit = function (reqBody) {
+        var _this = this;
+        this.isLoading = true;
+        this.SustainabilityGroupService.exportCsv({
+            exportType: reqBody === null || reqBody === void 0 ? void 0 : reqBody.exportType,
+            latestRecords: (reqBody === null || reqBody === void 0 ? void 0 : reqBody.latestRecords) || 0,
+            earliestRecords: (reqBody === null || reqBody === void 0 ? void 0 : reqBody.earliestRecords) || 0,
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1)).subscribe({
+            next: function (res) {
+                if ((res === null || res === void 0 ? void 0 : res.statusCode) === 200 && (res === null || res === void 0 ? void 0 : res.body)) {
+                    var data = new Blob([res === null || res === void 0 ? void 0 : res.body], {
+                        type: "text/csv;charset=utf-8"
+                    });
+                    Object(file_saver__WEBPACK_IMPORTED_MODULE_4__["saveAs"])(data, "sustainabilitygroup-" + ((reqBody === null || reqBody === void 0 ? void 0 : reqBody.exportType) === 'ALL' ? 'all' : ('filter-' + (parseInt(reqBody === null || reqBody === void 0 ? void 0 : reqBody.latestRecords, 10) > 0 ? ('latest-' + (reqBody === null || reqBody === void 0 ? void 0 : reqBody.latestRecords) || false) : ('earliest-' + (reqBody === null || reqBody === void 0 ? void 0 : reqBody.earliestRecords) || false)))) + ".csv");
+                }
+                _this.infoMsgModel = {
+                    show: true,
+                    header: (res === null || res === void 0 ? void 0 : res.statusCode) === 200 ? "CSV file exported successfully." : "CSV file not export. please try again.",
+                    content: "",
+                };
+            },
+            error: function () {
+                _this.infoMsgModel = {
+                    show: true,
+                    header: "CSV file not export. please try again.",
+                    content: ""
+                };
+            },
+            complete: function () {
+                _this.isLoading = false;
+            }
+        });
+    };
+    ExportComponent.prototype.onHideModal = function (action) {
+        this.infoMsgModel = {
+            show: false,
+            header: '',
+            content: '',
+        };
+        if (action) {
+            this.location.back();
+        }
+    };
+    ExportComponent.ɵfac = function ExportComponent_Factory(t) { return new (t || ExportComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_1__["Location"]), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_0__["SustainabilityGroupService"])); };
+    ExportComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: ExportComponent, selectors: [["app-export"]], decls: 3, vars: 2, consts: [["class", "m-loader", 4, "ngIf"], [3, "submit"], [4, "ngIf"], [1, "m-loader"], ["name", "loader"], ["yesBtnLabel", "Ok", 3, "modalHeader", "modalContent", "showNoBtn", "hideModal"]], template: function ExportComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](0, ExportComponent_div_0_Template, 2, 0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "app-export-file", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("submit", function ExportComponent_Template_app_export_file_submit_1_listener($event) { return ctx.submit($event); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, ExportComponent_ng_container_2_Template, 2, 3, "ng-container", 2);
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.isLoading);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.infoMsgModel == null ? null : ctx.infoMsgModel.show);
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _shared_modules_import_export_file_export_file_export_file_component__WEBPACK_IMPORTED_MODULE_5__["ExportFileComponent"], _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_6__["SvgComponent"], _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_7__["ModalComponent"]], encapsulation: 2 });
+    return ExportComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](ExportComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+                selector: 'app-export',
+                templateUrl: './export.component.html'
+            }]
+    }], function () { return [{ type: _angular_common__WEBPACK_IMPORTED_MODULE_1__["Location"] }, { type: _sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_0__["SustainabilityGroupService"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/sustainabilitygroup/import/import.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/import/import.component.ts ***!
+  \************************************************************************/
+/*! exports provided: ImportComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImportComponent", function() { return ImportComponent; });
+/* harmony import */ var _sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../sustainabilitygroup.service */ "./src/app/modules/sustainabilitygroup/sustainabilitygroup.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _shared_modules_import_export_file_import_file_import_file_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/modules/import-export-file/import-file/import-file.component */ "./src/app/shared/modules/import-export-file/import-file/import-file.component.ts");
+/* harmony import */ var _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/modules/svg/svg.component */ "./src/app/shared/modules/svg/svg.component.ts");
+/* harmony import */ var _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/modules/modal/modal.component */ "./src/app/shared/modules/modal/modal.component.ts");
+
+
+
+
+
+
+
+
+
+
+function ImportComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "app-svg", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} }
+function ImportComponent_ng_container_2_Template(rf, ctx) { if (rf & 1) {
+    var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "app-modal", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("hideModal", function ImportComponent_ng_container_2_Template_app_modal_hideModal_1_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r2.onHideModal($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerEnd"]();
+} if (rf & 2) {
+    var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("modalHeader", ctx_r1.infoMsgModel == null ? null : ctx_r1.infoMsgModel.header)("modalContent", ctx_r1.infoMsgModel == null ? null : ctx_r1.infoMsgModel.content)("showNoBtn", false);
+} }
+var ImportComponent = /** @class */ (function () {
+    function ImportComponent(location, titleCasePipe, SustainabilityGroupService) {
+        this.location = location;
+        this.titleCasePipe = titleCasePipe;
+        this.SustainabilityGroupService = SustainabilityGroupService;
+        this.isLoading = false;
+        this.infoMsgModel = {
+            show: false,
+            header: '',
+            content: '',
+        };
+    }
+    ImportComponent.prototype.ngOnInit = function () {
+    };
+    ImportComponent.prototype.submit = function (reqBody) {
+        var _this = this;
+        this.isLoading = true;
+        this.SustainabilityGroupService.importCsv(reqBody).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1)).subscribe({
+            next: function (res) {
+                var _a, _b, _c, _d, _e, _f;
+                var successStr = "\n                <div class=\"d-flex flex-column w-100-p mt-24\" >\n                    " + (((_a = res === null || res === void 0 ? void 0 : res.body) === null || _a === void 0 ? void 0 : _a.inserted) > 0 ? "<div class=\"w-100-p d-flex\" ><b>Total Records Inserted : </b> " + ((_b = res === null || res === void 0 ? void 0 : res.body) === null || _b === void 0 ? void 0 : _b.inserted) + "</div>" : '') + "\n                    " + (((_c = res === null || res === void 0 ? void 0 : res.body) === null || _c === void 0 ? void 0 : _c.updatedOrDuplicate) > 0 ? "<div class=\"w-100-p d-flex\" ><b>Total Records " + ((reqBody === null || reqBody === void 0 ? void 0 : reqBody.overwriteIfExists) ? 'Updated' : 'Duplicate') + " : </b> " + ((_d = res === null || res === void 0 ? void 0 : res.body) === null || _d === void 0 ? void 0 : _d.updatedOrDuplicate) + "</div>" : '') + "\n                </div>\n            ";
+                var errorStr = ((_e = res === null || res === void 0 ? void 0 : res.error) === null || _e === void 0 ? void 0 : _e.length) > 0 ? "\n                <ul class=\"list\">\n                    " + (res === null || res === void 0 ? void 0 : res.error.map(function (err) {
+                    var _a, _b;
+                    return "\n                            <li>\n                                <div class=\"title\" >\n                                    <h4>" + _this.titleCasePipe.transform((_a = err === null || err === void 0 ? void 0 : err.code) === null || _a === void 0 ? void 0 : _a.replace('-', ' ')) + "</h4>\n                                    <b>:</b>\n                                </div>\n                                <p>" + ((_b = err === null || err === void 0 ? void 0 : err.message) === null || _b === void 0 ? void 0 : _b.replace('\\', ' ')) + "</p>\n                            </li>\n                        ";
+                }).join("")) + "\n                </ul>\n            " : ((_f = res === null || res === void 0 ? void 0 : res.error) === null || _f === void 0 ? void 0 : _f.message) || '';
+                _this.infoMsgModel = {
+                    show: true,
+                    header: (res === null || res === void 0 ? void 0 : res.statusCode) === 200 ? "CSV file imported successfully." : "CSV file not imported. please check your CSV file.",
+                    content: "We validated your CSV import using Frictionless Data Standard, an open-source toolkit. You can learn more about it here: <a href='https://frictionlessdata.io' target='_blank'>https://frictionlessdata.io</a> <br/><br/> " + successStr + " <br/><br/> " + errorStr
+                };
+            },
+            error: function () {
+                _this.infoMsgModel = {
+                    show: true,
+                    header: "CSV file not imported. please check your CSV file.",
+                    content: "We validated your CSV import using Frictionless Data Standard, an open-source toolkit. You can learn more about it here: <a href='https://frictionlessdata.io' target='_blank'>https://frictionlessdata.io</a>"
+                };
+            },
+            complete: function () {
+                _this.isLoading = false;
+            }
+        });
+    };
+    ImportComponent.prototype.onHideModal = function (action) {
+        this.infoMsgModel = {
+            show: false,
+            header: '',
+            content: '',
+        };
+        if (action) {
+            this.location.back();
+        }
+    };
+    ImportComponent.ɵfac = function ImportComponent_Factory(t) { return new (t || ImportComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_2__["TitleCasePipe"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_0__["SustainabilityGroupService"])); };
+    ImportComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: ImportComponent, selectors: [["app-import"]], decls: 3, vars: 2, consts: [["class", "m-loader", 4, "ngIf"], [3, "submit"], [4, "ngIf"], [1, "m-loader"], ["name", "loader"], ["yesBtnLabel", "Ok", 3, "modalHeader", "modalContent", "showNoBtn", "hideModal"]], template: function ImportComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, ImportComponent_div_0_Template, 2, 0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "app-import-file", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("submit", function ImportComponent_Template_app_import_file_submit_1_listener($event) { return ctx.submit($event); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ImportComponent_ng_container_2_Template, 2, 3, "ng-container", 2);
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.isLoading);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.infoMsgModel == null ? null : ctx.infoMsgModel.show);
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _shared_modules_import_export_file_import_file_import_file_component__WEBPACK_IMPORTED_MODULE_4__["ImportFileComponent"], _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_5__["SvgComponent"], _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_6__["ModalComponent"]], encapsulation: 2 });
+    return ImportComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ImportComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+                selector: 'app-import',
+                templateUrl: './import.component.html'
+            }]
+    }], function () { return [{ type: _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"] }, { type: _angular_common__WEBPACK_IMPORTED_MODULE_2__["TitleCasePipe"] }, { type: _sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_0__["SustainabilityGroupService"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/sustainabilitygroup/list/sustainabilitygroup-list-manual.component.ts":
+/*!***********************************************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/list/sustainabilitygroup-list-manual.component.ts ***!
+  \***********************************************************************************************/
+/*! exports provided: SustainabilityGroupListManualComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SustainabilityGroupListManualComponent", function() { return SustainabilityGroupListManualComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @app/shared/common/app-component-base */ "./src/app/shared/common/app-component-base.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+var SustainabilityGroupListManualComponent = /** @class */ (function (_super) {
+    __extends(SustainabilityGroupListManualComponent, _super);
+    function SustainabilityGroupListManualComponent(injector) {
+        return _super.call(this, injector) || this;
+    }
+    SustainabilityGroupListManualComponent.prototype.ngOnInit = function () {
+    };
+    SustainabilityGroupListManualComponent.ɵfac = function SustainabilityGroupListManualComponent_Factory(t) { return new (t || SustainabilityGroupListManualComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"])); };
+    SustainabilityGroupListManualComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SustainabilityGroupListManualComponent, selectors: [["app-sustainabilitygroup-list-manual"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]], decls: 0, vars: 0, template: function SustainabilityGroupListManualComponent_Template(rf, ctx) { }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zdXN0YWluYWJpbGl0eWdyb3VwL2xpc3Qvc3VzdGFpbmFiaWxpdHlncm91cC1saXN0LW1hbnVhbC5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxrQ0FBa0MiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3N1c3RhaW5hYmlsaXR5Z3JvdXAvbGlzdC9zdXN0YWluYWJpbGl0eWdyb3VwLWxpc3QtbWFudWFsLmNvbXBvbmVudC5sZXNzIn0= */"] });
+    return SustainabilityGroupListManualComponent;
+}(_app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_1__["AppComponentBase"]));
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SustainabilityGroupListManualComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-sustainabilitygroup-list-manual',
+                templateUrl: './sustainabilitygroup-list-manual.component.html',
+                styleUrls: ['./sustainabilitygroup-list-manual.component.less'],
+                providers: []
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/sustainabilitygroup/list/sustainabilitygroup-list.component.ts":
+/*!****************************************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/list/sustainabilitygroup-list.component.ts ***!
+  \****************************************************************************************/
+/*! exports provided: SustainabilityGroupListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SustainabilityGroupListComponent", function() { return SustainabilityGroupListComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _table_definition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./table.definition */ "./src/app/modules/sustainabilitygroup/list/table.definition.ts");
+/* harmony import */ var _app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @app/shared/common/app-component-base */ "./src/app/shared/common/app-component-base.ts");
+/* harmony import */ var _sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../sustainabilitygroup.service */ "./src/app/modules/sustainabilitygroup/sustainabilitygroup.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _sustainabilitygroup_list_manual_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sustainabilitygroup-list-manual.component */ "./src/app/modules/sustainabilitygroup/list/sustainabilitygroup-list-manual.component.ts");
+/* harmony import */ var _shared_modules_table_table_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../shared/modules/table/table.component */ "./src/app/shared/modules/table/table.component.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+
+
+
+
+
+
+
+
+function SustainabilityGroupListComponent_ng_container_0_Template(rf, ctx) { if (rf & 1) {
+    var _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "app-table", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("reloadList", function SustainabilityGroupListComponent_ng_container_0_Template_app_table_reloadList_1_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r2); var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r1.getList($event); })("customActionClick", function SustainabilityGroupListComponent_ng_container_0_Template_app_table_customActionClick_1_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r2); var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r3.onCustomActionClick($event); })("rowClick", function SustainabilityGroupListComponent_ng_container_0_Template_app_table_rowClick_1_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r2); var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r4.onRowClick($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+} if (rf & 2) {
+    var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("configuration", ctx_r0.tableDefinition)("tableTitle", ctx_r0.tableTitle)("list", ctx_r0.list)("isDynamicData", false)("totalResult", ctx_r0.totalResult);
+} }
+var SustainabilityGroupListComponent = /** @class */ (function (_super) {
+    __extends(SustainabilityGroupListComponent, _super);
+    function SustainabilityGroupListComponent(injector, router, SustainabilityGroupService) {
+        var _this = _super.call(this, injector) || this;
+        _this.router = router;
+        _this.SustainabilityGroupService = SustainabilityGroupService;
+        _this.list = [];
+        _this.totalResult = 0;
+        _this.deleteRowConfirmationMetaData = {};
+        _this.tableColumnStyle = 'repeat(3, minmax(100px, 1fr)) repeat(1, 300px)';
+        var tableDefinition = new _table_definition__WEBPACK_IMPORTED_MODULE_1__["default"]();
+        _this.tableDefinition = tableDefinition.getDefinition();
+        _this.tableTitle = _this.l('Sustainability Group');
+        return _this;
+    }
+    SustainabilityGroupListComponent.prototype.getList = function (filters) {
+        var _this = this;
+        if (filters === void 0) { filters = {}; }
+        this.SustainabilityGroupService.getAll(filters)
+            .subscribe(function (res) {
+            if (!(res === null || res === void 0 ? void 0 : res.hasOwnProperty('error'))) {
+                _this.list = res.items;
+                _this.totalResult = res.totalCount;
+            }
+            else {
+                _this.list = [];
+                console.log(res);
+            }
+        });
+    };
+    SustainabilityGroupListComponent.prototype.onCustomActionClick = function (data) {
+        this.router.navigate(['/sustainabilitygroup/edit', data.rowData.id]);
+    };
+    SustainabilityGroupListComponent.prototype.onRowClick = function (data) {
+        this.router.navigate(['/sustainabilitygroup', data.id]);
+    };
+    SustainabilityGroupListComponent.ɵfac = function SustainabilityGroupListComponent_Factory(t) { return new (t || SustainabilityGroupListComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_3__["SustainabilityGroupService"])); };
+    SustainabilityGroupListComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SustainabilityGroupListComponent, selectors: [["app-sustainabilitygroup-list"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]], decls: 2, vars: 1, consts: [[4, "ngIf"], [3, "configuration", "tableTitle", "list", "isDynamicData", "totalResult", "reloadList", "customActionClick", "rowClick"]], template: function SustainabilityGroupListComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, SustainabilityGroupListComponent_ng_container_0_Template, 2, 5, "ng-container", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-sustainabilitygroup-list-manual");
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.tableDefinition);
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _sustainabilitygroup_list_manual_component__WEBPACK_IMPORTED_MODULE_6__["SustainabilityGroupListManualComponent"], _shared_modules_table_table_component__WEBPACK_IMPORTED_MODULE_7__["TableComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvc3VzdGFpbmFiaWxpdHlncm91cC9saXN0L3N1c3RhaW5hYmlsaXR5Z3JvdXAtbGlzdC5jb21wb25lbnQubGVzcyJ9 */"] });
+    return SustainabilityGroupListComponent;
+}(_app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_2__["AppComponentBase"]));
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SustainabilityGroupListComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-sustainabilitygroup-list',
+                templateUrl: './sustainabilitygroup-list.component.html',
+                styleUrls: ['./sustainabilitygroup-list.component.less']
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }, { type: _sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_3__["SustainabilityGroupService"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/sustainabilitygroup/list/table.definition.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/list/table.definition.ts ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _app_shared_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @app/shared/class */ "./src/app/shared/class/index.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+var TableDefinition = /** @class */ (function (_super) {
+    __extends(TableDefinition, _super);
+    function TableDefinition() {
+        var _this = _super.call(this) || this;
+        _this.definition = {
+            domainEntity: 'SustainabilityGroup',
+            route: 'sustainabilitygroup',
+            filters: [],
+            moreFilters: [],
+            actions: [
+                {
+                    route: '/sustainabilitygroup/create',
+                    icon: 'new',
+                    id: 'datatable-SustainabilityGroup-action-new',
+                    name: {
+                        en: 'new'
+                    },
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    route: '/sustainabilitygroup/export',
+                    icon: 'export',
+                    id: 'datatable-SustainabilityGroup-action-export',
+                    name: {
+                        en: 'Export'
+                    },
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    route: '/sustainabilitygroup/import',
+                    icon: 'import',
+                    id: 'datatable-SustainabilityGroup-action-import',
+                    name: {
+                        en: 'Import'
+                    },
+                    description: {
+                        en: ''
+                    }
+                }
+            ],
+            columns: [
+                {
+                    sortable: false,
+                    dataField: 'name',
+                    dataType: 'System.String',
+                    actions: [],
+                    id: 'datatable-SustainabilityGroup-column-Name',
+                    name: {
+                        en: 'Name'
+                    },
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    sortable: false,
+                    dataField: 'descriptionShort',
+                    dataType: 'System.String',
+                    actions: [],
+                    id: 'datatable-SustainabilityGroup-column-Description Short',
+                    name: {
+                        en: 'Description Short'
+                    },
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    sortable: false,
+                    actions: [
+                        {
+                            route: 'sustainabilitygroup/edit/{{id}}',
+                            icon: 'edit',
+                            id: 'datatable-SustainabilityGroup-column--action-edit',
+                            name: {
+                                en: 'edit'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        },
+                        {
+                            route: '',
+                            icon: 'delete-solid',
+                            id: 'datatable-SustainabilityGroup-column--action-delete',
+                            name: {
+                                en: 'delete'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        }
+                    ],
+                    id: 'datatable-SustainabilityGroup-column-',
+                    name: {
+                        en: ''
+                    },
+                    description: {
+                        en: ''
+                    }
+                }
+            ],
+            emptyState: {
+                icon: 'new',
+                import: {
+                    route: '/sustainabilitygroup/import',
+                    icon: 'import',
+                    id: 'datatable-SustainabilityGroup-action-import',
+                    name: {
+                        en: 'Import'
+                    },
+                    description: {
+                        en: ''
+                    }
+                },
+                id: 'SustainabilityGroup-datatable-emptystate',
+                name: {
+                    en: 'Add Sustainability Group'
+                },
+                description: {
+                    en: 'Add a Sustainability Group in Your Area'
+                }
+            },
+            id: 'SustainabilityGroup-datatable',
+            name: {
+                en: 'Sustainability Group List'
+            },
+            description: {
+                en: ''
+            }
+        };
+        return _this;
+    }
+    return TableDefinition;
+}(_app_shared_class__WEBPACK_IMPORTED_MODULE_0__["TableDefinitionCore"]));
+/* harmony default export */ __webpack_exports__["default"] = (TableDefinition);
+
+
+/***/ }),
+
+/***/ "./src/app/modules/sustainabilitygroup/sustainabilitygroup-routing.module.ts":
+/*!***********************************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/sustainabilitygroup-routing.module.ts ***!
+  \***********************************************************************************/
+/*! exports provided: SustainabilityGroupRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SustainabilityGroupRoutingModule", function() { return SustainabilityGroupRoutingModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _sustainabilitygroup_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sustainabilitygroup.component */ "./src/app/modules/sustainabilitygroup/sustainabilitygroup.component.ts");
+/* harmony import */ var _list_sustainabilitygroup_list_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./list/sustainabilitygroup-list.component */ "./src/app/modules/sustainabilitygroup/list/sustainabilitygroup-list.component.ts");
+/* harmony import */ var _view_sustainabilitygroup_view_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./view/sustainabilitygroup-view.component */ "./src/app/modules/sustainabilitygroup/view/sustainabilitygroup-view.component.ts");
+/* harmony import */ var _create_edit_sustainabilitygroup_create_edit_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./create-edit/sustainabilitygroup-create-edit.component */ "./src/app/modules/sustainabilitygroup/create-edit/sustainabilitygroup-create-edit.component.ts");
+/* harmony import */ var _import_import_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./import/import.component */ "./src/app/modules/sustainabilitygroup/import/import.component.ts");
+/* harmony import */ var _export_export_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./export/export.component */ "./src/app/modules/sustainabilitygroup/export/export.component.ts");
+
+
+
+
+
+
+
+
+
+
+var childRoutes = [
+    {
+        path: '',
+        component: _list_sustainabilitygroup_list_component__WEBPACK_IMPORTED_MODULE_3__["SustainabilityGroupListComponent"],
+        data: { isCreate: true }
+    },
+    {
+        path: 'create',
+        component: _create_edit_sustainabilitygroup_create_edit_component__WEBPACK_IMPORTED_MODULE_5__["SustainabilityGroupCreateEditComponent"],
+        data: { isCreate: true }
+    },
+    {
+        path: 'edit/:id',
+        component: _create_edit_sustainabilitygroup_create_edit_component__WEBPACK_IMPORTED_MODULE_5__["SustainabilityGroupCreateEditComponent"],
+        data: { isEdit: true }
+    },
+    {
+        path: 'import',
+        component: _import_import_component__WEBPACK_IMPORTED_MODULE_6__["ImportComponent"],
+        data: {
+            parent: 'sustainabilitygroup'
+        }
+    },
+    {
+        path: 'export',
+        component: _export_export_component__WEBPACK_IMPORTED_MODULE_7__["ExportComponent"],
+        data: {
+            parent: 'sustainabilitygroup'
+        }
+    },
+    {
+        path: ':id',
+        component: _view_sustainabilitygroup_view_component__WEBPACK_IMPORTED_MODULE_4__["SustainabilityGroupViewComponent"],
+        data: { isEdit: true }
+    }
+];
+var routes = [
+    {
+        path: '',
+        component: _sustainabilitygroup_component__WEBPACK_IMPORTED_MODULE_2__["SustainabilityGroupComponent"],
+        children: childRoutes
+    }
+];
+var SustainabilityGroupRoutingModule = /** @class */ (function () {
+    function SustainabilityGroupRoutingModule() {
+    }
+    SustainabilityGroupRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: SustainabilityGroupRoutingModule });
+    SustainabilityGroupRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function SustainabilityGroupRoutingModule_Factory(t) { return new (t || SustainabilityGroupRoutingModule)(); }, imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]] });
+    return SustainabilityGroupRoutingModule;
+}());
+
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](SustainabilityGroupRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SustainabilityGroupRoutingModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)],
+                exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/sustainabilitygroup/sustainabilitygroup.component.ts":
+/*!******************************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/sustainabilitygroup.component.ts ***!
+  \******************************************************************************/
+/*! exports provided: SustainabilityGroupComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SustainabilityGroupComponent", function() { return SustainabilityGroupComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+
+
+var SustainabilityGroupComponent = /** @class */ (function () {
+    function SustainabilityGroupComponent() {
+    }
+    SustainabilityGroupComponent.ɵfac = function SustainabilityGroupComponent_Factory(t) { return new (t || SustainabilityGroupComponent)(); };
+    SustainabilityGroupComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SustainabilityGroupComponent, selectors: [["app-sustainabilitygroup"]], decls: 1, vars: 0, template: function SustainabilityGroupComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "router-outlet");
+        } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterOutlet"]], encapsulation: 2 });
+    return SustainabilityGroupComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SustainabilityGroupComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-sustainabilitygroup',
+                template: "<router-outlet></router-outlet>"
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/sustainabilitygroup/sustainabilitygroup.module.ts":
+/*!***************************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/sustainabilitygroup.module.ts ***!
+  \***************************************************************************/
+/*! exports provided: SustainabilityGroupModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SustainabilityGroupModule", function() { return SustainabilityGroupModule; });
+/* harmony import */ var _shared_modules_details_details_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../shared/modules/details/details.module */ "./src/app/shared/modules/details/details.module.ts");
+/* harmony import */ var _shared_modules_address_display_address_display_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/modules/address-display/address-display.module */ "./src/app/shared/modules/address-display/address-display.module.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @app/shared/modules */ "./src/app/shared/modules/index.ts");
+/* harmony import */ var _sustainabilitygroup_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sustainabilitygroup-routing.module */ "./src/app/modules/sustainabilitygroup/sustainabilitygroup-routing.module.ts");
+/* harmony import */ var _sustainabilitygroup_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sustainabilitygroup.component */ "./src/app/modules/sustainabilitygroup/sustainabilitygroup.component.ts");
+/* harmony import */ var _list_sustainabilitygroup_list_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./list/sustainabilitygroup-list.component */ "./src/app/modules/sustainabilitygroup/list/sustainabilitygroup-list.component.ts");
+/* harmony import */ var _list_sustainabilitygroup_list_manual_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./list/sustainabilitygroup-list-manual.component */ "./src/app/modules/sustainabilitygroup/list/sustainabilitygroup-list-manual.component.ts");
+/* harmony import */ var _view_sustainabilitygroup_view_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./view/sustainabilitygroup-view.component */ "./src/app/modules/sustainabilitygroup/view/sustainabilitygroup-view.component.ts");
+/* harmony import */ var _view_sustainabilitygroup_view_manual_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./view/sustainabilitygroup-view-manual.component */ "./src/app/modules/sustainabilitygroup/view/sustainabilitygroup-view-manual.component.ts");
+/* harmony import */ var _create_edit_sustainabilitygroup_create_edit_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./create-edit/sustainabilitygroup-create-edit.component */ "./src/app/modules/sustainabilitygroup/create-edit/sustainabilitygroup-create-edit.component.ts");
+/* harmony import */ var _create_edit_sustainabilitygroup_create_edit_manual_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./create-edit/sustainabilitygroup-create-edit-manual.component */ "./src/app/modules/sustainabilitygroup/create-edit/sustainabilitygroup-create-edit-manual.component.ts");
+/* harmony import */ var _sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./sustainabilitygroup.service */ "./src/app/modules/sustainabilitygroup/sustainabilitygroup.service.ts");
+/* harmony import */ var _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @app/shared/utils/utils.module */ "./src/app/shared/utils/utils.module.ts");
+/* harmony import */ var ngx_mapbox_gl__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ngx-mapbox-gl */ "./node_modules/ngx-mapbox-gl/__ivy_ngcc__/fesm2015/ngx-mapbox-gl.js");
+/* harmony import */ var _app_shared_modules_form_form_module__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @app/shared/modules/form/form.module */ "./src/app/shared/modules/form/form.module.ts");
+/* harmony import */ var _app_shared_modules_import_export_file_import_export_file_module__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @app/shared/modules/import-export-file/import-export-file.module */ "./src/app/shared/modules/import-export-file/import-export-file.module.ts");
+/* harmony import */ var _import_import_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./import/import.component */ "./src/app/modules/sustainabilitygroup/import/import.component.ts");
+/* harmony import */ var _export_export_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./export/export.component */ "./src/app/modules/sustainabilitygroup/export/export.component.ts");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var SustainabilityGroupModule = /** @class */ (function () {
+    function SustainabilityGroupModule() {
+    }
+    SustainabilityGroupModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({ type: SustainabilityGroupModule });
+    SustainabilityGroupModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({ factory: function SustainabilityGroupModule_Factory(t) { return new (t || SustainabilityGroupModule)(); }, providers: [_sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_14__["SustainabilityGroupService"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["TitleCasePipe"]], imports: [[
+                _angular_common__WEBPACK_IMPORTED_MODULE_4__["CommonModule"],
+                _sustainabilitygroup_routing_module__WEBPACK_IMPORTED_MODULE_6__["SustainabilityGroupRoutingModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+                // Shared modules
+                _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["TableModule"],
+                _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["TextEditorModule"],
+                _shared_modules_address_display_address_display_module__WEBPACK_IMPORTED_MODULE_1__["AddressDisplayModule"],
+                _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["ModalModule"],
+                _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["AbpValidationSummaryModule"],
+                _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["SvgModule"],
+                _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_15__["UtilsModule"],
+                _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["MetaDatesModule"],
+                _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["LookupFieldModule"],
+                ngx_mapbox_gl__WEBPACK_IMPORTED_MODULE_16__["NgxMapboxGLModule"],
+                _app_shared_modules_form_form_module__WEBPACK_IMPORTED_MODULE_17__["FormModule"],
+                _shared_modules_details_details_module__WEBPACK_IMPORTED_MODULE_0__["DetailsModule"],
+                _app_shared_modules_import_export_file_import_export_file_module__WEBPACK_IMPORTED_MODULE_18__["ImportExportFileModule"]
+            ]] });
+    return SustainabilityGroupModule;
+}());
+
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](SustainabilityGroupModule, { declarations: [_sustainabilitygroup_component__WEBPACK_IMPORTED_MODULE_7__["SustainabilityGroupComponent"],
+        _list_sustainabilitygroup_list_component__WEBPACK_IMPORTED_MODULE_8__["SustainabilityGroupListComponent"],
+        _list_sustainabilitygroup_list_manual_component__WEBPACK_IMPORTED_MODULE_9__["SustainabilityGroupListManualComponent"],
+        _view_sustainabilitygroup_view_component__WEBPACK_IMPORTED_MODULE_10__["SustainabilityGroupViewComponent"],
+        _view_sustainabilitygroup_view_manual_component__WEBPACK_IMPORTED_MODULE_11__["SustainabilityGroupViewManualComponent"],
+        _create_edit_sustainabilitygroup_create_edit_component__WEBPACK_IMPORTED_MODULE_12__["SustainabilityGroupCreateEditComponent"],
+        _create_edit_sustainabilitygroup_create_edit_manual_component__WEBPACK_IMPORTED_MODULE_13__["SustainabilityGroupCreateEditManualComponent"],
+        _import_import_component__WEBPACK_IMPORTED_MODULE_19__["ImportComponent"],
+        _export_export_component__WEBPACK_IMPORTED_MODULE_20__["ExportComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["CommonModule"],
+        _sustainabilitygroup_routing_module__WEBPACK_IMPORTED_MODULE_6__["SustainabilityGroupRoutingModule"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+        // Shared modules
+        _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["TableModule"],
+        _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["TextEditorModule"],
+        _shared_modules_address_display_address_display_module__WEBPACK_IMPORTED_MODULE_1__["AddressDisplayModule"],
+        _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["ModalModule"],
+        _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["AbpValidationSummaryModule"],
+        _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["SvgModule"],
+        _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_15__["UtilsModule"],
+        _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["MetaDatesModule"],
+        _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["LookupFieldModule"],
+        ngx_mapbox_gl__WEBPACK_IMPORTED_MODULE_16__["NgxMapboxGLModule"],
+        _app_shared_modules_form_form_module__WEBPACK_IMPORTED_MODULE_17__["FormModule"],
+        _shared_modules_details_details_module__WEBPACK_IMPORTED_MODULE_0__["DetailsModule"],
+        _app_shared_modules_import_export_file_import_export_file_module__WEBPACK_IMPORTED_MODULE_18__["ImportExportFileModule"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](SustainabilityGroupModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"],
+        args: [{
+                declarations: [
+                    _sustainabilitygroup_component__WEBPACK_IMPORTED_MODULE_7__["SustainabilityGroupComponent"],
+                    _list_sustainabilitygroup_list_component__WEBPACK_IMPORTED_MODULE_8__["SustainabilityGroupListComponent"],
+                    _list_sustainabilitygroup_list_manual_component__WEBPACK_IMPORTED_MODULE_9__["SustainabilityGroupListManualComponent"],
+                    _view_sustainabilitygroup_view_component__WEBPACK_IMPORTED_MODULE_10__["SustainabilityGroupViewComponent"],
+                    _view_sustainabilitygroup_view_manual_component__WEBPACK_IMPORTED_MODULE_11__["SustainabilityGroupViewManualComponent"],
+                    _create_edit_sustainabilitygroup_create_edit_component__WEBPACK_IMPORTED_MODULE_12__["SustainabilityGroupCreateEditComponent"],
+                    _create_edit_sustainabilitygroup_create_edit_manual_component__WEBPACK_IMPORTED_MODULE_13__["SustainabilityGroupCreateEditManualComponent"],
+                    _import_import_component__WEBPACK_IMPORTED_MODULE_19__["ImportComponent"],
+                    _export_export_component__WEBPACK_IMPORTED_MODULE_20__["ExportComponent"]
+                ],
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_4__["CommonModule"],
+                    _sustainabilitygroup_routing_module__WEBPACK_IMPORTED_MODULE_6__["SustainabilityGroupRoutingModule"],
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+                    // Shared modules
+                    _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["TableModule"],
+                    _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["TextEditorModule"],
+                    _shared_modules_address_display_address_display_module__WEBPACK_IMPORTED_MODULE_1__["AddressDisplayModule"],
+                    _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["ModalModule"],
+                    _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["AbpValidationSummaryModule"],
+                    _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["SvgModule"],
+                    _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_15__["UtilsModule"],
+                    _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["MetaDatesModule"],
+                    _app_shared_modules__WEBPACK_IMPORTED_MODULE_5__["LookupFieldModule"],
+                    ngx_mapbox_gl__WEBPACK_IMPORTED_MODULE_16__["NgxMapboxGLModule"],
+                    _app_shared_modules_form_form_module__WEBPACK_IMPORTED_MODULE_17__["FormModule"],
+                    _shared_modules_details_details_module__WEBPACK_IMPORTED_MODULE_0__["DetailsModule"],
+                    _app_shared_modules_import_export_file_import_export_file_module__WEBPACK_IMPORTED_MODULE_18__["ImportExportFileModule"]
+                ],
+                entryComponents: [],
+                providers: [_sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_14__["SustainabilityGroupService"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["TitleCasePipe"]]
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/sustainabilitygroup/sustainabilitygroup.service.ts":
+/*!****************************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/sustainabilitygroup.service.ts ***!
+  \****************************************************************************/
+/*! exports provided: SustainabilityGroupService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SustainabilityGroupService", function() { return SustainabilityGroupService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _app_shared_helpers_helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @app/shared/helpers/helpers */ "./src/app/shared/helpers/helpers.ts");
+/* harmony import */ var _app_shared_class_api_service_base_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @app/shared/class/api-service-base.class */ "./src/app/shared/class/api-service-base.class.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+
+
+
+
+
+var SustainabilityGroupService = /** @class */ (function (_super) {
+    __extends(SustainabilityGroupService, _super);
+    function SustainabilityGroupService(injector, http) {
+        var _this = _super.call(this, injector) || this;
+        _this.injector = injector;
+        _this.http = http;
+        _this.endPoint = _this.baseUrl + "/api/services/app/SustainabilityGroup";
+        return _this;
+    }
+    SustainabilityGroupService.prototype.getAll = function (filters) {
+        var _this = this;
+        if (filters === void 0) { filters = {}; }
+        var url_ = this.endPoint + "/GetAllDetail?";
+        var httpParams = Object(_app_shared_helpers_helpers__WEBPACK_IMPORTED_MODULE_4__["formatHttpParams"])(filters);
+        url_ = url_.replace(/[?&]$/, '');
+        var options_ = {
+            observe: 'response',
+            responseType: 'blob',
+            params: httpParams,
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                Accept: 'text/plain',
+            }),
+        };
+        return this.http
+            .get(url_, options_)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["mergeMap"])(function (response_) {
+            return _this.processGetAll(response_);
+        }))
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (response_) {
+            if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpResponseBase"]) {
+                try {
+                    return _this.processGetAll(response_);
+                }
+                catch (e) {
+                    return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(e);
+                }
+            }
+            else
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(response_);
+        }));
+    };
+    SustainabilityGroupService.prototype.getFull = function (id) {
+        var _this = this;
+        var url_ = this.endPoint + "/GetFull?id=" + id;
+        url_ = url_.replace(/[?&]$/, '');
+        var options_ = {
+            observe: 'response',
+            responseType: 'blob',
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                Accept: 'text/plain',
+            }),
+        };
+        return this.http
+            .request('get', url_, options_)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["mergeMap"])(function (response_) {
+            return _this.processGetAll(response_);
+        }))
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (response_) {
+            if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpResponseBase"]) {
+                try {
+                    return _this.processGetAll(response_);
+                }
+                catch (e) {
+                    return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(e);
+                }
+            }
+            else
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(response_);
+        }));
+    };
+    SustainabilityGroupService.prototype.create = function (body) {
+        var _this = this;
+        var url_ = this.endPoint + "/Create";
+        url_ = url_.replace(/[?&]$/, '');
+        body = Object(_app_shared_helpers_helpers__WEBPACK_IMPORTED_MODULE_4__["removeUndefinedAndEmpty"])(body);
+        var content_ = JSON.stringify(body);
+        var options_ = {
+            body: content_,
+            observe: 'response',
+            responseType: 'blob',
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                'Content-Type': 'application/json-patch+json',
+                Accept: 'text/plain',
+            }),
+        };
+        return this.http
+            .request('post', url_, options_)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["mergeMap"])(function (response_) {
+            return _this.processCreate(response_);
+        }))
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (response_) {
+            if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpResponseBase"]) {
+                try {
+                    return _this.processCreate(response_);
+                }
+                catch (e) {
+                    return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(e);
+                }
+            }
+            else
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(response_);
+        }));
+    };
+    SustainabilityGroupService.prototype.update = function (body) {
+        var _this = this;
+        var url_ = this.endPoint + "/Update";
+        url_ = url_.replace(/[?&]$/, '');
+        body = Object(_app_shared_helpers_helpers__WEBPACK_IMPORTED_MODULE_4__["removeUndefinedAndEmpty"])(body);
+        var content_ = JSON.stringify(body);
+        var options_ = {
+            body: content_,
+            observe: 'response',
+            responseType: 'blob',
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                'Content-Type': 'application/json-patch+json',
+                Accept: 'text/plain',
+            }),
+        };
+        return this.http
+            .request('put', url_, options_)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["mergeMap"])(function (response_) {
+            return _this.processUpdate(response_);
+        }))
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (response_) {
+            if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpResponseBase"]) {
+                try {
+                    return _this.processUpdate(response_);
+                }
+                catch (e) {
+                    return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(e);
+                }
+            }
+            else
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(response_);
+        }));
+    };
+    SustainabilityGroupService.prototype.importCsv = function (body) {
+        return this.post(this.endPoint + "/ImportCSV", body, true);
+    };
+    SustainabilityGroupService.prototype.exportCsv = function (body) {
+        return this.post(this.endPoint + "/ExportCSV", body, true);
+    };
+    SustainabilityGroupService.ɵfac = function SustainabilityGroupService_Factory(t) { return new (t || SustainabilityGroupService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
+    SustainabilityGroupService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: SustainabilityGroupService, factory: SustainabilityGroupService.ɵfac });
+    return SustainabilityGroupService;
+}(_app_shared_class_api_service_base_class__WEBPACK_IMPORTED_MODULE_5__["APIServiceBase"]));
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SustainabilityGroupService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"] }, { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+                args: [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]]
+            }] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/sustainabilitygroup/view/sustainabilitygroup-view-manual.component.ts":
+/*!***********************************************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/view/sustainabilitygroup-view-manual.component.ts ***!
+  \***********************************************************************************************/
+/*! exports provided: SustainabilityGroupViewManualComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SustainabilityGroupViewManualComponent", function() { return SustainabilityGroupViewManualComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @app/shared/common/app-component-base */ "./src/app/shared/common/app-component-base.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+var SustainabilityGroupViewManualComponent = /** @class */ (function (_super) {
+    __extends(SustainabilityGroupViewManualComponent, _super);
+    function SustainabilityGroupViewManualComponent(injector) {
+        return _super.call(this, injector) || this;
+    }
+    SustainabilityGroupViewManualComponent.prototype.ngOnInit = function () {
+    };
+    SustainabilityGroupViewManualComponent.ɵfac = function SustainabilityGroupViewManualComponent_Factory(t) { return new (t || SustainabilityGroupViewManualComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"])); };
+    SustainabilityGroupViewManualComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SustainabilityGroupViewManualComponent, selectors: [["app-sustainabilitygroup-view-manual"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]], decls: 0, vars: 0, template: function SustainabilityGroupViewManualComponent_Template(rf, ctx) { }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zdXN0YWluYWJpbGl0eWdyb3VwL3ZpZXcvc3VzdGFpbmFiaWxpdHlncm91cC12aWV3LW1hbnVhbC5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxrQ0FBa0MiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3N1c3RhaW5hYmlsaXR5Z3JvdXAvdmlldy9zdXN0YWluYWJpbGl0eWdyb3VwLXZpZXctbWFudWFsLmNvbXBvbmVudC5sZXNzIn0= */"] });
+    return SustainabilityGroupViewManualComponent;
+}(_app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_1__["AppComponentBase"]));
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SustainabilityGroupViewManualComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-sustainabilitygroup-view-manual',
+                templateUrl: './sustainabilitygroup-view-manual.component.html',
+                styleUrls: ['./sustainabilitygroup-view-manual.component.less'],
+                providers: []
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/sustainabilitygroup/view/sustainabilitygroup-view.component.ts":
+/*!****************************************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/view/sustainabilitygroup-view.component.ts ***!
+  \****************************************************************************************/
+/*! exports provided: SustainabilityGroupViewComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SustainabilityGroupViewComponent", function() { return SustainabilityGroupViewComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @app/shared/common/app-component-base */ "./src/app/shared/common/app-component-base.ts");
+/* harmony import */ var _sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../sustainabilitygroup.service */ "./src/app/modules/sustainabilitygroup/sustainabilitygroup.service.ts");
+/* harmony import */ var _app_shared_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @app/shared/service */ "./src/app/shared/service/index.ts");
+/* harmony import */ var _app_shared_AppConsts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @app/shared/AppConsts */ "./src/app/shared/AppConsts.ts");
+/* harmony import */ var _app_shared_service_configuration_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @app/shared/service/configuration.service */ "./src/app/shared/service/configuration.service.ts");
+/* harmony import */ var _view_definition__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./view.definition */ "./src/app/modules/sustainabilitygroup/view/view.definition.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _sustainabilitygroup_view_manual_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sustainabilitygroup-view-manual.component */ "./src/app/modules/sustainabilitygroup/view/sustainabilitygroup-view-manual.component.ts");
+/* harmony import */ var _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../shared/modules/svg/svg.component */ "./src/app/shared/modules/svg/svg.component.ts");
+/* harmony import */ var _shared_modules_details_details_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../shared/modules/details/details.component */ "./src/app/shared/modules/details/details.component.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function SustainabilityGroupViewComponent_div_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-svg", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function SustainabilityGroupViewComponent_app_details_2_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-details", 5);
+} if (rf & 2) {
+    var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("data", ctx_r1.data)("detailsDefinition", ctx_r1.detailsDefinition);
+} }
+function SustainabilityGroupViewComponent_div_3_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r2.httpError, "\n");
+} }
+var SustainabilityGroupViewComponent = /** @class */ (function (_super) {
+    __extends(SustainabilityGroupViewComponent, _super);
+    function SustainabilityGroupViewComponent(injector, activatedRoute, SustainabilityGroupService, _clientConfigService) {
+        var _this = _super.call(this, injector) || this;
+        _this.activatedRoute = activatedRoute;
+        _this.SustainabilityGroupService = SustainabilityGroupService;
+        _this._clientConfigService = _clientConfigService;
+        _this.id = _this.activatedRoute.snapshot.params.id;
+        _this.isLoading = true;
+        _this.events = [];
+        _this.totalEventResult = 0;
+        _this.markerLatLng = null;
+        _this.defaultCentreLngLat = _app_shared_AppConsts__WEBPACK_IMPORTED_MODULE_5__["AppConsts"].mapDefaultLngLat;
+        _this.showMap = false;
+        _this.id = _this.activatedRoute.snapshot.params.id;
+        return _this;
+    }
+    SustainabilityGroupViewComponent.prototype.ngOnInit = function () {
+        this.getData();
+        this.detailsDefinition = new _view_definition__WEBPACK_IMPORTED_MODULE_7__["default"]();
+    };
+    SustainabilityGroupViewComponent.prototype.getData = function () {
+        var _this = this;
+        this.SustainabilityGroupService.getFull(this.id).subscribe(function (res) {
+            if (res && !res.hasOwnProperty('error')) {
+                _this.data = res;
+                _this._clientConfigService.getWebClientConfiguration()
+                    .subscribe(function (result) {
+                    _this.accessToken = result.mapboxToken;
+                    if (!(_this.data.longitude === 0 && _this.data.latitude === 0)) {
+                        _this.markerLatLng = [_this.data.longitude, _this.data.latitude];
+                    }
+                    _this.showMap = true;
+                });
+            }
+            else {
+                _this.httpError = res.error.message;
+                ;
+            }
+            _this.isLoading = false;
+        }, function (err) {
+            _this.isLoading = false;
+            _this.httpError = err.message;
+        });
+    };
+    SustainabilityGroupViewComponent.ɵfac = function SustainabilityGroupViewComponent_Factory(t) { return new (t || SustainabilityGroupViewComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_3__["SustainabilityGroupService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_app_shared_service_configuration_service__WEBPACK_IMPORTED_MODULE_6__["ConfigurationService"])); };
+    SustainabilityGroupViewComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SustainabilityGroupViewComponent, selectors: [["app-sustainabilitygroup-view"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([_app_shared_service__WEBPACK_IMPORTED_MODULE_4__["MapboxService"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]], decls: 5, vars: 3, consts: [["class", "m-loader", 4, "ngIf"], [3, "data", "detailsDefinition", 4, "ngIf"], ["class", "m-form-error httpError", 4, "ngIf"], [1, "m-loader"], ["name", "loader"], [3, "data", "detailsDefinition"], [1, "m-form-error", "httpError"]], template: function SustainabilityGroupViewComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SustainabilityGroupViewComponent_div_1_Template, 2, 0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, SustainabilityGroupViewComponent_app_details_2_Template, 1, 2, "app-details", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, SustainabilityGroupViewComponent_div_3_Template, 2, 1, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "app-sustainabilitygroup-view-manual");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.isLoading && !ctx.data);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.data);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.httpError);
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _sustainabilitygroup_view_manual_component__WEBPACK_IMPORTED_MODULE_9__["SustainabilityGroupViewManualComponent"], _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_10__["SvgComponent"], _shared_modules_details_details_component__WEBPACK_IMPORTED_MODULE_11__["DetailsComponent"]], styles: [".detail-view-grid[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  margin-bottom: 12px;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column[_ngcontent-%COMP%] {\n  width: 100%;\n  display: grid;\n  grid-template-columns: 200px 1fr;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column.full-width[_ngcontent-%COMP%] {\n  grid-template-columns: 1fr;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column.float-right[_ngcontent-%COMP%] {\n  grid-template-columns: 1fr 200px;\n  text-align: right;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column[_ngcontent-%COMP%]   .column-2[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-grid-row-title[_ngcontent-%COMP%] {\n  text-transform: uppercase;\n  font-weight: 600;\n  margin-bottom: 8px;\n}\n.detail-view-grid[_ngcontent-%COMP%] {\n  margin: 20px;\n}\n.mgl-map-container[_ngcontent-%COMP%] {\n  height: 500px;\n}\n.mgl-map-container[_ngcontent-%COMP%]   mgl-map[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n}\n.meta-dates[_ngcontent-%COMP%] {\n  justify-content: flex-end;\n  padding-top: 12px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zdXN0YWluYWJpbGl0eWdyb3VwL3ZpZXcvTTovcmVwb3MvRGVwbG95U29sdXRpb25zQ2xpbWF0ZUNoYW5nZS9kc3NfY2NpcF9wcm90by90YS9hbmd1bGFyL3NyYy9zdHlsZXMvZWxlbWVudHMvZGV0YWlsLXZpZXctZ3JpZC5sZXNzIiwic3JjL2FwcC9tb2R1bGVzL3N1c3RhaW5hYmlsaXR5Z3JvdXAvdmlldy9NOi9yZXBvcy9EZXBsb3lTb2x1dGlvbnNDbGltYXRlQ2hhbmdlL2Rzc19jY2lwX3Byb3RvL3RhL2FuZ3VsYXIvc3JjL3N0eWxlcy9taXhpbnMvcG9zaXRpb24ubGVzcyIsInNyYy9hcHAvbW9kdWxlcy9zdXN0YWluYWJpbGl0eWdyb3VwL3ZpZXcvc3VzdGFpbmFiaWxpdHlncm91cC12aWV3LmNvbXBvbmVudC5sZXNzIiwic3JjL2FwcC9tb2R1bGVzL3N1c3RhaW5hYmlsaXR5Z3JvdXAvdmlldy9NOi9yZXBvcy9EZXBsb3lTb2x1dGlvbnNDbGltYXRlQ2hhbmdlL2Rzc19jY2lwX3Byb3RvL3RhL2FuZ3VsYXIvc3JjL2FwcC9tb2R1bGVzL3N1c3RhaW5hYmlsaXR5Z3JvdXAvdmlldy9zdXN0YWluYWJpbGl0eWdyb3VwLXZpZXcuY29tcG9uZW50Lmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUNVRSxrQkFBQTtFQUNBLE1BQUE7RUFDQSxRQUFBO0VBQ0EsU0FBQTtFQUNBLE9BQUE7RURaQSxhQUFBO0VBQ0Esc0JBQUE7QUVHRjtBRk5BO0VBS0ksYUFBQTtFQUNBLGlCQUFBO0VBQ0EsbUJBQUE7QUVJSjtBRlhBO0VBU0ssV0FBQTtFQUNBLGFBQUE7RUFDQSxnQ0FBQTtBRUtMO0FGSks7RUFDQywwQkFBQTtBRU1OO0FGSk07RUFDRSxnQ0FBQTtFQUNBLGlCQUFBO0FFTVI7QUZ2QkE7RUFvQlEsYUFBQTtFQUNBLHFDQUFBO0FFTVI7QUYzQkE7RUF5Qk0seUJBQUE7RUFDSCxnQkFBQTtFQUNBLGtCQUFBO0FFS0g7QUM5QkE7RUFDRSxZQUFBO0FEZ0NGO0FDN0JBO0VBQ0MsYUFBQTtBRCtCRDtBQ2hDQTtFQUdFLFdBQUE7RUFDQSxZQUFBO0FEZ0NGO0FDN0JBO0VBQ0UseUJBQUE7RUFDQSxpQkFBQTtBRCtCRiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvc3VzdGFpbmFiaWxpdHlncm91cC92aWV3L3N1c3RhaW5hYmlsaXR5Z3JvdXAtdmlldy5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIkBncmlkLXNpemU6IDIwMHB4O1xuXG4uZGV0YWlsLXZpZXctZ3JpZCB7XG4gIC5wb3NpdGlvbihhYnNvbHV0ZSwgQHRvcDogMCwgQHJpZ2h0OiAwLCBAYm90dG9tOiAwLCBAbGVmdDogMCk7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG5cdC5kZXRhaWwtdmlldy1ncmlkLXJvdyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IG5vd3JhcDtcbiAgICBtYXJnaW4tYm90dG9tOiBAc3BhY2luZy0xMjtcbiAgICAuZGV0YWlsLXZpZXctcm93LWNvbHVtbiB7XG4gICAgXHR3aWR0aDogMTAwJTtcblx0ICAgIGRpc3BsYXk6IGdyaWQ7XG4gICAgXHRncmlkLXRlbXBsYXRlLWNvbHVtbnM6IEBncmlkLXNpemUgMWZyO1xuICAgIFx0Ji5mdWxsLXdpZHRoIHtcbiAgICBcdFx0Z3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnI7XG4gICAgXHR9XG4gICAgICAmLmZsb2F0LXJpZ2h0IHtcbiAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnIgQGdyaWQtc2l6ZTtcbiAgICAgICAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gICAgICB9XG4gICAgICAuY29sdW1uLTIge1xuICAgICAgICBkaXNwbGF5OiBncmlkO1xuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgyLCAxZnIpO1xuICAgICAgfVxuICAgIH1cblx0XHQuZGV0YWlsLXZpZXctZ3JpZC1yb3ctdGl0bGUge1xuICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcblx0XHRcdGZvbnQtd2VpZ2h0OiBAZm9udC13ZWlnaHQtc2VtaWJvbGQ7XG5cdFx0XHRtYXJnaW4tYm90dG9tOiBAc3BhY2luZy04O1xuXHRcdH1cblx0fVxufSIsIi8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4vLyBNSVhJTlMgLSBQT1NJVElPTlxuLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblxuLy8gU2hvcnRoYW5kIG1peGluIGZvciBvZmZzZXQgcG9zaXRpb25pbmdcbi8vIEBwYXJhbSB7U3RyaW5nfSBAcG9zaXRpb24gLSBFaXRoZXIgYHJlbGF0aXZlYCwgYGFic29sdXRlYCBvciBgZml4ZWRgXG4vLyBAcGFyYW0ge0xlbmd0aH0gQHRvcCBbbnVsbF0gLSBUb3Agb2Zmc2V0XG4vLyBAcGFyYW0ge0xlbmd0aH0gQHJpZ2h0IFtudWxsXSAtIFJpZ2h0IG9mZnNldFxuLy8gQHBhcmFtIHtMZW5ndGh9IEBib3R0b20gW251bGxdIC0gQm90dG9tIG9mZnNldFxuLy8gQHBhcmFtIHtMZW5ndGh9IEBsZWZ0IFtudWxsXSAtIExlZnQgb2Zmc2V0XG5cbi5wb3NpdGlvbihAcG9zaXRpb24sIEB0b3A6IG51bGwsIEByaWdodDogbnVsbCwgQGJvdHRvbTogbnVsbCwgQGxlZnQ6IG51bGwpIHtcbiAgcG9zaXRpb246IEBwb3NpdGlvbjtcbiAgdG9wOiBAdG9wO1xuICByaWdodDogQHJpZ2h0O1xuICBib3R0b206IEBib3R0b207XG4gIGxlZnQ6IEBsZWZ0O1xufVxuXG4ucG9zaXRpb24tcmVsYXRpdmUtcmVzZXQoKSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgdG9wOiBhdXRvO1xuICByaWdodDogYXV0bztcbiAgYm90dG9tOiBhdXRvO1xuICBsZWZ0OiBhdXRvO1xufVxuIiwiLmRldGFpbC12aWV3LWdyaWQge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgbGVmdDogMDtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogbm93cmFwO1xuICBtYXJnaW4tYm90dG9tOiAxMnB4O1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1yb3ctY29sdW1uIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMjAwcHggMWZyO1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1yb3ctY29sdW1uLmZ1bGwtd2lkdGgge1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmcjtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyAuZGV0YWlsLXZpZXctcm93LWNvbHVtbi5mbG9hdC1yaWdodCB7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDIwMHB4O1xuICB0ZXh0LWFsaWduOiByaWdodDtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyAuZGV0YWlsLXZpZXctcm93LWNvbHVtbiAuY29sdW1uLTIge1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgyLCAxZnIpO1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1ncmlkLXJvdy10aXRsZSB7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIG1hcmdpbi1ib3R0b206IDhweDtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIHtcbiAgbWFyZ2luOiAyMHB4O1xufVxuLm1nbC1tYXAtY29udGFpbmVyIHtcbiAgaGVpZ2h0OiA1MDBweDtcbn1cbi5tZ2wtbWFwLWNvbnRhaW5lciBtZ2wtbWFwIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn1cbi5tZXRhLWRhdGVzIHtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbiAgcGFkZGluZy10b3A6IDEycHg7XG59XG4iLCJAaW1wb3J0IFwiLi8uLi8uLi8uLi8uLi9zdHlsZXMvdmFyaWFibGVzXCI7XG5AaW1wb3J0IFwiLi8uLi8uLi8uLi8uLi9zdHlsZXMvZWxlbWVudHMvZGV0YWlsLXZpZXctZ3JpZFwiO1xuQGltcG9ydCBcIi4vLi4vLi4vLi4vLi4vc3R5bGVzL21peGlucy9wb3NpdGlvblwiO1xuXG4uZGV0YWlsLXZpZXctZ3JpZCB7XG4gIG1hcmdpbjogQHNwYWNpbmctMjA7XG59XG5cbi5tZ2wtbWFwLWNvbnRhaW5lciB7XG5cdGhlaWdodDogNTAwcHg7XG5cdG1nbC1tYXAge1xuXHRcdHdpZHRoOiAxMDAlO1xuXHRcdGhlaWdodDogMTAwJTtcblx0fVxufVxuLm1ldGEtZGF0ZXMge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xuICBwYWRkaW5nLXRvcDogQHNwYWNpbmctMTI7XG59XG4iXX0= */"] });
+    return SustainabilityGroupViewComponent;
+}(_app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_2__["AppComponentBase"]));
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SustainabilityGroupViewComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-sustainabilitygroup-view',
+                templateUrl: './sustainabilitygroup-view.component.html',
+                styleUrls: ['./sustainabilitygroup-view.component.less'],
+                providers: [_app_shared_service__WEBPACK_IMPORTED_MODULE_4__["MapboxService"]]
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] }, { type: _sustainabilitygroup_service__WEBPACK_IMPORTED_MODULE_3__["SustainabilityGroupService"] }, { type: _app_shared_service_configuration_service__WEBPACK_IMPORTED_MODULE_6__["ConfigurationService"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/sustainabilitygroup/view/view.definition.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/modules/sustainabilitygroup/view/view.definition.ts ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _app_shared_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @app/shared/class */ "./src/app/shared/class/index.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+var DetailViewDefinition = /** @class */ (function (_super) {
+    __extends(DetailViewDefinition, _super);
+    function DetailViewDefinition() {
+        var _this = _super.call(this) || this;
+        _this.definition = {
+            domainEntity: 'Sustainability Group',
+            rows: [
+                {
+                    items: [
+                        {
+                            itemType: 'view',
+                            dataField: 'name',
+                            dataType: 'System.String',
+                            required: true,
+                            name: {
+                                en: 'Name'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        }
+                    ],
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'view',
+                            dataField: 'descriptionShort',
+                            dataType: 'System.String',
+                            required: true,
+                            name: {
+                                en: 'Description Short'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        }
+                    ],
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'view',
+                            dataField: 'descriptionFull',
+                            dataType: 'System.String',
+                            required: true,
+                            name: {
+                                en: 'Description Full'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        }
+                    ],
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'view',
+                            dataField: 'creatorUserName',
+                            dataType: 'System.String',
+                            required: false,
+                            name: {
+                                en: 'Creator User Name'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        },
+                        {
+                            itemType: 'view',
+                            dataField: 'creationTime',
+                            dataType: 'System.DateTime',
+                            required: false,
+                            name: {
+                                en: 'Creation Time'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        }
+                    ],
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'view',
+                            dataField: 'lastModifierUserName',
+                            dataType: 'System.String',
+                            required: false,
+                            name: {
+                                en: 'Last Modifier User Name'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        },
+                        {
+                            itemType: 'view',
+                            dataField: 'lastModificationTime',
+                            dataType: 'System.DateTime?',
+                            required: false,
+                            name: {
+                                en: 'Last Modification Time'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        }
+                    ],
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'view',
+                            dataType: 'AddressMap',
+                            latDataField: 'latitude',
+                            lonDataField: 'longitude',
+                            streetDataField: 'street',
+                            cityDataField: 'city',
+                            provinceDataField: 'province',
+                            postalCodeDataField: 'postalCode',
+                            required: false,
+                            name: {
+                                en: 'Address'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        }
+                    ],
+                    description: {
+                        en: ''
+                    }
+                }
+            ],
+            id: 'SustainabilityGroup-detailview',
+            name: {
+                en: ''
+            },
+            description: {
+                en: ''
+            }
+        };
+        return _this;
+    }
+    return DetailViewDefinition;
+}(_app_shared_class__WEBPACK_IMPORTED_MODULE_0__["DetailViewDefinitionCore"]));
+/* harmony default export */ __webpack_exports__["default"] = (DetailViewDefinition);
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=modules-sustainabilitygroup-sustainabilitygroup-module.js.map
