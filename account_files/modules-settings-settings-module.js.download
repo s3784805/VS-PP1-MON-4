@@ -1,0 +1,1238 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["modules-settings-settings-module"],{
+
+/***/ "./src/app/modules/settings/account-management/account-management-routing.module.ts":
+/*!******************************************************************************************!*\
+  !*** ./src/app/modules/settings/account-management/account-management-routing.module.ts ***!
+  \******************************************************************************************/
+/*! exports provided: AccountManagementRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountManagementRoutingModule", function() { return AccountManagementRoutingModule; });
+/* harmony import */ var _account_management_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./account-management.component */ "./src/app/modules/settings/account-management/account-management.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+
+var routes = [
+    {
+        path: '',
+        component: _account_management_component__WEBPACK_IMPORTED_MODULE_0__["AccountManagementComponent"]
+    },
+];
+var AccountManagementRoutingModule = _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes);
+
+
+/***/ }),
+
+/***/ "./src/app/modules/settings/account-management/account-management.component.ts":
+/*!*************************************************************************************!*\
+  !*** ./src/app/modules/settings/account-management/account-management.component.ts ***!
+  \*************************************************************************************/
+/*! exports provided: AccountManagementComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountManagementComponent", function() { return AccountManagementComponent; });
+/* harmony import */ var _environments_environment_hmr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../../environments/environment.hmr */ "./src/environments/environment.hmr.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+/* harmony import */ var _shared_common_auth_app_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../../shared/common/auth/app-auth.service */ "./src/app/shared/common/auth/app-auth.service.ts");
+/* harmony import */ var _shared_helpers_helpers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../shared/helpers/helpers */ "./src/app/shared/helpers/helpers.ts");
+/* harmony import */ var _settings_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../settings.service */ "./src/app/modules/settings/settings.service.ts");
+/* harmony import */ var _shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @shared/common/app-component-base */ "./src/app/shared/common/app-component-base.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _table_definition__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./table.definition */ "./src/app/modules/settings/account-management/table.definition.ts");
+/* harmony import */ var _app_shared_modules_plans_plans_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @app/shared/modules/plans/plans.service */ "./src/app/shared/modules/plans/plans.service.ts");
+/* harmony import */ var _app_shared_service_user_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @app/shared/service/user.service */ "./src/app/shared/service/user.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _components_settings_header_settings_header_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/settings-header/settings-header.component */ "./src/app/modules/settings/components/settings-header/settings-header.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../shared/modules/modal/modal.component */ "./src/app/shared/modules/modal/modal.component.ts");
+/* harmony import */ var _shared_modules_logo_logo_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../shared/modules/logo/logo.component */ "./src/app/shared/modules/logo/logo.component.ts");
+/* harmony import */ var _shared_modules_plans_plans_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../shared/modules/plans/plans.component */ "./src/app/shared/modules/plans/plans.component.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function AccountManagementComponent_div_36_Template(rf, ctx) { if (rf & 1) {
+    var _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](0, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "div", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](2, "p", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](3, " Change account ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](4, "small", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](5, " Upgrade or downgrade your account ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](6, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](7, "button", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("click", function AccountManagementComponent_div_36_Template_button_click_7_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵrestoreView"](_r5); var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵnextContext"](); return ctx_r4.showPlansSelector(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](8, " CHANGE ACCOUNT ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+} }
+function AccountManagementComponent_div_60_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](0, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "label", 24);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtextInterpolate"](ctx_r1.displayError);
+} }
+function AccountManagementComponent_app_modal_61_Template(rf, ctx) { if (rf & 1) {
+    var _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](0, "app-modal", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("hideModal", function AccountManagementComponent_app_modal_61_Template_app_modal_hideModal_0_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵrestoreView"](_r7); var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵnextContext"](); return ctx_r6.onModalAction($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("modalHeader", ctx_r2.modalHeader)("modalContent", ctx_r2.modalMessage);
+} }
+function AccountManagementComponent_div_62_div_4_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](0, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "label", 24);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtextInterpolate"](ctx_r8.planDisplayError);
+} }
+function AccountManagementComponent_div_62_Template(rf, ctx) { if (rf & 1) {
+    var _r10 = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](0, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "div", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](2, "app-logo");
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](3, "app-plans", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("onAltAction", function AccountManagementComponent_div_62_Template_app_plans_onAltAction_3_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵrestoreView"](_r10); var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵnextContext"](); return ctx_r9.onAltActionClicked(); })("onSelect", function AccountManagementComponent_div_62_Template_app_plans_onSelect_3_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵrestoreView"](_r10); var ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵnextContext"](); return ctx_r11.onPlanSelected($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtemplate"](4, AccountManagementComponent_div_62_div_4_Template, 3, 1, "div", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("featuredPlanId", ctx_r3.userPlan == null ? null : ctx_r3.userPlan.id);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("ngIf", ctx_r3.planDisplayError);
+} }
+var AccountManagementComponent = /** @class */ (function (_super) {
+    __extends(AccountManagementComponent, _super);
+    function AccountManagementComponent(injector, userService, planService, settingsService, authService, toastService) {
+        var _this = _super.call(this, injector) || this;
+        _this.userService = userService;
+        _this.planService = planService;
+        _this.settingsService = settingsService;
+        _this.authService = authService;
+        _this.toastService = toastService;
+        _this.user = _this.appSession.user;
+        _this.pageName = 'Account';
+        _this.list = [];
+        _this.totalResult = 0;
+        _this.environment = _environments_environment_hmr__WEBPACK_IMPORTED_MODULE_0__["environment"];
+        var tableDefinition = new _table_definition__WEBPACK_IMPORTED_MODULE_7__["default"]();
+        _this.tableDefinition = tableDefinition.getDefinition();
+        return _this;
+    }
+    AccountManagementComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.planService.getPlans()
+            .subscribe(function (plans) { return _this.plans = plans; });
+        this.getUserDetails();
+    };
+    AccountManagementComponent.prototype.getUserDetails = function () {
+        var _this = this;
+        var userDetails;
+        this.loaderService.showLoader();
+        this.userService.getUserDetails()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["finalize"])(function () { return _this.loaderService.showLoader(false); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["switchMap"])(function (details) {
+            userDetails = details;
+            return _this.planService.getPlans();
+        })).subscribe(function (plans) {
+            _this.userPlan = plans.items.find(function (plan) { return plan.id === userDetails.billingPlanId; });
+            _this.userDetails = userDetails;
+        });
+    };
+    AccountManagementComponent.prototype.getList = function (evt) {
+        this.list = __spreadArrays(this.list);
+    };
+    AccountManagementComponent.prototype.showPlansSelector = function () {
+        this.showPlans = true;
+    };
+    AccountManagementComponent.prototype.cancelAccount = function () {
+        var _this = this;
+        this.loaderService.showLoader();
+        this.userService.cancelAccount(this.user.id)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["finalize"])(function () { return _this.loaderService.showLoader(false); }))
+            .subscribe(function (res) {
+            _this.authService.logout(true);
+            setTimeout(function () {
+                _this.toastService.success('Account cancelled successfully');
+            }, 500);
+        }, function (err) {
+            err.subscribe(function (error) {
+                _this.displayError = error.error.message;
+            });
+        });
+    };
+    AccountManagementComponent.prototype.onModalAction = function (evt) {
+        this.showModal = false;
+        if (evt) {
+            if (this.actionToPerform === 'cancelAccount') {
+                this.cancelAccount();
+            }
+            else {
+                this.changeAccountPlan();
+            }
+        }
+    };
+    AccountManagementComponent.prototype.changeAccountPlan = function () {
+        var _this = this;
+        this.loaderService.showLoader();
+        this.userService.changeUserPlan(this.userDetails.id, this.newUserPlan)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["finalize"])(function () { return _this.loaderService.showLoader(false); }))
+            .subscribe(function (res) {
+            _this.showPlans = false;
+            _this.getUserDetails();
+        }, function (err) {
+            err.subscribe(function (error) {
+                _this.planDisplayError = error.error.message;
+            });
+        });
+    };
+    AccountManagementComponent.prototype.onPaymentHistoryClick = function () {
+        this.settingsService.getPaymentInfo()
+            .subscribe(function (res) {
+            console.log(res);
+            var fileURL = window.URL.createObjectURL(res);
+            window.open(fileURL);
+        });
+    };
+    AccountManagementComponent.prototype.onCancelAccountClick = function () {
+        this.actionToPerform = 'cancelAccount';
+        this.modalHeader = 'Cancel Account';
+        this.modalMessage = 'Are you sure you want to cancel your acccount. All of your data will be removed from the system.';
+        this.showModal = true;
+    };
+    AccountManagementComponent.prototype.onAltActionClicked = function () {
+        this.displayError = null;
+        this.showPlans = false;
+    };
+    AccountManagementComponent.prototype.onPlanSelected = function (plan) {
+        // this.showPlans = false;
+        this.displayError = null;
+        this.newUserPlan = plan;
+        this.actionToPerform = 'changeAccount';
+        this.modalHeader = 'Change Account';
+        this.modalMessage = "Are you sure you want change your account to " + Object(_shared_helpers_helpers__WEBPACK_IMPORTED_MODULE_3__["capitalize"])(plan.name) + "? Charges may apply.";
+        this.showModal = true;
+    };
+    AccountManagementComponent.prototype.onCustomActionClick = function (evt) {
+        // Print preview here
+    };
+    AccountManagementComponent.ɵfac = function AccountManagementComponent_Factory(t) { return new (t || AccountManagementComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_6__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_app_shared_service_user_service__WEBPACK_IMPORTED_MODULE_9__["UserService"]), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_app_shared_modules_plans_plans_service__WEBPACK_IMPORTED_MODULE_8__["PlansService"]), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_settings_service__WEBPACK_IMPORTED_MODULE_4__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_shared_common_auth_app_auth_service__WEBPACK_IMPORTED_MODULE_2__["AppAuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_1__["ToastrService"])); };
+    AccountManagementComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({ type: AccountManagementComponent, selectors: [["app-account-management"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵInheritDefinitionFeature"]], decls: 63, vars: 21, consts: [[1, "account-container", "border"], [1, "section-title"], [1, "section-content", "account-info", "border"], [1, "info"], [1, "info-value"], [1, "section-content", "account-changes", "border"], ["class", "change-action-container", 4, "ngIf"], [1, "change-action-container"], [1, "change-action-description"], [1, "change-title"], [1, "change-description"], [1, "change-action"], ["type", "button", 1, "m-button", "m-button-primary", "cancel-color", 3, "click"], [1, "section-content", "payment-info", "border"], [1, "payment-action-container"], [1, "payment-action-description"], [1, "payment-title"], [1, "payment-description"], [1, "payment-action"], ["class", "form-group error-message row", 4, "ngIf"], ["noBtnLabel", "No", "yesBtnLabel", "Yes", 3, "modalHeader", "modalContent", "hideModal", 4, "ngIf"], ["class", "plans-container", 4, "ngIf"], ["type", "button", 1, "m-button", "m-button-primary", 3, "click"], [1, "form-group", "error-message", "row"], [1, "m-form-error", "tcError"], ["noBtnLabel", "No", "yesBtnLabel", "Yes", 3, "modalHeader", "modalContent", "hideModal"], [1, "plans-container"], [1, "border"], ["altActionText", "< Back to Account Settings", 3, "featuredPlanId", "onAltAction", "onSelect"]], template: function AccountManagementComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](1, "app-settings-header");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](2, "section");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](3, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](4, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](5, " Account ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](6, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](7, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](8, "small");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](9, "Account");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](10, "p", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](12, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](13, "small");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](14, "Created");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](15, "p", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵpipe"](17, "date");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](18, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](19, "small");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](20, "Renewal due date");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](21, "p", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](22);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵpipe"](23, "date");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](24, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](25, "small");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](26, "Area of interest used");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](27, "p", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](28);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵpipe"](29, "number");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵpipe"](30, "number");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](31, "section");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](32, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](33, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](34, " Account Changes ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](35, "div", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtemplate"](36, AccountManagementComponent_div_36_Template, 9, 0, "div", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](37, "div", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](38, "div", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](39, "p", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](40, " Cancel account ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](41, "small", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](42, " Cancel your account ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](43, "div", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](44, "button", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("click", function AccountManagementComponent_Template_button_click_44_listener() { return ctx.onCancelAccountClick(); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](45, " CANCEL ACCOUNT ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](46, "section");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](47, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](48, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](49, " Payment History ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](50, "div", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](51, "div", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](52, "div", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](53, "p", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](54, " View payment history ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](55, "small", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](56, " Generate a report of your payment history ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](57, "div", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](58, "button", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("click", function AccountManagementComponent_Template_button_click_58_listener() { return ctx.onPaymentHistoryClick(); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](59, " GENERATE PAYMENT HISTORY ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtemplate"](60, AccountManagementComponent_div_60_Template, 3, 1, "div", 19);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtemplate"](61, AccountManagementComponent_app_modal_61_Template, 1, 2, "app-modal", 20);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtemplate"](62, AccountManagementComponent_div_62_Template, 5, 2, "div", 21);
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtextInterpolate"](ctx.userPlan == null ? null : ctx.userPlan.name);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵpipeBind2"](17, 9, ctx.userDetails == null ? null : ctx.userDetails.creationTime, "MMM dd, yyyy"));
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵpipeBind2"](23, 12, ctx.userDetails == null ? null : ctx.userDetails.billingPlanRenewalDate, "MMM dd, yyyy"));
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtextInterpolate2"]("", _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵpipeBind2"](29, 15, ctx.userDetails == null ? null : ctx.userDetails.totalAreaSizeUsed, "1.0-0"), " km\u00B2 of ", _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵpipeBind2"](30, 18, ctx.userDetails == null ? null : ctx.userDetails.totalAreaSizeRemaining, "1.0-0"), " km\u00B2 used");
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("ngIf", ctx.environment.multiBillingPlan);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](24);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("ngIf", ctx.displayError);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("ngIf", ctx.showModal);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("ngIf", ctx.showPlans);
+        } }, directives: [_components_settings_header_settings_header_component__WEBPACK_IMPORTED_MODULE_11__["SettingsHeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_13__["ModalComponent"], _shared_modules_logo_logo_component__WEBPACK_IMPORTED_MODULE_14__["LogoComponent"], _shared_modules_plans_plans_component__WEBPACK_IMPORTED_MODULE_15__["PlansComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_12__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["DecimalPipe"]], styles: [".account-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  flex-grow: 1;\n  height: 100%;\n  max-height: 100%;\n}\n.account-container[_ngcontent-%COMP%]   app-settings-header[_ngcontent-%COMP%] {\n  display: block;\n  padding: 20px;\n}\n.account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%] {\n  margin-bottom: 0;\n  padding-top: 0;\n}\n.account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content[_ngcontent-%COMP%] {\n  padding: 20px;\n}\n.account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content.account-info[_ngcontent-%COMP%], .account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content.payment-info[_ngcontent-%COMP%] {\n  display: flex;\n}\n.account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content.account-info[_ngcontent-%COMP%]   .info[_ngcontent-%COMP%], .account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content.payment-info[_ngcontent-%COMP%]   .info[_ngcontent-%COMP%] {\n  flex-grow: 1;\n}\n.account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content.account-info[_ngcontent-%COMP%]   .info-value[_ngcontent-%COMP%], .account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content.payment-info[_ngcontent-%COMP%]   .info-value[_ngcontent-%COMP%] {\n  text-transform: capitalize;\n}\n.account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content[_ngcontent-%COMP%]   .change-action-container[_ngcontent-%COMP%], .account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content[_ngcontent-%COMP%]   .payment-action-container[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n}\n.account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content[_ngcontent-%COMP%]   .change-action-container[_ngcontent-%COMP%]   .change-action-description[_ngcontent-%COMP%], .account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content[_ngcontent-%COMP%]   .payment-action-container[_ngcontent-%COMP%]   .change-action-description[_ngcontent-%COMP%], .account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content[_ngcontent-%COMP%]   .change-action-container[_ngcontent-%COMP%]   .payment-action-description[_ngcontent-%COMP%], .account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content[_ngcontent-%COMP%]   .payment-action-container[_ngcontent-%COMP%]   .payment-action-description[_ngcontent-%COMP%] {\n  flex-grow: 1;\n}\n.account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content[_ngcontent-%COMP%]   .change-action-container[_ngcontent-%COMP%]   .change-action[_ngcontent-%COMP%]   .cancel-color[_ngcontent-%COMP%], .account-container[_ngcontent-%COMP%]   section[_ngcontent-%COMP%]   .section-content[_ngcontent-%COMP%]   .payment-action-container[_ngcontent-%COMP%]   .change-action[_ngcontent-%COMP%]   .cancel-color[_ngcontent-%COMP%] {\n  color: var(--error-color);\n  border-color: var(--error-color);\n}\n.account-container[_ngcontent-%COMP%]   .error-message[_ngcontent-%COMP%] {\n  margin: 20px;\n}\n.plans-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 100vh;\n  background: var(--layout-body-background);\n  z-index: 100;\n  align-items: center;\n  justify-content: center;\n}\n.plans-container[_ngcontent-%COMP%]   div.border[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin: auto;\n  padding-top: 20px;\n}\n.plans-container[_ngcontent-%COMP%]   div.border[_ngcontent-%COMP%]   .error-message[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zZXR0aW5ncy9hY2NvdW50LW1hbmFnZW1lbnQvTTovcmVwb3MvRGVwbG95U29sdXRpb25zQ2xpbWF0ZUNoYW5nZS9kc3NfY2NpcF9wcm90by90YS9hbmd1bGFyL3NyYy9hcHAvbW9kdWxlcy9zZXR0aW5ncy9hY2NvdW50LW1hbmFnZW1lbnQvYWNjb3VudC1tYW5hZ2VtZW50LmNvbXBvbmVudC5sZXNzIiwic3JjL2FwcC9tb2R1bGVzL3NldHRpbmdzL2FjY291bnQtbWFuYWdlbWVudC9hY2NvdW50LW1hbmFnZW1lbnQuY29tcG9uZW50Lmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFFRSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0FDRkY7QURKQTtFQVNJLGNBQUE7RUFDQSxhQUFBO0FDRko7QURSQTtFQWVJLGdCQUFBO0VBQ0EsY0FBQTtBQ0pKO0FEWkE7RUFtQk0sYUFBQTtBQ0pOO0FETU07O0VBQ0UsYUFBQTtBQ0hSO0FERU07O0VBSUksWUFBQTtBQ0ZWO0FERk07O0VBUUksMEJBQUE7QUNGVjtBRDNCQTs7RUFzQ1UsYUFBQTtFQUNBLFdBQUE7QUNQVjtBRGhDQTs7OztFQTBDWSxZQUFBO0FDSlo7QUR0Q0E7O0VBK0NjLHlCQUFBO0VBQ0EsZ0NBQUE7QUNMZDtBRDNDQTtFQTBESSxZQUFBO0FDWko7QURnQkE7RUFDRSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxlQUFBO0VBQ0EsTUFBQTtFQUNBLE9BQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLHlDQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7QUNkRjtBREdBO0VBY0ksYUFBQTtFQUNBLHNCQUFBO0VBQ0EsbUJBQUE7RUFDQSxZQUFBO0VBQ0EsaUJBQUE7QUNkSjtBREpBO0VBcUJNLG1CQUFBO0FDZE4iLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3NldHRpbmdzL2FjY291bnQtbWFuYWdlbWVudC9hY2NvdW50LW1hbmFnZW1lbnQuY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0ICcuLi8uLi8uLi8uLi9zdHlsZXMvdmFyaWFibGVzLmxlc3MnO1xuXG4uYWNjb3VudC1jb250YWluZXIge1xuXG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGZsZXgtZ3JvdzogMTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBtYXgtaGVpZ2h0OiAxMDAlO1xuXG4gIGFwcC1zZXR0aW5ncy1oZWFkZXIge1xuICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIHBhZGRpbmc6IEBzcGFjaW5nLTIwO1xuICB9XG5cblxuICBzZWN0aW9uIHtcbiAgICBtYXJnaW4tYm90dG9tOiAwO1xuICAgIHBhZGRpbmctdG9wOiAwO1xuXG4gICAgLnNlY3Rpb24tY29udGVudCB7XG4gICAgICBwYWRkaW5nOiBAc3BhY2luZy0yMDtcblxuICAgICAgJi5hY2NvdW50LWluZm8sICYucGF5bWVudC1pbmZvIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcblxuICAgICAgICAuaW5mbyB7XG4gICAgICAgICAgZmxleC1ncm93OiAxO1xuICAgICAgICB9XG5cbiAgICAgICAgLmluZm8tdmFsdWUge1xuICAgICAgICAgIHRleHQtdHJhbnNmb3JtOiBjYXBpdGFsaXplO1xuICAgICAgICB9XG4gICAgICB9XG5cbiAgICAgIC8vICYuYWNjb3VudC1jaGFuZ2VzIHtcbiAgICAgICAgLy8gZGlzcGxheTogZmxleDtcbiAgICAgICAgLy8gZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcblxuICAgICAgICAuY2hhbmdlLWFjdGlvbi1jb250YWluZXIsIC5wYXltZW50LWFjdGlvbi1jb250YWluZXIge1xuICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgICAgd2lkdGg6IDEwMCU7XG5cbiAgICAgICAgICAuY2hhbmdlLWFjdGlvbi1kZXNjcmlwdGlvbiwgLnBheW1lbnQtYWN0aW9uLWRlc2NyaXB0aW9uIHtcbiAgICAgICAgICAgIGZsZXgtZ3JvdzogMTtcbiAgICAgICAgICB9XG5cbiAgICAgICAgICAuY2hhbmdlLWFjdGlvbiB7XG4gICAgICAgICAgICAuY2FuY2VsLWNvbG9yIHtcbiAgICAgICAgICAgICAgY29sb3I6IHZhcigtLWVycm9yLWNvbG9yKTtcbiAgICAgICAgICAgICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1lcnJvci1jb2xvcik7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICAvLyB9XG5cbiAgICB9XG4gIH1cblxuICAuZXJyb3ItbWVzc2FnZSB7XG4gICAgbWFyZ2luOiBAc3BhY2luZy0yMDtcbiAgfVxufVxuXG4ucGxhbnMtY29udGFpbmVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB0b3A6IDA7XG4gIGxlZnQ6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgYmFja2dyb3VuZDogdmFyKC0tbGF5b3V0LWJvZHktYmFja2dyb3VuZCk7XG4gIHotaW5kZXg6IDEwMDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG5cbiAgZGl2LmJvcmRlciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgbWFyZ2luOiBhdXRvO1xuICAgIHBhZGRpbmctdG9wOiBAc3BhY2luZy0yMDtcbiAgICBcbiAgICAuZXJyb3ItbWVzc2FnZSB7XG4gICAgICBtYXJnaW4tYm90dG9tOiBAc3BhY2luZy0yMDtcbiAgICB9XG4gIH1cblxufSIsIi5hY2NvdW50LWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGZsZXgtZ3JvdzogMTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBtYXgtaGVpZ2h0OiAxMDAlO1xufVxuLmFjY291bnQtY29udGFpbmVyIGFwcC1zZXR0aW5ncy1oZWFkZXIge1xuICBkaXNwbGF5OiBibG9jaztcbiAgcGFkZGluZzogMjBweDtcbn1cbi5hY2NvdW50LWNvbnRhaW5lciBzZWN0aW9uIHtcbiAgbWFyZ2luLWJvdHRvbTogMDtcbiAgcGFkZGluZy10b3A6IDA7XG59XG4uYWNjb3VudC1jb250YWluZXIgc2VjdGlvbiAuc2VjdGlvbi1jb250ZW50IHtcbiAgcGFkZGluZzogMjBweDtcbn1cbi5hY2NvdW50LWNvbnRhaW5lciBzZWN0aW9uIC5zZWN0aW9uLWNvbnRlbnQuYWNjb3VudC1pbmZvLFxuLmFjY291bnQtY29udGFpbmVyIHNlY3Rpb24gLnNlY3Rpb24tY29udGVudC5wYXltZW50LWluZm8ge1xuICBkaXNwbGF5OiBmbGV4O1xufVxuLmFjY291bnQtY29udGFpbmVyIHNlY3Rpb24gLnNlY3Rpb24tY29udGVudC5hY2NvdW50LWluZm8gLmluZm8sXG4uYWNjb3VudC1jb250YWluZXIgc2VjdGlvbiAuc2VjdGlvbi1jb250ZW50LnBheW1lbnQtaW5mbyAuaW5mbyB7XG4gIGZsZXgtZ3JvdzogMTtcbn1cbi5hY2NvdW50LWNvbnRhaW5lciBzZWN0aW9uIC5zZWN0aW9uLWNvbnRlbnQuYWNjb3VudC1pbmZvIC5pbmZvLXZhbHVlLFxuLmFjY291bnQtY29udGFpbmVyIHNlY3Rpb24gLnNlY3Rpb24tY29udGVudC5wYXltZW50LWluZm8gLmluZm8tdmFsdWUge1xuICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTtcbn1cbi5hY2NvdW50LWNvbnRhaW5lciBzZWN0aW9uIC5zZWN0aW9uLWNvbnRlbnQgLmNoYW5nZS1hY3Rpb24tY29udGFpbmVyLFxuLmFjY291bnQtY29udGFpbmVyIHNlY3Rpb24gLnNlY3Rpb24tY29udGVudCAucGF5bWVudC1hY3Rpb24tY29udGFpbmVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgd2lkdGg6IDEwMCU7XG59XG4uYWNjb3VudC1jb250YWluZXIgc2VjdGlvbiAuc2VjdGlvbi1jb250ZW50IC5jaGFuZ2UtYWN0aW9uLWNvbnRhaW5lciAuY2hhbmdlLWFjdGlvbi1kZXNjcmlwdGlvbixcbi5hY2NvdW50LWNvbnRhaW5lciBzZWN0aW9uIC5zZWN0aW9uLWNvbnRlbnQgLnBheW1lbnQtYWN0aW9uLWNvbnRhaW5lciAuY2hhbmdlLWFjdGlvbi1kZXNjcmlwdGlvbixcbi5hY2NvdW50LWNvbnRhaW5lciBzZWN0aW9uIC5zZWN0aW9uLWNvbnRlbnQgLmNoYW5nZS1hY3Rpb24tY29udGFpbmVyIC5wYXltZW50LWFjdGlvbi1kZXNjcmlwdGlvbixcbi5hY2NvdW50LWNvbnRhaW5lciBzZWN0aW9uIC5zZWN0aW9uLWNvbnRlbnQgLnBheW1lbnQtYWN0aW9uLWNvbnRhaW5lciAucGF5bWVudC1hY3Rpb24tZGVzY3JpcHRpb24ge1xuICBmbGV4LWdyb3c6IDE7XG59XG4uYWNjb3VudC1jb250YWluZXIgc2VjdGlvbiAuc2VjdGlvbi1jb250ZW50IC5jaGFuZ2UtYWN0aW9uLWNvbnRhaW5lciAuY2hhbmdlLWFjdGlvbiAuY2FuY2VsLWNvbG9yLFxuLmFjY291bnQtY29udGFpbmVyIHNlY3Rpb24gLnNlY3Rpb24tY29udGVudCAucGF5bWVudC1hY3Rpb24tY29udGFpbmVyIC5jaGFuZ2UtYWN0aW9uIC5jYW5jZWwtY29sb3Ige1xuICBjb2xvcjogdmFyKC0tZXJyb3ItY29sb3IpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWVycm9yLWNvbG9yKTtcbn1cbi5hY2NvdW50LWNvbnRhaW5lciAuZXJyb3ItbWVzc2FnZSB7XG4gIG1hcmdpbjogMjBweDtcbn1cbi5wbGFucy1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBiYWNrZ3JvdW5kOiB2YXIoLS1sYXlvdXQtYm9keS1iYWNrZ3JvdW5kKTtcbiAgei1pbmRleDogMTAwO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cbi5wbGFucy1jb250YWluZXIgZGl2LmJvcmRlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIG1hcmdpbjogYXV0bztcbiAgcGFkZGluZy10b3A6IDIwcHg7XG59XG4ucGxhbnMtY29udGFpbmVyIGRpdi5ib3JkZXIgLmVycm9yLW1lc3NhZ2Uge1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xufVxuIl19 */"] });
+    return AccountManagementComponent;
+}(_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_5__["AppComponentBase"]));
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵsetClassMetadata"](AccountManagementComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["Component"],
+        args: [{
+                selector: 'app-account-management',
+                templateUrl: './account-management.component.html',
+                styleUrls: ['./account-management.component.less'],
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["Injector"] }, { type: _app_shared_service_user_service__WEBPACK_IMPORTED_MODULE_9__["UserService"] }, { type: _app_shared_modules_plans_plans_service__WEBPACK_IMPORTED_MODULE_8__["PlansService"] }, { type: _settings_service__WEBPACK_IMPORTED_MODULE_4__["SettingsService"] }, { type: _shared_common_auth_app_auth_service__WEBPACK_IMPORTED_MODULE_2__["AppAuthService"] }, { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_1__["ToastrService"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/settings/account-management/account-management.module.ts":
+/*!**********************************************************************************!*\
+  !*** ./src/app/modules/settings/account-management/account-management.module.ts ***!
+  \**********************************************************************************/
+/*! exports provided: AccountManagementModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountManagementModule", function() { return AccountManagementModule; });
+/* harmony import */ var _shared_modules_plans_plans_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../shared/modules/plans/plans.module */ "./src/app/shared/modules/plans/plans.module.ts");
+/* harmony import */ var _shared_modules_table_table_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../shared/modules/table/table.module */ "./src/app/shared/modules/table/table.module.ts");
+/* harmony import */ var _components_account_section_account_section_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/account-section/account-section.component */ "./src/app/modules/settings/account-management/components/account-section/account-section.component.ts");
+/* harmony import */ var _components_settings_header_settings_header_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../components/settings-header/settings-header.component */ "./src/app/modules/settings/components/settings-header/settings-header.component.ts");
+/* harmony import */ var _shared_modules_svg_svg_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../../shared/modules/svg/svg.module */ "./src/app/shared/modules/svg/svg.module.ts");
+/* harmony import */ var _shared_modules_form_form_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../../shared/modules/form/form.module */ "./src/app/shared/modules/form/form.module.ts");
+/* harmony import */ var _account_management_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./account-management-routing.module */ "./src/app/modules/settings/account-management/account-management-routing.module.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _account_management_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./account-management.component */ "./src/app/modules/settings/account-management/account-management.component.ts");
+/* harmony import */ var _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @app/shared/utils/utils.module */ "./src/app/shared/utils/utils.module.ts");
+/* harmony import */ var _app_shared_modules__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @app/shared/modules */ "./src/app/shared/modules/index.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AccountManagementModule = /** @class */ (function () {
+    function AccountManagementModule() {
+    }
+    AccountManagementModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineNgModule"]({ type: AccountManagementModule });
+    AccountManagementModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjector"]({ factory: function AccountManagementModule_Factory(t) { return new (t || AccountManagementModule)(); }, imports: [[
+                _angular_common__WEBPACK_IMPORTED_MODULE_8__["CommonModule"],
+                _account_management_routing_module__WEBPACK_IMPORTED_MODULE_6__["AccountManagementRoutingModule"],
+                _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_10__["UtilsModule"],
+                _shared_modules_svg_svg_module__WEBPACK_IMPORTED_MODULE_4__["SvgModule"],
+                _shared_modules_form_form_module__WEBPACK_IMPORTED_MODULE_5__["FormModule"],
+                _shared_modules_table_table_module__WEBPACK_IMPORTED_MODULE_1__["TableModule"],
+                _app_shared_modules__WEBPACK_IMPORTED_MODULE_11__["ModalModule"],
+                _shared_modules_plans_plans_module__WEBPACK_IMPORTED_MODULE_0__["PlansModule"],
+            ]] });
+    return AccountManagementModule;
+}());
+
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵsetNgModuleScope"](AccountManagementModule, { declarations: [_account_management_component__WEBPACK_IMPORTED_MODULE_9__["AccountManagementComponent"],
+        _components_settings_header_settings_header_component__WEBPACK_IMPORTED_MODULE_3__["SettingsHeaderComponent"],
+        _components_account_section_account_section_component__WEBPACK_IMPORTED_MODULE_2__["AccountSectionComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_12__["RouterModule"], _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_10__["UtilsModule"],
+        _shared_modules_svg_svg_module__WEBPACK_IMPORTED_MODULE_4__["SvgModule"],
+        _shared_modules_form_form_module__WEBPACK_IMPORTED_MODULE_5__["FormModule"],
+        _shared_modules_table_table_module__WEBPACK_IMPORTED_MODULE_1__["TableModule"],
+        _app_shared_modules__WEBPACK_IMPORTED_MODULE_11__["ModalModule"],
+        _shared_modules_plans_plans_module__WEBPACK_IMPORTED_MODULE_0__["PlansModule"]], exports: [_components_settings_header_settings_header_component__WEBPACK_IMPORTED_MODULE_3__["SettingsHeaderComponent"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵsetClassMetadata"](AccountManagementModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_7__["NgModule"],
+        args: [{
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_8__["CommonModule"],
+                    _account_management_routing_module__WEBPACK_IMPORTED_MODULE_6__["AccountManagementRoutingModule"],
+                    _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_10__["UtilsModule"],
+                    _shared_modules_svg_svg_module__WEBPACK_IMPORTED_MODULE_4__["SvgModule"],
+                    _shared_modules_form_form_module__WEBPACK_IMPORTED_MODULE_5__["FormModule"],
+                    _shared_modules_table_table_module__WEBPACK_IMPORTED_MODULE_1__["TableModule"],
+                    _app_shared_modules__WEBPACK_IMPORTED_MODULE_11__["ModalModule"],
+                    _shared_modules_plans_plans_module__WEBPACK_IMPORTED_MODULE_0__["PlansModule"],
+                ],
+                declarations: [
+                    _account_management_component__WEBPACK_IMPORTED_MODULE_9__["AccountManagementComponent"],
+                    _components_settings_header_settings_header_component__WEBPACK_IMPORTED_MODULE_3__["SettingsHeaderComponent"],
+                    _components_account_section_account_section_component__WEBPACK_IMPORTED_MODULE_2__["AccountSectionComponent"]
+                ],
+                exports: [_components_settings_header_settings_header_component__WEBPACK_IMPORTED_MODULE_3__["SettingsHeaderComponent"]]
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/settings/account-management/components/account-section/account-section.component.ts":
+/*!*************************************************************************************************************!*\
+  !*** ./src/app/modules/settings/account-management/components/account-section/account-section.component.ts ***!
+  \*************************************************************************************************************/
+/*! exports provided: AccountSectionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountSectionComponent", function() { return AccountSectionComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+var _c0 = ["*", "*"];
+var AccountSectionComponent = /** @class */ (function () {
+    function AccountSectionComponent() {
+    }
+    AccountSectionComponent.prototype.ngOnInit = function () {
+    };
+    AccountSectionComponent.ɵfac = function AccountSectionComponent_Factory(t) { return new (t || AccountSectionComponent)(); };
+    AccountSectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AccountSectionComponent, selectors: [["app-account-section"]], ngContentSelectors: _c0, decls: 6, vars: 0, consts: [[1, "section-title"], ["select", "[sectionTitle]"], ["select", "[content]", 1, "section-content", "border"]], template: function AccountSectionComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵprojectionDef"](_c0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵprojection"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵprojection"](5, 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvc2V0dGluZ3MvYWNjb3VudC1tYW5hZ2VtZW50L2NvbXBvbmVudHMvYWNjb3VudC1zZWN0aW9uL2FjY291bnQtc2VjdGlvbi5jb21wb25lbnQubGVzcyJ9 */"] });
+    return AccountSectionComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AccountSectionComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-account-section',
+                templateUrl: './account-section.component.html',
+                styleUrls: ['./account-section.component.less'],
+            }]
+    }], function () { return []; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/settings/account-management/table.definition.ts":
+/*!*************************************************************************!*\
+  !*** ./src/app/modules/settings/account-management/table.definition.ts ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _app_shared_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @app/shared/class */ "./src/app/shared/class/index.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+var TableDefinition = /** @class */ (function (_super) {
+    __extends(TableDefinition, _super);
+    function TableDefinition() {
+        var _this = _super.call(this) || this;
+        _this.definition = {
+            domainEntity: '',
+            route: 'account',
+            filters: [],
+            columns: [
+                {
+                    sortable: true,
+                    dataField: 'date',
+                    dataType: 'System.String',
+                    style: 'text-transform: capitalize;',
+                    actions: [],
+                    id: 'datatable-payment-column-DATE',
+                    name: {
+                        en: 'DATE'
+                    },
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    sortable: true,
+                    dataField: 'accountType',
+                    dataType: 'System.String',
+                    actions: [],
+                    id: 'datatable-payment-column-ACCOUNT TYPE',
+                    name: {
+                        en: 'ACCOUNT TYPE'
+                    },
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    sortable: true,
+                    dataField: 'total',
+                    dataType: 'System.String',
+                    actions: [],
+                    id: 'datatable-payment-column-TOTAL',
+                    name: {
+                        en: 'TOTAL'
+                    },
+                    description: {
+                        en: ''
+                    }
+                },
+                {
+                    sortable: false,
+                    actions: [
+                        {
+                            route: 'payment/edit/{{id}}',
+                            icon: 'edit',
+                            id: 'datatable-payment-column--action-edit',
+                            name: {
+                                en: 'edit'
+                            },
+                            description: {
+                                en: ''
+                            }
+                        },
+                        {
+                            route: '',
+                            icon: 'delete-solid',
+                            id: 'datatable-payment-column--action-delete',
+                            name: {
+                                en: ''
+                            },
+                            description: {
+                                en: 'delete'
+                            }
+                        }
+                    ],
+                    id: 'datatable-payment-column-',
+                    name: {
+                        en: ''
+                    },
+                    description: {
+                        en: ''
+                    }
+                }
+            ],
+            // emptyState: {
+            //   icon: 'telescope',
+            //   id: 'payment-datatable-emptystate',
+            //   description: {
+            //     en: 'Add at least 1 Earth or Non-Earth observation type'
+            //   }
+            // },
+            id: 'payment-datatable',
+            name: {
+                en: 'Payment History'
+            },
+            description: {
+                en: ''
+            },
+            customActions: [
+                {
+                    icon: 'print'
+                },
+            ],
+            customRowColumnStyle: { 'grid-template-columns': '1fr 1fr 3fr 1fr 1fr 1fr' }
+        };
+        return _this;
+    }
+    return TableDefinition;
+}(_app_shared_class__WEBPACK_IMPORTED_MODULE_0__["TableDefinitionCore"]));
+/* harmony default export */ __webpack_exports__["default"] = (TableDefinition);
+
+
+/***/ }),
+
+/***/ "./src/app/modules/settings/components/settings-header/settings-header.component.ts":
+/*!******************************************************************************************!*\
+  !*** ./src/app/modules/settings/components/settings-header/settings-header.component.ts ***!
+  \******************************************************************************************/
+/*! exports provided: SettingsHeaderComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsHeaderComponent", function() { return SettingsHeaderComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @app/shared/common/app-component-base */ "./src/app/shared/common/app-component-base.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/modules/svg/svg.component */ "./src/app/shared/modules/svg/svg.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/modules/modal/modal.component */ "./src/app/shared/modules/modal/modal.component.ts");
+/* harmony import */ var _shared_utils_support_info_support_info_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/utils/support-info/support-info.component */ "./src/app/shared/utils/support-info/support-info.component.ts");
+/* harmony import */ var _shared_common_pipes_localize_pipe__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @shared/common/pipes/localize.pipe */ "./src/app/shared/common/pipes/localize.pipe.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+
+
+
+
+
+
+
+
+function SettingsHeaderComponent_app_modal_12_Template(rf, ctx) { if (rf & 1) {
+    var _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-modal", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("hideModal", function SettingsHeaderComponent_app_modal_12_Template_app_modal_hideModal_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r2); var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r1.onContactModalCloseAction(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-support-info");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("showYesBtn", false);
+} }
+var SettingsHeaderComponent = /** @class */ (function (_super) {
+    __extends(SettingsHeaderComponent, _super);
+    function SettingsHeaderComponent(injector, activatedRoute, router) {
+        var _this = _super.call(this, injector) || this;
+        _this.activatedRoute = activatedRoute;
+        _this.router = router;
+        _this.user = _this.appSession.user;
+        _this.pageName = '';
+        return _this;
+    }
+    SettingsHeaderComponent.prototype.ngOnInit = function () {
+        this.listenToUrlData();
+    };
+    SettingsHeaderComponent.prototype.listenToUrlData = function () {
+        var _this = this;
+        (this.activatedRoute.firstChild || this.activatedRoute).data.subscribe(function (data) {
+            _this.pageName = data.name || '';
+        });
+        this.router.events
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(function (event) { return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"]; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function () { return _this.activatedRoute; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (route) {
+            while (route.firstChild) {
+                route = route.firstChild;
+            }
+            return route;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["mergeMap"])(function (route) { return route.data; }))
+            .subscribe(function (data) {
+            _this.pageName = data.name || '';
+        });
+    };
+    SettingsHeaderComponent.prototype.onContactModalCloseAction = function () {
+        this.showContactModal = false;
+    };
+    SettingsHeaderComponent.prototype.showContactModalAction = function () {
+        this.showContactModal = true;
+    };
+    SettingsHeaderComponent.ɵfac = function SettingsHeaderComponent_Factory(t) { return new (t || SettingsHeaderComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"])); };
+    SettingsHeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SettingsHeaderComponent, selectors: [["app-settings-header"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]], decls: 13, vars: 7, consts: [[1, "user-info"], ["name", "person-placeholder"], [1, "user"], [1, "contact-container"], [1, "btn", "m-button", "m-button-block", "m-button-lg", 3, "routerLink", "click"], ["modalHeader", "Contact Us", "noBtnLabel", "Close", 3, "showYesBtn", "hideModal", 4, "ngIf"], ["modalHeader", "Contact Us", "noBtnLabel", "Close", 3, "showYesBtn", "hideModal"]], template: function SettingsHeaderComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "header");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "app-svg", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "h1");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Manage your personal information");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SettingsHeaderComponent_Template_a_click_9_listener() { return ctx.showContactModalAction(); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](11, "localize");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, SettingsHeaderComponent_app_modal_12_Template, 2, 1, "app-modal", 5);
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate3"]("", ctx.user.name, " ", ctx.user.surname, " ", ctx.pageName ? "/ " + ctx.pageName : "", "");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](11, 5, "CONTACT SUPPORT"), " ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.showContactModal);
+        } }, directives: [_shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_4__["SvgComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_6__["ModalComponent"], _shared_utils_support_info_support_info_component__WEBPACK_IMPORTED_MODULE_7__["SupportInfoComponent"]], pipes: [_shared_common_pipes_localize_pipe__WEBPACK_IMPORTED_MODULE_8__["LocalizePipe"]], styles: ["header[_ngcontent-%COMP%] {\n  display: flex;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n  padding-top: 20px;\n}\nheader[_ngcontent-%COMP%]   .user-info[_ngcontent-%COMP%] {\n  flex-grow: 1;\n  display: flex;\n}\nheader[_ngcontent-%COMP%]   .user-info[_ngcontent-%COMP%]   app-svg[_ngcontent-%COMP%] {\n  margin-right: 10px;\n}\nheader[_ngcontent-%COMP%]   .user-info[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin-top: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zZXR0aW5ncy9jb21wb25lbnRzL3NldHRpbmdzLWhlYWRlci9NOi9yZXBvcy9EZXBsb3lTb2x1dGlvbnNDbGltYXRlQ2hhbmdlL2Rzc19jY2lwX3Byb3RvL3RhL2FuZ3VsYXIvc3JjL2FwcC9tb2R1bGVzL3NldHRpbmdzL2NvbXBvbmVudHMvc2V0dGluZ3MtaGVhZGVyL3NldHRpbmdzLWhlYWRlci5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvbW9kdWxlcy9zZXR0aW5ncy9jb21wb25lbnRzL3NldHRpbmdzLWhlYWRlci9zZXR0aW5ncy1oZWFkZXIuY29tcG9uZW50Lmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDRSxhQUFBO0VBQ0Esd0JBQUE7RUFBQSxnQkFBQTtFQUNBLE1BQUE7RUFDQSxVQUFBO0VBQ0EsaUJBQUE7QUNERjtBREpBO0VBUUksWUFBQTtFQUNBLGFBQUE7QUNESjtBRFJBO0VBWU0sa0JBQUE7QUNETjtBRFhBO0VBZ0JNLGFBQUE7QUNGTiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvc2V0dGluZ3MvY29tcG9uZW50cy9zZXR0aW5ncy1oZWFkZXIvc2V0dGluZ3MtaGVhZGVyLmNvbXBvbmVudC5sZXNzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnLi4vLi4vLi4vLi4vLi4vc3R5bGVzL3ZhcmlhYmxlcy5sZXNzJztcblxuaGVhZGVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgcG9zaXRpb246IHN0aWNreTtcbiAgdG9wOiAwO1xuICB6LWluZGV4OiAxO1xuICBwYWRkaW5nLXRvcDogQHNwYWNpbmctMjA7XG5cbiAgLnVzZXItaW5mbyB7XG4gICAgZmxleC1ncm93OiAxO1xuICAgIGRpc3BsYXk6IGZsZXg7XG5cbiAgICBhcHAtc3ZnIHtcbiAgICAgIG1hcmdpbi1yaWdodDogMTBweDtcbiAgICB9XG5cbiAgICBwIHtcbiAgICAgIG1hcmdpbi10b3A6IDA7XG4gICAgfVxuICB9XG59IiwiaGVhZGVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgcG9zaXRpb246IHN0aWNreTtcbiAgdG9wOiAwO1xuICB6LWluZGV4OiAxO1xuICBwYWRkaW5nLXRvcDogMjBweDtcbn1cbmhlYWRlciAudXNlci1pbmZvIHtcbiAgZmxleC1ncm93OiAxO1xuICBkaXNwbGF5OiBmbGV4O1xufVxuaGVhZGVyIC51c2VyLWluZm8gYXBwLXN2ZyB7XG4gIG1hcmdpbi1yaWdodDogMTBweDtcbn1cbmhlYWRlciAudXNlci1pbmZvIHAge1xuICBtYXJnaW4tdG9wOiAwO1xufVxuIl19 */"] });
+    return SettingsHeaderComponent;
+}(_app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_2__["AppComponentBase"]));
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SettingsHeaderComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-settings-header',
+                templateUrl: './settings-header.component.html',
+                styleUrls: ['./settings-header.component.less']
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/settings/settings-routing.module.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/modules/settings/settings-routing.module.ts ***!
+  \*************************************************************/
+/*! exports provided: SettingsRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsRoutingModule", function() { return SettingsRoutingModule; });
+/* harmony import */ var _settings_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./settings.component */ "./src/app/modules/settings/settings.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+
+var routes = [
+    {
+        path: '',
+        component: _settings_component__WEBPACK_IMPORTED_MODULE_0__["SettingsComponent"],
+        children: [
+            {
+                path: 'profile',
+                loadChildren: function () { return __webpack_require__.e(/*! import() | profile-profile-module */ "profile-profile-module").then(__webpack_require__.bind(null, /*! ./profile/profile.module */ "./src/app/modules/settings/profile/profile.module.ts")).then(function (m) { return m.ProfileModule; }); },
+                data: { name: 'Profile', permission: 'Pages' }
+            },
+            {
+                path: 'password',
+                loadChildren: function () { return __webpack_require__.e(/*! import() | password-password-module */ "password-password-module").then(__webpack_require__.bind(null, /*! ./password/password.module */ "./src/app/modules/settings/password/password.module.ts")).then(function (m) { return m.PasswordModule; }); },
+                data: { name: 'Password', permission: 'Pages' }
+            },
+            {
+                path: 'language',
+                loadChildren: function () { return __webpack_require__.e(/*! import() | shared-modules-language-language-module */ "shared-modules-language-language-module").then(__webpack_require__.bind(null, /*! ./../../shared/modules/language/language.module */ "./src/app/shared/modules/language/language.module.ts")).then(function (m) { return m.LanguageModule; }); },
+                data: { name: 'Language', permission: 'Pages' }
+            },
+        ]
+    },
+    {
+        path: 'account',
+        loadChildren: function () { return Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./account-management/account-management.module */ "./src/app/modules/settings/account-management/account-management.module.ts")).then(function (m) { return m.AccountManagementModule; }); },
+        data: { name: 'Account', permission: 'Pages' }
+    },
+];
+var SettingsRoutingModule = _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes);
+
+
+/***/ }),
+
+/***/ "./src/app/modules/settings/settings.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/modules/settings/settings.component.ts ***!
+  \********************************************************/
+/*! exports provided: SettingsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsComponent", function() { return SettingsComponent; });
+/* harmony import */ var _app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @app/shared/common/app-component-base */ "./src/app/shared/common/app-component-base.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _components_settings_header_settings_header_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/settings-header/settings-header.component */ "./src/app/modules/settings/components/settings-header/settings-header.component.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+
+
+
+
+
+var SettingsComponent = /** @class */ (function (_super) {
+    __extends(SettingsComponent, _super);
+    function SettingsComponent(injector, activatedRoute, router) {
+        var _this = _super.call(this, injector) || this;
+        _this.activatedRoute = activatedRoute;
+        _this.router = router;
+        _this.user = _this.appSession.user;
+        _this.pageName = '';
+        return _this;
+    }
+    SettingsComponent.prototype.ngOnInit = function () {
+        this.listenToUrlData();
+    };
+    SettingsComponent.prototype.listenToUrlData = function () {
+        var _this = this;
+        this.activatedRoute.firstChild.data.subscribe(function (data) {
+            _this.pageName = data.name || '';
+        });
+        this.router.events
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(function (event) { return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_2__["NavigationEnd"]; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function () { return _this.activatedRoute; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (route) {
+            while (route.firstChild) {
+                route = route.firstChild;
+            }
+            return route;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["mergeMap"])(function (route) { return route.data; }))
+            .subscribe(function (data) {
+            _this.pageName = data.name || '';
+        });
+    };
+    SettingsComponent.ɵfac = function SettingsComponent_Factory(t) { return new (t || SettingsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"])); };
+    SettingsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: SettingsComponent, selectors: [["app-settings"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵInheritDefinitionFeature"]], decls: 5, vars: 0, consts: [[1, "settings-container", "border"], [1, "form-container"], [1, "outlet-container", "border"]], template: function SettingsComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "app-settings-header");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](4, "router-outlet");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        } }, directives: [_components_settings_header_settings_header_component__WEBPACK_IMPORTED_MODULE_4__["SettingsHeaderComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterOutlet"]], styles: [".settings-container[_ngcontent-%COMP%] {\n  height: 100%;\n  overflow: auto;\n  scrollbar-face-color: var(--layout-scroll-thumb);\n  scrollbar-track-color: var(--layout-scroll-background);\n}\n.settings-container[_ngcontent-%COMP%]::-webkit-scrollbar {\n  width: 6px;\n  height: 6px;\n}\n.settings-container[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  background: var(--layout-scroll-thumb);\n  border-radius: 3px;\n}\n.settings-container[_ngcontent-%COMP%]::-webkit-scrollbar-track {\n  background: var(--layout-scroll-background);\n}\n.settings-container[_ngcontent-%COMP%]   .outlet-container[_ngcontent-%COMP%] {\n  padding: 20px;\n}\n.settings-container[_ngcontent-%COMP%]   header[_ngcontent-%COMP%] {\n  display: flex;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n  padding-top: 20px;\n}\n.settings-container[_ngcontent-%COMP%]   header[_ngcontent-%COMP%]   .user-info[_ngcontent-%COMP%] {\n  flex-grow: 1;\n  display: flex;\n}\n.settings-container[_ngcontent-%COMP%]   header[_ngcontent-%COMP%]   .user-info[_ngcontent-%COMP%]   app-svg[_ngcontent-%COMP%] {\n  margin-right: 10px;\n}\n.settings-container[_ngcontent-%COMP%]   header[_ngcontent-%COMP%]   .user-info[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin-top: 0;\n}\n.settings-container[_ngcontent-%COMP%]   .form-container[_ngcontent-%COMP%] {\n  margin: auto;\n  width: auto;\n  max-width: 680px;\n  padding: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zZXR0aW5ncy9NOi9yZXBvcy9EZXBsb3lTb2x1dGlvbnNDbGltYXRlQ2hhbmdlL2Rzc19jY2lwX3Byb3RvL3RhL2FuZ3VsYXIvc3JjL2FwcC9tb2R1bGVzL3NldHRpbmdzL3NldHRpbmdzLmNvbXBvbmVudC5sZXNzIiwic3JjL2FwcC9tb2R1bGVzL3NldHRpbmdzL006L3JlcG9zL0RlcGxveVNvbHV0aW9uc0NsaW1hdGVDaGFuZ2UvZHNzX2NjaXBfcHJvdG8vdGEvYW5ndWxhci9zcmMvc3R5bGVzL21peGlucy9zY3JvbGxiYXIubGVzcyIsInNyYy9hcHAvbW9kdWxlcy9zZXR0aW5ncy9zZXR0aW5ncy5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFHQTtFQUNFLFlBQUE7RUFDQSxjQUFBO0VDZ0JFLGdEQUFBO0VBQ0Esc0RBQUE7QUNqQko7QURBRTtFQUNFLFVBQUE7RUFDQSxXQUFBO0FDRUo7QURDRTtFQUNFLHNDQUFBO0VBQ0Esa0JBQUE7QUNDSjtBREVFO0VBQ0UsMkNBQUE7QUNBSjtBRmJBO0VBTUksYUFBQTtBRVVKO0FGaEJBO0VBVUksYUFBQTtFQUNBLHdCQUFBO0VBQUEsZ0JBQUE7RUFDQSxNQUFBO0VBQ0EsVUFBQTtFQUNBLGlCQUFBO0FFU0o7QUZ2QkE7RUFpQk0sWUFBQTtFQUNBLGFBQUE7QUVTTjtBRjNCQTtFQXFCUSxrQkFBQTtBRVNSO0FGOUJBO0VBeUJRLGFBQUE7QUVRUjtBRmpDQTtFQStCSSxZQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0VBQ0EsYUFBQTtBRUtKIiwiZmlsZSI6InNyYy9hcHAvbW9kdWxlcy9zZXR0aW5ncy9zZXR0aW5ncy5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJy4uLy4uLy4uL3N0eWxlcy92YXJpYWJsZXMubGVzcyc7XG5AaW1wb3J0IFwiLi4vLi4vLi4vc3R5bGVzL21peGlucy9zY3JvbGxiYXIubGVzc1wiO1xuXG4uc2V0dGluZ3MtY29udGFpbmVyIHtcbiAgaGVpZ2h0OiAxMDAlO1xuICBvdmVyZmxvdzogYXV0bztcbiAgLnNjcm9sbGJhcig2cHgpO1xuXG4gIC5vdXRsZXQtY29udGFpbmVyIHtcbiAgICBwYWRkaW5nOiBAc3BhY2luZy0yMDtcbiAgfVxuXG4gIGhlYWRlciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBwb3NpdGlvbjogc3RpY2t5O1xuICAgIHRvcDogMDtcbiAgICB6LWluZGV4OiAxO1xuICAgIHBhZGRpbmctdG9wOiBAc3BhY2luZy0yMDtcblxuICAgIC51c2VyLWluZm8ge1xuICAgICAgZmxleC1ncm93OiAxO1xuICAgICAgZGlzcGxheTogZmxleDtcblxuICAgICAgYXBwLXN2ZyB7XG4gICAgICAgIG1hcmdpbi1yaWdodDogMTBweDtcbiAgICAgIH1cblxuICAgICAgcCB7XG4gICAgICAgIG1hcmdpbi10b3A6IDA7XG4gICAgICB9XG4gICAgfVxuICB9XG5cbiAgLmZvcm0tY29udGFpbmVyIHtcbiAgICBtYXJnaW46IGF1dG87XG4gICAgd2lkdGg6IGF1dG87XG4gICAgbWF4LXdpZHRoOiA2ODBweDtcbiAgICBwYWRkaW5nOiBAc3BhY2luZy0yMDtcbiAgfVxuXG59IiwiLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbi8vIE1JWElOUyAtIFNDUk9MTEJBUlxuLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbi5zY3JvbGxiYXIoQHNpemUpIHtcbiAgLy8gRm9yIEdvb2dsZSBDaHJvbWVcbiAgJjo6LXdlYmtpdC1zY3JvbGxiYXIge1xuICAgIHdpZHRoOiBAc2l6ZTtcbiAgICBoZWlnaHQ6IEBzaXplO1xuICB9XG5cbiAgJjo6LXdlYmtpdC1zY3JvbGxiYXItdGh1bWIge1xuICAgIGJhY2tncm91bmQ6IHZhcigtLWxheW91dC1zY3JvbGwtdGh1bWIpO1xuICAgIGJvcmRlci1yYWRpdXM6IEBib3JkZXItcmFkaXVzO1xuICB9XG5cbiAgJjo6LXdlYmtpdC1zY3JvbGxiYXItdHJhY2sge1xuICAgIGJhY2tncm91bmQ6IHZhcigtLWxheW91dC1zY3JvbGwtYmFja2dyb3VuZCk7XG4gIH1cblxuICAvLyBGb3IgSW50ZXJuZXQgRXhwbG9yZXJcbiAgJiB7XG4gICAgc2Nyb2xsYmFyLWZhY2UtY29sb3I6IHZhcigtLWxheW91dC1zY3JvbGwtdGh1bWIpO1xuICAgIHNjcm9sbGJhci10cmFjay1jb2xvcjogdmFyKC0tbGF5b3V0LXNjcm9sbC1iYWNrZ3JvdW5kKTtcbiAgfVxufSIsIi5zZXR0aW5ncy1jb250YWluZXIge1xuICBoZWlnaHQ6IDEwMCU7XG4gIG92ZXJmbG93OiBhdXRvO1xuICBzY3JvbGxiYXItZmFjZS1jb2xvcjogdmFyKC0tbGF5b3V0LXNjcm9sbC10aHVtYik7XG4gIHNjcm9sbGJhci10cmFjay1jb2xvcjogdmFyKC0tbGF5b3V0LXNjcm9sbC1iYWNrZ3JvdW5kKTtcbn1cbi5zZXR0aW5ncy1jb250YWluZXI6Oi13ZWJraXQtc2Nyb2xsYmFyIHtcbiAgd2lkdGg6IDZweDtcbiAgaGVpZ2h0OiA2cHg7XG59XG4uc2V0dGluZ3MtY29udGFpbmVyOjotd2Via2l0LXNjcm9sbGJhci10aHVtYiB7XG4gIGJhY2tncm91bmQ6IHZhcigtLWxheW91dC1zY3JvbGwtdGh1bWIpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG59XG4uc2V0dGluZ3MtY29udGFpbmVyOjotd2Via2l0LXNjcm9sbGJhci10cmFjayB7XG4gIGJhY2tncm91bmQ6IHZhcigtLWxheW91dC1zY3JvbGwtYmFja2dyb3VuZCk7XG59XG4uc2V0dGluZ3MtY29udGFpbmVyIC5vdXRsZXQtY29udGFpbmVyIHtcbiAgcGFkZGluZzogMjBweDtcbn1cbi5zZXR0aW5ncy1jb250YWluZXIgaGVhZGVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgcG9zaXRpb246IHN0aWNreTtcbiAgdG9wOiAwO1xuICB6LWluZGV4OiAxO1xuICBwYWRkaW5nLXRvcDogMjBweDtcbn1cbi5zZXR0aW5ncy1jb250YWluZXIgaGVhZGVyIC51c2VyLWluZm8ge1xuICBmbGV4LWdyb3c6IDE7XG4gIGRpc3BsYXk6IGZsZXg7XG59XG4uc2V0dGluZ3MtY29udGFpbmVyIGhlYWRlciAudXNlci1pbmZvIGFwcC1zdmcge1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG59XG4uc2V0dGluZ3MtY29udGFpbmVyIGhlYWRlciAudXNlci1pbmZvIHAge1xuICBtYXJnaW4tdG9wOiAwO1xufVxuLnNldHRpbmdzLWNvbnRhaW5lciAuZm9ybS1jb250YWluZXIge1xuICBtYXJnaW46IGF1dG87XG4gIHdpZHRoOiBhdXRvO1xuICBtYXgtd2lkdGg6IDY4MHB4O1xuICBwYWRkaW5nOiAyMHB4O1xufVxuIl19 */"] });
+    return SettingsComponent;
+}(_app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_0__["AppComponentBase"]));
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](SettingsComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+                selector: 'app-settings',
+                templateUrl: './settings.component.html',
+                styleUrls: ['./settings.component.less']
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/settings/settings.module.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/modules/settings/settings.module.ts ***!
+  \*****************************************************/
+/*! exports provided: SettingsModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsModule", function() { return SettingsModule; });
+/* harmony import */ var _account_management_account_management_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./account-management/account-management.module */ "./src/app/modules/settings/account-management/account-management.module.ts");
+/* harmony import */ var _settings_routing_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./settings-routing.module */ "./src/app/modules/settings/settings-routing.module.ts");
+/* harmony import */ var _shared_modules_svg_svg_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../shared/modules/svg/svg.module */ "./src/app/shared/modules/svg/svg.module.ts");
+/* harmony import */ var _shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../shared/utils/utils.module */ "./src/app/shared/utils/utils.module.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _settings_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./settings.component */ "./src/app/modules/settings/settings.component.ts");
+
+
+
+
+
+
+
+
+
+
+var SettingsModule = /** @class */ (function () {
+    function SettingsModule() {
+    }
+    SettingsModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineNgModule"]({ type: SettingsModule });
+    SettingsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjector"]({ factory: function SettingsModule_Factory(t) { return new (t || SettingsModule)(); }, imports: [[
+                _angular_common__WEBPACK_IMPORTED_MODULE_6__["CommonModule"],
+                _settings_routing_module__WEBPACK_IMPORTED_MODULE_1__["SettingsRoutingModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"],
+                _shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_3__["UtilsModule"],
+                _shared_modules_svg_svg_module__WEBPACK_IMPORTED_MODULE_2__["SvgModule"],
+                _account_management_account_management_module__WEBPACK_IMPORTED_MODULE_0__["AccountManagementModule"]
+            ]] });
+    return SettingsModule;
+}());
+
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵsetNgModuleScope"](SettingsModule, { declarations: [_settings_component__WEBPACK_IMPORTED_MODULE_7__["SettingsComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"],
+        _shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_3__["UtilsModule"],
+        _shared_modules_svg_svg_module__WEBPACK_IMPORTED_MODULE_2__["SvgModule"],
+        _account_management_account_management_module__WEBPACK_IMPORTED_MODULE_0__["AccountManagementModule"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵsetClassMetadata"](SettingsModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_5__["NgModule"],
+        args: [{
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_6__["CommonModule"],
+                    _settings_routing_module__WEBPACK_IMPORTED_MODULE_1__["SettingsRoutingModule"],
+                    _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"],
+                    _shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_3__["UtilsModule"],
+                    _shared_modules_svg_svg_module__WEBPACK_IMPORTED_MODULE_2__["SvgModule"],
+                    _account_management_account_management_module__WEBPACK_IMPORTED_MODULE_0__["AccountManagementModule"]
+                ],
+                declarations: [_settings_component__WEBPACK_IMPORTED_MODULE_7__["SettingsComponent"]],
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/settings/settings.service.ts":
+/*!******************************************************!*\
+  !*** ./src/app/modules/settings/settings.service.ts ***!
+  \******************************************************/
+/*! exports provided: SettingsService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsService", function() { return SettingsService; });
+/* harmony import */ var _shared_common_session_app_session_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../shared/common/session/app-session.service */ "./src/app/shared/common/session/app-session.service.ts");
+/* harmony import */ var _app_shared_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @app/shared/class */ "./src/app/shared/class/index.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+
+
+
+
+var SettingsService = /** @class */ (function (_super) {
+    __extends(SettingsService, _super);
+    function SettingsService(injector, http, appSession) {
+        var _this = _super.call(this, injector) || this;
+        _this.appSession = appSession;
+        _this.http = http;
+        _this.endPoint = _this.baseUrl + "/api/services/app/User";
+        return _this;
+    }
+    SettingsService.prototype.getAuthenticatedUser = function () {
+        var id = this.appSession.user.id;
+        var url = this.endPoint + "/Get";
+        return this.get(url, { id: id });
+    };
+    SettingsService.prototype.getPaymentInfo = function () {
+        var UserId = this.appSession.user.id;
+        var url = this.baseUrl + "/api/services/app/Payment/GetPaymentHistory";
+        return this.get(url, { UserId: UserId }, true, { headers: { 'Content-Type': 'application/pdf ' } });
+    };
+    SettingsService.prototype.getUserDetail = function () {
+        var id = this.appSession.user.id;
+        var url = this.baseUrl + "/api/services/app/UserDetail/GetDetail";
+        return this.get(url);
+    };
+    SettingsService.prototype.updateProfile = function (body) {
+        var url = this.endPoint + "/Update";
+        return this.put(url, body);
+    };
+    SettingsService.prototype.updateUserDetails = function (body) {
+        var url = this.baseUrl + "/api/services/app/UserDetail/Update";
+        return this.put(url, body);
+    };
+    SettingsService.prototype.updateUserPassword = function (body) {
+        var url = this.endPoint + "/ChangePassword";
+        return this.post(url, body);
+    };
+    SettingsService.ɵfac = function SettingsService_Factory(t) { return new (t || SettingsService)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_shared_common_session_app_session_service__WEBPACK_IMPORTED_MODULE_0__["AppSessionService"])); };
+    SettingsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ token: SettingsService, factory: SettingsService.ɵfac, providedIn: 'root' });
+    return SettingsService;
+}(_app_shared_class__WEBPACK_IMPORTED_MODULE_1__["APIServiceBase"]));
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](SettingsService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"],
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injector"] }, { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"],
+                args: [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]]
+            }] }, { type: _shared_common_session_app_session_service__WEBPACK_IMPORTED_MODULE_0__["AppSessionService"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/shared/service/user.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/shared/service/user.service.ts ***!
+  \************************************************/
+/*! exports provided: UserService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserService", function() { return UserService; });
+/* harmony import */ var _common_session_app_session_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../common/session/app-session.service */ "./src/app/shared/common/session/app-session.service.ts");
+/* harmony import */ var _app_shared_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @app/shared/class */ "./src/app/shared/class/index.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+
+
+
+
+var UserService = /** @class */ (function (_super) {
+    __extends(UserService, _super);
+    function UserService(injector, http, appSessionService) {
+        var _this = _super.call(this, injector) || this;
+        _this.appSessionService = appSessionService;
+        _this.http = http;
+        _this.userEndPoint = _this.baseUrl + "/api/services/app/User";
+        _this.userDetailEndPoint = _this.baseUrl + "/api/services/app/UserDetail";
+        return _this;
+    }
+    UserService.prototype.getUserDetails = function () {
+        var url = this.userDetailEndPoint + "/GetDetail?Id=0";
+        return this.get(url);
+    };
+    UserService.prototype.getUserCompany = function (id) {
+        var url = this.baseUrl + "/api/services/app/Company/GetDetail";
+        return this.get(url, { id: id });
+    };
+    UserService.prototype.getUserIndustries = function () {
+        var url = this.baseUrl + "/api/services/app/PicklistValue/GetAllDetail";
+        return this.get(url, { 'PicklistType': 'Industry' });
+    };
+    UserService.prototype.getUserRoles = function () {
+        var url = this.baseUrl + "/api/services/app/PicklistValue/GetAllDetail";
+        return this.get(url, { 'PicklistType': 'Role' });
+    };
+    UserService.prototype.updateUser = function (body) {
+        var url = this.userEndPoint + "/Update";
+        return this.put(url, body, true, {
+            successMessage: 'Updated successfully',
+            type: 'success',
+            showToast: true
+        });
+    };
+    UserService.prototype.updateUserCompany = function (body) {
+        var url = this.baseUrl + "/api/services/app/Company/Update";
+        return this.post(url, body, true);
+    };
+    UserService.prototype.createUserCompany = function (body) {
+        var url = this.baseUrl + "/api/services/app/Company/Create";
+        return this.post(url, body);
+    };
+    UserService.prototype.cancelAccount = function (id) {
+        var url = this.userEndPoint + "/DeActivate";
+        return this.post(url, { id: id });
+    };
+    UserService.prototype.changeUserPlan = function (id, plan) {
+        var url = this.userDetailEndPoint + "/Update";
+        return this.put(url, { billingPlanId: plan.id, id: id }, true, true);
+    };
+    UserService.ɵfac = function UserService_Factory(t) { return new (t || UserService)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_common_session_app_session_service__WEBPACK_IMPORTED_MODULE_0__["AppSessionService"])); };
+    UserService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ token: UserService, factory: UserService.ɵfac, providedIn: 'root' });
+    return UserService;
+}(_app_shared_class__WEBPACK_IMPORTED_MODULE_1__["APIServiceBase"]));
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](UserService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"],
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injector"] }, { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"],
+                args: [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]]
+            }] }, { type: _common_session_app_session_service__WEBPACK_IMPORTED_MODULE_0__["AppSessionService"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/environments/environment.hmr.ts":
+/*!*********************************************!*\
+  !*** ./src/environments/environment.hmr.ts ***!
+  \*********************************************/
+/*! exports provided: environment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+// 'Hot Module Replacement' enabled environment
+var environment = {
+    production: false,
+    hmr: true,
+    appConfig: 'appconfig.json',
+    multiTenant: false,
+    multiBillingPlan: true,
+    appName: 'SpaceApp-Dev'
+};
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=modules-settings-settings-module.js.map
