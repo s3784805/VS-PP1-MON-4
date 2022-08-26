@@ -1,0 +1,550 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["profile-profile-module"],{
+
+/***/ "./src/app/modules/settings/profile/form.definition.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/modules/settings/profile/form.definition.ts ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _shared_helpers_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../shared/helpers/helpers */ "./src/app/shared/helpers/helpers.ts");
+/* harmony import */ var _app_shared_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @app/shared/class */ "./src/app/shared/class/index.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+var FormDefinition = /** @class */ (function (_super) {
+    __extends(FormDefinition, _super);
+    function FormDefinition() {
+        var _this = _super.call(this) || this;
+        _this.definition = {
+            domainEntity: 'UserDetail',
+            rows: [
+                {
+                    items: [
+                        {
+                            itemType: 'input',
+                            dataField: 'firstName',
+                            dataType: 'System.String',
+                            required: true,
+                            name: {
+                                en: 'First Name'
+                            }
+                        }
+                    ]
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'input',
+                            dataField: 'lastName',
+                            dataType: 'System.String',
+                            required: true,
+                            name: {
+                                en: 'Last Name'
+                            }
+                        }
+                    ]
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'input',
+                            dataType: 'AddressMap',
+                            latDataField: 'addrLatitude',
+                            lonDataField: 'addrLongitude',
+                            streetDataField: 'addrStreet',
+                            cityDataField: 'addrCity',
+                            provinceDataField: 'addrState',
+                            postalCodeDataField: 'addrPostalCodeZip',
+                            required: false,
+                            name: {
+                                en: 'Address'
+                            }
+                        }
+                    ]
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'input',
+                            dataField: 'addrUnit',
+                            dataType: 'System.String',
+                            required: false,
+                            name: {
+                                en: 'Apartment, suite, etc'
+                            }
+                        }
+                    ]
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'input',
+                            dataField: 'email',
+                            dataType: 'System.String',
+                            validators: [_shared_helpers_helpers__WEBPACK_IMPORTED_MODULE_0__["customEmailValidator"]],
+                            required: true,
+                            name: {
+                                en: 'Email'
+                            }
+                        }
+                    ]
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'input',
+                            dataField: 'phone',
+                            dataType: 'System.String',
+                            required: false,
+                            name: {
+                                en: 'Phone'
+                            }
+                        },
+                    ]
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'input',
+                            dataField: 'industry',
+                            dataType: 'Enum',
+                            dynamicEnums: true,
+                            hasEmptyState: true,
+                            emptyStateText: 'Select industry',
+                            dynamicEnumsField: 'options',
+                            enums: [
+                                'Engineering',
+                                'Medicine',
+                                'Transportation'
+                            ],
+                            required: false,
+                            name: {
+                                en: 'Which industry do you work in?'
+                            }
+                        }
+                    ]
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'input',
+                            dataField: 'jobRole',
+                            dataType: 'Enum',
+                            dynamicEnums: true,
+                            hasEmptyState: true,
+                            emptyStateText: 'Select role',
+                            dynamicEnumsField: 'options',
+                            enums: [
+                                'Engineering',
+                                'Medicine',
+                                'Transportation'
+                            ],
+                            required: false,
+                            name: {
+                                en: 'What is your role'
+                            }
+                        }
+                    ]
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'input',
+                            dataField: 'company',
+                            dataType: 'System.String',
+                            required: false,
+                            name: {
+                                en: 'Company'
+                            }
+                        },
+                    ]
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'textarea',
+                            dataField: 'howDidYouHearAboutUs',
+                            dataType: 'System.String',
+                            required: false,
+                            name: {
+                                en: 'How did you hear about us?'
+                            }
+                        }
+                    ]
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'button',
+                            buttonType: 'reset',
+                            required: false,
+                            name: {
+                                en: 'UNDO'
+                            }
+                        },
+                        {
+                            itemType: 'button',
+                            buttonType: 'submit',
+                            required: false,
+                            // formValidEnabled: true,
+                            name: {
+                                en: 'SAVE'
+                            }
+                        }
+                    ]
+                },
+            ],
+            id: 'profile-webform',
+            name: {
+                en: 'Profile'
+            }
+        };
+        return _this;
+    }
+    return FormDefinition;
+}(_app_shared_class__WEBPACK_IMPORTED_MODULE_1__["FormDefinitionCore"]));
+/* harmony default export */ __webpack_exports__["default"] = (FormDefinition);
+
+
+/***/ }),
+
+/***/ "./src/app/modules/settings/profile/profile-routing.module.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/modules/settings/profile/profile-routing.module.ts ***!
+  \********************************************************************/
+/*! exports provided: ProfileRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfileRoutingModule", function() { return ProfileRoutingModule; });
+/* harmony import */ var _profile_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./profile.component */ "./src/app/modules/settings/profile/profile.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+
+var routes = [
+    {
+        path: '',
+        component: _profile_component__WEBPACK_IMPORTED_MODULE_0__["ProfileComponent"]
+    },
+];
+var ProfileRoutingModule = _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes);
+
+
+/***/ }),
+
+/***/ "./src/app/modules/settings/profile/profile.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/modules/settings/profile/profile.component.ts ***!
+  \***************************************************************/
+/*! exports provided: ProfileComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfileComponent", function() { return ProfileComponent; });
+/* harmony import */ var _app_shared_service_user_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @app/shared/service/user.service */ "./src/app/shared/service/user.service.ts");
+/* harmony import */ var _settings_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../settings.service */ "./src/app/modules/settings/settings.service.ts");
+/* harmony import */ var _app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @app/shared/common/app-component-base */ "./src/app/shared/common/app-component-base.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _form_definition__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./form.definition */ "./src/app/modules/settings/profile/form.definition.ts");
+/* harmony import */ var _app_shared_AppConsts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @app/shared/AppConsts */ "./src/app/shared/AppConsts.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _shared_modules_form_form_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../shared/modules/form/form.component */ "./src/app/shared/modules/form/form.component.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _c0 = function (a0) { return { "hidden": a0 }; };
+function ProfileComponent_app_form_1_Template(rf, ctx) { if (rf & 1) {
+    var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "app-form", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("formReset", function ProfileComponent_app_form_1_Template_app_form_formReset_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r3); var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](); return ctx_r2.onFormReset(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("initialData", ctx_r0.editData)("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction1"](5, _c0, ctx_r0.isLoading))("onBeforeSubmit", ctx_r0.onBeforeSubmit)("formDefinition", ctx_r0.formDefinition)("fieldMetaData", ctx_r0.profileSelectsMeta);
+} }
+function ProfileComponent_div_2_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "label", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](ctx_r1.displayError);
+} }
+var ProfileComponent = /** @class */ (function (_super) {
+    __extends(ProfileComponent, _super);
+    function ProfileComponent(injector, settingService, userService) {
+        var _this = _super.call(this, injector) || this;
+        _this.settingService = settingService;
+        _this.userService = userService;
+        _this.isLoading = false;
+        _this.user = _this.appSession.user;
+        _this.displayError = '';
+        _this.profileSelectsMeta = {};
+        return _this;
+    }
+    ProfileComponent.prototype.ngOnInit = function () {
+        this.formDefinition = new _form_definition__WEBPACK_IMPORTED_MODULE_4__["default"]();
+        this.setupForm();
+    };
+    ProfileComponent.prototype.getUserDetail = function () {
+        var _this = this;
+        return this.settingService.getUserDetail()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["tap"])((function (data) {
+            _this.userDetails = data;
+        })));
+    };
+    ProfileComponent.prototype.onFormReset = function () {
+        this.setupForm();
+    };
+    ProfileComponent.prototype.setupForm = function () {
+        var _this = this;
+        var userDetails;
+        this.getUserDetail()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["switchMap"])(function (details) {
+            userDetails = details;
+            var requests = [
+                _this.userService.getUserIndustries(),
+                _this.userService.getUserRoles(),
+            ];
+            if (userDetails === null || userDetails === void 0 ? void 0 : userDetails.companyId) {
+                requests.push(_this.userService.getUserCompany(details.companyId));
+            }
+            else {
+                requests.push(Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["of"])(null));
+            }
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["forkJoin"])(requests);
+        })).subscribe(function (userData) {
+            var _a, _b, _c, _d;
+            var _e = _this.user, name = _e.name, surname = _e.surname, emailAddress = _e.emailAddress;
+            var defaults = _app_shared_AppConsts__WEBPACK_IMPORTED_MODULE_5__["AppConsts"].mapDefaultLngLat;
+            var userCompany = userData === null || userData === void 0 ? void 0 : userData[2];
+            _this.profileSelectsMeta = {
+                industry: (_b = (_a = userData === null || userData === void 0 ? void 0 : userData[0]) === null || _a === void 0 ? void 0 : _a.items) === null || _b === void 0 ? void 0 : _b.map(function (el) { return el.name; }),
+                jobRole: (_d = (_c = userData === null || userData === void 0 ? void 0 : userData[1]) === null || _c === void 0 ? void 0 : _c.items) === null || _d === void 0 ? void 0 : _d.map(function (el) { return el.name; })
+            };
+            _this.editData = __assign({ name: name,
+                surname: surname,
+                emailAddress: emailAddress, company: userCompany === null || userCompany === void 0 ? void 0 : userCompany.name }, userDetails);
+            _this.onBeforeSubmit = function (data) { return __awaiter(_this, void 0, void 0, function () {
+                return __generator(this, function (_a) {
+                    // if(data.company) {
+                    //   const companyData = await this.userService.createUserCompany({
+                    //     isActive: true,
+                    //     name: data.company,
+                    //     descriptionShort: data.company
+                    //   }).pipe(catchError(err => {
+                    //     err.subscribe(error => {
+                    //       this.displayError = error.error.message;
+                    //     });
+                    //     return throwError(err);
+                    //   })).toPromise();
+                    //   data['companyId'] = companyData?.id;
+                    // }
+                    if (data.company) {
+                        data['companyName'] = data.company;
+                        data.company = undefined;
+                    }
+                    // const countryID = await this.userService.getCountryID('canada')
+                    // .pipe(catchError(err => {
+                    //   err.subscribe(error => { 
+                    //     this.displayError = error.error.message;
+                    //   });
+                    //   return throwError(err);
+                    // })).toPromise();
+                    data['userName'] = this.user.userName;
+                    // data['addrCountry'] = countryID?.items[0]?.id;
+                    data['id'] = userDetails.id;
+                    data = __assign(__assign({}, data), { emailAddress: data['email'], surname: data['lastName'], name: data['firstName'], fullName: data['firstName'] + " " + data['lastName'], isActive: data['isActive'] });
+                    return [2 /*return*/, data];
+                });
+            }); };
+        });
+    };
+    ProfileComponent.ɵfac = function ProfileComponent_Factory(t) { return new (t || ProfileComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_3__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_settings_service__WEBPACK_IMPORTED_MODULE_1__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_app_shared_service_user_service__WEBPACK_IMPORTED_MODULE_0__["UserService"])); };
+    ProfileComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: ProfileComponent, selectors: [["app-profile"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵInheritDefinitionFeature"]], decls: 3, vars: 2, consts: [[1, "profile-form-container"], [3, "initialData", "ngClass", "onBeforeSubmit", "formDefinition", "fieldMetaData", "formReset", 4, "ngIf"], ["class", "form-group error-message row", 4, "ngIf"], [3, "initialData", "ngClass", "onBeforeSubmit", "formDefinition", "fieldMetaData", "formReset"], [1, "form-group", "error-message", "row"], [1, "m-form-error", "tcError"]], template: function ProfileComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](1, ProfileComponent_app_form_1_Template, 1, 7, "app-form", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](2, ProfileComponent_div_2_Template, 3, 1, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.formDefinition && ctx.editData);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.displayError != "");
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _shared_modules_form_form_component__WEBPACK_IMPORTED_MODULE_9__["FormComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgClass"]], styles: [".form-container {\n  margin: auto;\n  width: auto;\n  max-width: 680px;\n  padding: 20px;\n}\napp-form .grid-row.row-5,\napp-form .grid-row.row-6,\napp-form .grid-row.row-7,\napp-form .grid-row.row-8 {\n  width: 65%;\n}\napp-form .grid-row.row-8 .grid-column-12 {\n  width: 600px;\n}\napp-form .grid-row.row-9 {\n  display: block;\n}\n.error-message {\n  margin: 12px 0;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zZXR0aW5ncy9wcm9maWxlL006L3JlcG9zL0RlcGxveVNvbHV0aW9uc0NsaW1hdGVDaGFuZ2UvZHNzX2NjaXBfcHJvdG8vdGEvYW5ndWxhci9zcmMvYXBwL21vZHVsZXMvc2V0dGluZ3MvcHJvZmlsZS9wcm9maWxlLmNvbXBvbmVudC5sZXNzIiwic3JjL2FwcC9tb2R1bGVzL3NldHRpbmdzL3Byb2ZpbGUvcHJvZmlsZS5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNJLFlBQUE7RUFDQSxXQUFBO0VBQ0EsZ0JBQUE7RUFDQSxhQUFBO0FDREo7QURRUTs7OztFQUlJLFVBQUE7QUNOWjtBRFNRO0VBRVEsWUFBQTtBQ1JoQjtBRFlRO0VBQ0ksY0FBQTtBQ1ZaO0FEZ0JBO0VBQ0ksY0FBQTtBQ2RKIiwiZmlsZSI6InNyYy9hcHAvbW9kdWxlcy9zZXR0aW5ncy9wcm9maWxlL3Byb2ZpbGUuY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0ICcuLi8uLi8uLi8uLi9zdHlsZXMvdmFyaWFibGVzLmxlc3MnO1xuXG4uZm9ybS1jb250YWluZXIge1xuICAgIG1hcmdpbjogYXV0bztcbiAgICB3aWR0aDogYXV0bztcbiAgICBtYXgtd2lkdGg6IDY4MHB4O1xuICAgIHBhZGRpbmc6IEBzcGFjaW5nLTIwO1xufVxuXG5hcHAtZm9ybSB7XG5cbiAgICAuZ3JpZC1yb3cge1xuXG4gICAgICAgICYucm93LTUsXG4gICAgICAgICYucm93LTYsXG4gICAgICAgICYucm93LTcsXG4gICAgICAgICYucm93LTgge1xuICAgICAgICAgICAgd2lkdGg6IDY1JVxuICAgICAgICB9XG5cbiAgICAgICAgJi5yb3ctOCB7XG4gICAgICAgICAgICAuZ3JpZC1jb2x1bW4tMTIge1xuICAgICAgICAgICAgICAgIHdpZHRoOiA2MDBweDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuXG4gICAgICAgICYucm93LTkge1xuICAgICAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgIH1cbiAgICB9XG5cbn1cblxuLmVycm9yLW1lc3NhZ2Uge1xuICAgIG1hcmdpbjogQHNwYWNpbmctMTIgMDtcbn1cblxuLy8gfSIsIi5mb3JtLWNvbnRhaW5lciB7XG4gIG1hcmdpbjogYXV0bztcbiAgd2lkdGg6IGF1dG87XG4gIG1heC13aWR0aDogNjgwcHg7XG4gIHBhZGRpbmc6IDIwcHg7XG59XG5hcHAtZm9ybSAuZ3JpZC1yb3cucm93LTUsXG5hcHAtZm9ybSAuZ3JpZC1yb3cucm93LTYsXG5hcHAtZm9ybSAuZ3JpZC1yb3cucm93LTcsXG5hcHAtZm9ybSAuZ3JpZC1yb3cucm93LTgge1xuICB3aWR0aDogNjUlO1xufVxuYXBwLWZvcm0gLmdyaWQtcm93LnJvdy04IC5ncmlkLWNvbHVtbi0xMiB7XG4gIHdpZHRoOiA2MDBweDtcbn1cbmFwcC1mb3JtIC5ncmlkLXJvdy5yb3ctOSB7XG4gIGRpc3BsYXk6IGJsb2NrO1xufVxuLmVycm9yLW1lc3NhZ2Uge1xuICBtYXJnaW46IDEycHggMDtcbn1cbiJdfQ== */"], encapsulation: 2 });
+    return ProfileComponent;
+}(_app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_2__["AppComponentBase"]));
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](ProfileComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"],
+        args: [{
+                selector: 'app-profile',
+                templateUrl: './profile.component.html',
+                styleUrls: ['./profile.component.less'],
+                encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewEncapsulation"].None
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Injector"] }, { type: _settings_service__WEBPACK_IMPORTED_MODULE_1__["SettingsService"] }, { type: _app_shared_service_user_service__WEBPACK_IMPORTED_MODULE_0__["UserService"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/settings/profile/profile.module.ts":
+/*!************************************************************!*\
+  !*** ./src/app/modules/settings/profile/profile.module.ts ***!
+  \************************************************************/
+/*! exports provided: ProfileModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfileModule", function() { return ProfileModule; });
+/* harmony import */ var _shared_modules_address_display_address_display_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../shared/modules/address-display/address-display.module */ "./src/app/shared/modules/address-display/address-display.module.ts");
+/* harmony import */ var _shared_modules_svg_svg_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../shared/modules/svg/svg.module */ "./src/app/shared/modules/svg/svg.module.ts");
+/* harmony import */ var _shared_modules_form_form_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../../shared/modules/form/form.module */ "./src/app/shared/modules/form/form.module.ts");
+/* harmony import */ var _profile_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./profile-routing.module */ "./src/app/modules/settings/profile/profile-routing.module.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _profile_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./profile.component */ "./src/app/modules/settings/profile/profile.component.ts");
+/* harmony import */ var _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @app/shared/utils/utils.module */ "./src/app/shared/utils/utils.module.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+
+
+
+
+
+
+
+
+
+var ProfileModule = /** @class */ (function () {
+    function ProfileModule() {
+    }
+    ProfileModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineNgModule"]({ type: ProfileModule });
+    ProfileModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjector"]({ factory: function ProfileModule_Factory(t) { return new (t || ProfileModule)(); }, imports: [[
+                _angular_common__WEBPACK_IMPORTED_MODULE_5__["CommonModule"],
+                _profile_routing_module__WEBPACK_IMPORTED_MODULE_3__["ProfileRoutingModule"],
+                _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_7__["UtilsModule"],
+                _shared_modules_svg_svg_module__WEBPACK_IMPORTED_MODULE_1__["SvgModule"],
+                _shared_modules_address_display_address_display_module__WEBPACK_IMPORTED_MODULE_0__["AddressDisplayModule"],
+                _shared_modules_form_form_module__WEBPACK_IMPORTED_MODULE_2__["FormModule"]
+            ]] });
+    return ProfileModule;
+}());
+
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵsetNgModuleScope"](ProfileModule, { declarations: [_profile_component__WEBPACK_IMPORTED_MODULE_6__["ProfileComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"], _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_7__["UtilsModule"],
+        _shared_modules_svg_svg_module__WEBPACK_IMPORTED_MODULE_1__["SvgModule"],
+        _shared_modules_address_display_address_display_module__WEBPACK_IMPORTED_MODULE_0__["AddressDisplayModule"],
+        _shared_modules_form_form_module__WEBPACK_IMPORTED_MODULE_2__["FormModule"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](ProfileModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["NgModule"],
+        args: [{
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_5__["CommonModule"],
+                    _profile_routing_module__WEBPACK_IMPORTED_MODULE_3__["ProfileRoutingModule"],
+                    _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_7__["UtilsModule"],
+                    _shared_modules_svg_svg_module__WEBPACK_IMPORTED_MODULE_1__["SvgModule"],
+                    _shared_modules_address_display_address_display_module__WEBPACK_IMPORTED_MODULE_0__["AddressDisplayModule"],
+                    _shared_modules_form_form_module__WEBPACK_IMPORTED_MODULE_2__["FormModule"]
+                ],
+                declarations: [_profile_component__WEBPACK_IMPORTED_MODULE_6__["ProfileComponent"]]
+            }]
+    }], null, null); })();
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=profile-profile-module.js.map
