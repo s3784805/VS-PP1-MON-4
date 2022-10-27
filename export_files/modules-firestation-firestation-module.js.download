@@ -72,11 +72,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_shared_modules_text_editor_text_editor_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @app/shared/modules/text-editor/text-editor.component */ "./src/app/shared/modules/text-editor/text-editor.component.ts");
 /* harmony import */ var _form_definition__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./form.definition */ "./src/app/modules/firestation/create-edit/form.definition.ts");
 /* harmony import */ var _app_shared_modules_form_components_address_search_services_address_search_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @app/shared/modules/form/components/address-search/services/address-search.service */ "./src/app/shared/modules/form/components/address-search/services/address-search.service.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _firestation_create_edit_manual_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./firestation-create-edit-manual.component */ "./src/app/modules/firestation/create-edit/firestation-create-edit-manual.component.ts");
-/* harmony import */ var _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../shared/modules/svg/svg.component */ "./src/app/shared/modules/svg/svg.component.ts");
-/* harmony import */ var _shared_modules_form_form_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../shared/modules/form/form.component */ "./src/app/shared/modules/form/form.component.ts");
-/* harmony import */ var _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../shared/modules/modal/modal.component */ "./src/app/shared/modules/modal/modal.component.ts");
+/* harmony import */ var _app_layout_header_header_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @app/layout/header/header.service */ "./src/app/layout/header/header.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _firestation_create_edit_manual_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./firestation-create-edit-manual.component */ "./src/app/modules/firestation/create-edit/firestation-create-edit-manual.component.ts");
+/* harmony import */ var _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../shared/modules/svg/svg.component */ "./src/app/shared/modules/svg/svg.component.ts");
+/* harmony import */ var _shared_modules_form_form_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../shared/modules/form/form.component */ "./src/app/shared/modules/form/form.component.ts");
+/* harmony import */ var _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../shared/modules/modal/modal.component */ "./src/app/shared/modules/modal/modal.component.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -101,6 +102,8 @@ var __assign = (undefined && undefined.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
+
+
 
 
 
@@ -146,12 +149,13 @@ function FireStationCreateEditComponent_app_modal_2_Template(rf, ctx) { if (rf &
 } }
 var FireStationCreateEditComponent = /** @class */ (function (_super) {
     __extends(FireStationCreateEditComponent, _super);
-    function FireStationCreateEditComponent(injector, activatedRoute, router, FireStationService, addressSearchService) {
+    function FireStationCreateEditComponent(injector, activatedRoute, router, FireStationService, addressSearchService, headerService) {
         var _this = _super.call(this, injector) || this;
         _this.activatedRoute = activatedRoute;
         _this.router = router;
         _this.FireStationService = FireStationService;
         _this.addressSearchService = addressSearchService;
+        _this.headerService = headerService;
         _this.culture = 'en';
         _this.defaultCentreLngLat = _app_shared_AppConsts__WEBPACK_IMPORTED_MODULE_0__["AppConsts"].mapDefaultLngLat;
         _this.centreLatLng = null;
@@ -177,37 +181,12 @@ var FireStationCreateEditComponent = /** @class */ (function (_super) {
         return _this;
     }
     FireStationCreateEditComponent.prototype.ngOnInit = function () {
-        var _this = this;
         if (!this.isCreate) {
             this.getData();
         }
         else {
             this.formDefinition = new _form_definition__WEBPACK_IMPORTED_MODULE_7__["default"]();
         }
-        this.addressSearchService.addressSearchEvent.subscribe(function (res) {
-            var _a, _b;
-            console.log(res);
-            var mapPlaceTypes = {
-                'postcode': 'postalCode',
-                "region": "province",
-                "neighborhood": "street",
-                "address": "street",
-                "country": "country",
-                "place": "city"
-            };
-            var mapData = {};
-            // if (this.mapData && this.mapData.hasOwnProperty('features')) {
-            (_a = res.data) === null || _a === void 0 ? void 0 : _a.map(function (el) {
-                if (mapPlaceTypes.hasOwnProperty(el.place_type[0])) {
-                    _this.addressData[mapPlaceTypes[el.place_type[0]]] = el.text;
-                }
-            });
-            var streetData = (_b = _this.mapData) === null || _b === void 0 ? void 0 : _b.features.find(function (el) { return el.place_type.includes('address'); });
-            if (streetData) {
-                mapData['street'] = ((streetData.address || '') + " " + streetData.text).trim();
-            }
-            // }
-        });
     };
     FireStationCreateEditComponent.prototype.onFormLoaded = function (e) {
     };
@@ -216,6 +195,7 @@ var FireStationCreateEditComponent = /** @class */ (function (_super) {
         // this.isLoading = true;
         this.FireStationService.getFull(this.id).subscribe(function (res) {
             if (res && !res.hasOwnProperty('error')) {
+                _this.headerService.updateActiveRouteData((res === null || res === void 0 ? void 0 : res.name) || null);
                 _this.editData = res;
                 // this.populateForm(res);
                 _this.formDefinition = new _form_definition__WEBPACK_IMPORTED_MODULE_7__["default"]();
@@ -247,7 +227,7 @@ var FireStationCreateEditComponent = /** @class */ (function (_super) {
         }
         this.modalShow = false;
     };
-    FireStationCreateEditComponent.ɵfac = function FireStationCreateEditComponent_Factory(t) { return new (t || FireStationCreateEditComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_firestation_service__WEBPACK_IMPORTED_MODULE_5__["FireStationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_app_shared_modules_form_components_address_search_services_address_search_service__WEBPACK_IMPORTED_MODULE_8__["AddressSearchService"])); };
+    FireStationCreateEditComponent.ɵfac = function FireStationCreateEditComponent_Factory(t) { return new (t || FireStationCreateEditComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_firestation_service__WEBPACK_IMPORTED_MODULE_5__["FireStationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_app_shared_modules_form_components_address_search_services_address_search_service__WEBPACK_IMPORTED_MODULE_8__["AddressSearchService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_app_layout_header_header_service__WEBPACK_IMPORTED_MODULE_9__["HeaderService"])); };
     FireStationCreateEditComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: FireStationCreateEditComponent, selectors: [["app-firestation-create-edit"]], viewQuery: function FireStationCreateEditComponent_Query(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, true);
         } if (rf & 2) {
@@ -264,7 +244,7 @@ var FireStationCreateEditComponent = /** @class */ (function (_super) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.formDefinition);
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.modalShow);
-        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"], _firestation_create_edit_manual_component__WEBPACK_IMPORTED_MODULE_10__["FireStationCreateEditManualComponent"], _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_11__["SvgComponent"], _shared_modules_form_form_component__WEBPACK_IMPORTED_MODULE_12__["FormComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgClass"], _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_13__["ModalComponent"]], styles: [".mapbox-container[_ngcontent-%COMP%] {\n  position: relative;\n  height: 500px;\n}\n.mapbox-container[_ngcontent-%COMP%]   mgl-map[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9maXJlc3RhdGlvbi9jcmVhdGUtZWRpdC9NOi9yZXBvcy9EZXBsb3lTb2x1dGlvbnNDbGltYXRlQ2hhbmdlL2Rzc19jY2lwX3Byb3RvL3RhL2FuZ3VsYXIvc3JjL2FwcC9tb2R1bGVzL2ZpcmVzdGF0aW9uL2NyZWF0ZS1lZGl0L2ZpcmVzdGF0aW9uLWNyZWF0ZS1lZGl0LmNvbXBvbmVudC5sZXNzIiwic3JjL2FwcC9tb2R1bGVzL2ZpcmVzdGF0aW9uL2NyZWF0ZS1lZGl0L2ZpcmVzdGF0aW9uLWNyZWF0ZS1lZGl0LmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Msa0JBQUE7RUFDQSxhQUFBO0FDQ0Q7QURIQTtFQUlFLFdBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7QUNFRiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvZmlyZXN0YXRpb24vY3JlYXRlLWVkaXQvZmlyZXN0YXRpb24tY3JlYXRlLWVkaXQuY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWFwYm94LWNvbnRhaW5lciB7XG5cdHBvc2l0aW9uOiByZWxhdGl2ZTtcblx0aGVpZ2h0OiA1MDBweDtcblx0bWdsLW1hcCB7XG5cdFx0d2lkdGg6IDEwMCU7XG5cdFx0aGVpZ2h0OiAxMDAlO1xuXHRcdHBvc2l0aW9uOiBhYnNvbHV0ZTtcblx0fVxufVxuIiwiLm1hcGJveC1jb250YWluZXIge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGhlaWdodDogNTAwcHg7XG59XG4ubWFwYm94LWNvbnRhaW5lciBtZ2wtbWFwIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgcG9zaXRpb246IGFic29sdXRlO1xufVxuIl19 */"] });
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], _firestation_create_edit_manual_component__WEBPACK_IMPORTED_MODULE_11__["FireStationCreateEditManualComponent"], _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_12__["SvgComponent"], _shared_modules_form_form_component__WEBPACK_IMPORTED_MODULE_13__["FormComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgClass"], _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_14__["ModalComponent"]], styles: [".mapbox-container[_ngcontent-%COMP%] {\n  position: relative;\n  height: 500px;\n}\n.mapbox-container[_ngcontent-%COMP%]   mgl-map[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9maXJlc3RhdGlvbi9jcmVhdGUtZWRpdC9NOi9yZXBvcy9EZXBsb3lTb2x1dGlvbnNDbGltYXRlQ2hhbmdlL2Rzc19jY2lwX3Byb3RvL2Rldi90YS9hbmd1bGFyL3NyYy9hcHAvbW9kdWxlcy9maXJlc3RhdGlvbi9jcmVhdGUtZWRpdC9maXJlc3RhdGlvbi1jcmVhdGUtZWRpdC5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvbW9kdWxlcy9maXJlc3RhdGlvbi9jcmVhdGUtZWRpdC9maXJlc3RhdGlvbi1jcmVhdGUtZWRpdC5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNDLGtCQUFBO0VBQ0EsYUFBQTtBQ0NEO0FESEE7RUFJRSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0FDRUYiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL2ZpcmVzdGF0aW9uL2NyZWF0ZS1lZGl0L2ZpcmVzdGF0aW9uLWNyZWF0ZS1lZGl0LmNvbXBvbmVudC5sZXNzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hcGJveC1jb250YWluZXIge1xuXHRwb3NpdGlvbjogcmVsYXRpdmU7XG5cdGhlaWdodDogNTAwcHg7XG5cdG1nbC1tYXAge1xuXHRcdHdpZHRoOiAxMDAlO1xuXHRcdGhlaWdodDogMTAwJTtcblx0XHRwb3NpdGlvbjogYWJzb2x1dGU7XG5cdH1cbn1cbiIsIi5tYXBib3gtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBoZWlnaHQ6IDUwMHB4O1xufVxuLm1hcGJveC1jb250YWluZXIgbWdsLW1hcCB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbn1cbiJdfQ== */"] });
     return FireStationCreateEditComponent;
 }(_app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_3__["AppComponentBase"]));
 
@@ -276,7 +256,7 @@ var FireStationCreateEditComponent = /** @class */ (function (_super) {
                 styleUrls: ['./firestation-create-edit.component.less'],
                 providers: [_app_shared_service__WEBPACK_IMPORTED_MODULE_4__["MapboxService"]]
             }]
-    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }, { type: _firestation_service__WEBPACK_IMPORTED_MODULE_5__["FireStationService"] }, { type: _app_shared_modules_form_components_address_search_services_address_search_service__WEBPACK_IMPORTED_MODULE_8__["AddressSearchService"] }]; }, { textEditor: [{
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }, { type: _firestation_service__WEBPACK_IMPORTED_MODULE_5__["FireStationService"] }, { type: _app_shared_modules_form_components_address_search_services_address_search_service__WEBPACK_IMPORTED_MODULE_8__["AddressSearchService"] }, { type: _app_layout_header_header_service__WEBPACK_IMPORTED_MODULE_9__["HeaderService"] }]; }, { textEditor: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
             args: ['textEditor']
         }] }); })();
@@ -323,17 +303,11 @@ var FormDefinition = /** @class */ (function (_super) {
                             dataType: 'System.String',
                             span: 2,
                             required: true,
-                            name: {
-                                en: 'Name'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Deploy.WebPortal.FireStations.FireStation.Name',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -343,17 +317,11 @@ var FormDefinition = /** @class */ (function (_super) {
                             dataType: 'System.String',
                             span: 2,
                             required: true,
-                            name: {
-                                en: 'Description Short'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Deploy.WebPortal.FireStations.FireStation.DescriptionShort',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -363,17 +331,25 @@ var FormDefinition = /** @class */ (function (_super) {
                             dataType: 'System.String',
                             span: 2,
                             required: true,
-                            name: {
-                                en: 'Description Full'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Deploy.WebPortal.FireStations.FireStation.DescriptionFull',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
+                },
+                {
+                    items: [
+                        {
+                            itemType: 'input',
+                            dataField: 'phone',
+                            dataType: 'System.String',
+                            span: 2,
+                            required: false,
+                            name: 'Deploy.WebPortal.FireStations.FireStation.Phone',
+                            description: ''
+                        }
+                    ],
+                    description: ''
                 },
                 {
                     items: [
@@ -388,17 +364,11 @@ var FormDefinition = /** @class */ (function (_super) {
                             provinceDataField: 'province',
                             postalCodeDataField: 'postalCode',
                             required: true,
-                            name: {
-                                en: 'Address'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Deploy.WebPortal.FireStations.FireStation.Address',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -406,37 +376,23 @@ var FormDefinition = /** @class */ (function (_super) {
                             itemType: 'button',
                             buttonType: 'reset',
                             required: false,
-                            name: {
-                                en: 'Reset'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Reset',
+                            description: ''
                         },
                         {
                             itemType: 'button',
                             buttonType: 'submit',
                             required: false,
-                            name: {
-                                en: 'Save'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Save',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 }
             ],
             id: 'FireStation-webform',
-            name: {
-                en: 'Fire Station Form'
-            },
-            description: {
-                en: ''
-            }
+            name: 'Deploy.WebPortal.FireStations.FireStation.Form',
+            description: ''
         };
         return _this;
     }
@@ -524,14 +480,14 @@ var ExportComponent = /** @class */ (function () {
                 }
                 _this.infoMsgModel = {
                     show: true,
-                    header: (res === null || res === void 0 ? void 0 : res.statusCode) === 200 ? "CSV file exported successfully." : "CSV file not export. please try again.",
+                    header: (res === null || res === void 0 ? void 0 : res.statusCode) === 200 ? "Deploy.WebPortal.NewsStations.NewsStation.ExportSuccess" : "Deploy.WebPortal.NewsStations.NewsStation.ExportError",
                     content: "",
                 };
             },
             error: function () {
                 _this.infoMsgModel = {
                     show: true,
-                    header: "CSV file not export. please try again.",
+                    header: "Deploy.WebPortal.NewsStations.NewsStation.ExportError",
                     content: ""
                 };
             },
@@ -608,12 +564,12 @@ var childRoutes = [
     {
         path: '',
         component: _list_firestation_list_component__WEBPACK_IMPORTED_MODULE_3__["FireStationListComponent"],
-        data: { isCreate: true }
+        data: { name: 'Deploy.WebPortal.FireStations.FireStation', isCreate: true }
     },
     {
         path: 'create',
         component: _create_edit_firestation_create_edit_component__WEBPACK_IMPORTED_MODULE_5__["FireStationCreateEditComponent"],
-        data: { isCreate: true }
+        data: { name: 'Deploy.WebPortal.FireStations.FireStation.Form', isCreate: true }
     },
     {
         path: 'edit/:id',
@@ -624,6 +580,7 @@ var childRoutes = [
         path: 'import',
         component: _import_import_component__WEBPACK_IMPORTED_MODULE_6__["ImportComponent"],
         data: {
+            name: 'FireStationImport',
             parent: 'firestation'
         }
     },
@@ -631,6 +588,7 @@ var childRoutes = [
         path: 'export',
         component: _export_export_component__WEBPACK_IMPORTED_MODULE_7__["ExportComponent"],
         data: {
+            name: 'FireStationExport',
             parent: 'firestation'
         }
     },
@@ -1116,15 +1074,15 @@ var ImportComponent = /** @class */ (function () {
                 }).join("")) + "\n                </ul>\n            " : ((_f = res === null || res === void 0 ? void 0 : res.error) === null || _f === void 0 ? void 0 : _f.message) || '';
                 _this.infoMsgModel = {
                     show: true,
-                    header: (res === null || res === void 0 ? void 0 : res.statusCode) === 200 ? "CSV file imported successfully." : "CSV file not imported. please check your CSV file.",
-                    content: "We validated your CSV import using Frictionless Data Standard, an open-source toolkit. You can learn more about it here: <a href='https://frictionlessdata.io' target='_blank'>https://frictionlessdata.io</a> <br/><br/> " + successStr + " <br/><br/> " + errorStr
+                    header: (res === null || res === void 0 ? void 0 : res.statusCode) === 200 ? "Deploy.WebPortal.NewsStations.NewsStation.ImportSuccess" : "Deploy.WebPortal.NewsStations.NewsStation.ImportError",
+                    content: "Deploy.WebPortal.NewsStations.NewsStation.CsvValidationMessage <br/><br/> " + successStr + " <br/><br/> " + errorStr
                 };
             },
             error: function () {
                 _this.infoMsgModel = {
                     show: true,
-                    header: "CSV file not imported. please check your CSV file.",
-                    content: "We validated your CSV import using Frictionless Data Standard, an open-source toolkit. You can learn more about it here: <a href='https://frictionlessdata.io' target='_blank'>https://frictionlessdata.io</a>"
+                    header: "Deploy.WebPortal.NewsStations.NewsStation.ImportError",
+                    content: "Deploy.WebPortal.NewsStations.NewsStation.CsvValidationMessage"
                 };
             },
             complete: function () {
@@ -1283,11 +1241,10 @@ var FireStationListComponent = /** @class */ (function (_super) {
         _this.FireStationService = FireStationService;
         _this.list = [];
         _this.totalResult = 0;
-        _this.deleteRowConfirmationMetaData = {};
         _this.tableColumnStyle = 'repeat(3, minmax(100px, 1fr)) repeat(1, 300px)';
         var tableDefinition = new _table_definition__WEBPACK_IMPORTED_MODULE_1__["default"]();
         _this.tableDefinition = tableDefinition.getDefinition();
-        _this.tableTitle = _this.l('Fire Station');
+        _this.tableTitle = _this.l('Deploy.WebPortal.FireStations.FireStation');
         return _this;
     }
     FireStationListComponent.prototype.getList = function (filters) {
@@ -1370,35 +1327,23 @@ var TableDefinition = /** @class */ (function (_super) {
                 {
                     route: '/firestation/create',
                     icon: 'new',
-                    id: 'datatable-FireStation-action-new',
-                    name: {
-                        en: 'new'
-                    },
-                    description: {
-                        en: ''
-                    }
+                    id: 'datatable-FireStation-action-New',
+                    name: 'New',
+                    description: ''
                 },
                 {
                     route: '/firestation/export',
                     icon: 'export',
                     id: 'datatable-FireStation-action-export',
-                    name: {
-                        en: 'Export'
-                    },
-                    description: {
-                        en: ''
-                    }
+                    name: 'Export',
+                    description: ''
                 },
                 {
                     route: '/firestation/import',
                     icon: 'import',
                     id: 'datatable-FireStation-action-import',
-                    name: {
-                        en: 'Import'
-                    },
-                    description: {
-                        en: ''
-                    }
+                    name: 'Import',
+                    description: ''
                 }
             ],
             columns: [
@@ -1408,59 +1353,59 @@ var TableDefinition = /** @class */ (function (_super) {
                     dataType: 'System.String',
                     actions: [],
                     id: 'datatable-FireStation-column-Name',
-                    name: {
-                        en: 'Name'
-                    },
-                    description: {
-                        en: ''
-                    }
+                    name: 'Deploy.WebPortal.FireStations.FireStation.Name',
+                    description: ''
                 },
                 {
                     sortable: false,
                     dataField: 'descriptionShort',
                     dataType: 'System.String',
                     actions: [],
-                    id: 'datatable-FireStation-column-Description Short',
-                    name: {
-                        en: 'Description Short'
-                    },
-                    description: {
-                        en: ''
-                    }
+                    id: 'datatable-FireStation-column-DescriptionShort',
+                    name: 'Deploy.WebPortal.FireStations.FireStation.DescriptionShort',
+                    description: ''
+                },
+                {
+                    sortable: false,
+                    dataField: 'phone',
+                    dataType: 'System.String',
+                    actions: [],
+                    id: 'datatable-FireStation-column-Phone',
+                    name: 'Deploy.WebPortal.FireStations.FireStation.Phone',
+                    description: ''
+                },
+                {
+                    sortable: false,
+                    dataField: 'address',
+                    dataType: 'System.String',
+                    actions: [],
+                    id: 'datatable-FireStation-column-Address',
+                    name: 'Deploy.WebPortal.FireStations.FireStation.Address',
+                    description: ''
                 },
                 {
                     sortable: false,
                     actions: [
                         {
-                            route: 'firestation/edit/{{id}}',
+                            type: 'edit',
+                            route: 'firestation/edit',
                             icon: 'edit',
-                            id: 'datatable-FireStation-column--action-edit',
-                            name: {
-                                en: 'edit'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            id: 'datatable-FireStation-column--action-Edit',
+                            name: 'Deploy.WebPortal.FireStations.FireStation.Edit',
+                            description: ''
                         },
                         {
+                            type: 'delete',
                             route: '',
                             icon: 'delete-solid',
-                            id: 'datatable-FireStation-column--action-delete',
-                            name: {
-                                en: 'delete'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            id: 'datatable-FireStation-column--action-Delete',
+                            name: 'Deploy.WebPortal.FireStations.FireStation.Delete',
+                            description: ''
                         }
                     ],
                     id: 'datatable-FireStation-column-',
-                    name: {
-                        en: ''
-                    },
-                    description: {
-                        en: ''
-                    }
+                    name: '',
+                    description: ''
                 }
             ],
             emptyState: {
@@ -1469,28 +1414,16 @@ var TableDefinition = /** @class */ (function (_super) {
                     route: '/firestation/import',
                     icon: 'import',
                     id: 'datatable-FireStation-action-import',
-                    name: {
-                        en: 'Import'
-                    },
-                    description: {
-                        en: ''
-                    }
+                    name: 'Import',
+                    description: ''
                 },
                 id: 'FireStation-datatable-emptystate',
-                name: {
-                    en: 'Add Fire Station'
-                },
-                description: {
-                    en: 'Add a Fire Station in Your Area'
-                }
+                name: 'Deploy.WebPortal.FireStations.FireStation.Add',
+                description: 'Deploy.WebPortal.FireStations.FireStation.AddInYourArea'
             },
             id: 'FireStation-datatable',
-            name: {
-                en: 'Fire Station List'
-            },
-            description: {
-                en: ''
-            }
+            name: 'Deploy.WebPortal.FireStations.FireStation.List',
+            description: ''
         };
         return _this;
     }
@@ -1572,10 +1505,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_shared_AppConsts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @app/shared/AppConsts */ "./src/app/shared/AppConsts.ts");
 /* harmony import */ var _app_shared_service_configuration_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @app/shared/service/configuration.service */ "./src/app/shared/service/configuration.service.ts");
 /* harmony import */ var _view_definition__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./view.definition */ "./src/app/modules/firestation/view/view.definition.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _firestation_view_manual_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./firestation-view-manual.component */ "./src/app/modules/firestation/view/firestation-view-manual.component.ts");
-/* harmony import */ var _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../shared/modules/svg/svg.component */ "./src/app/shared/modules/svg/svg.component.ts");
-/* harmony import */ var _shared_modules_details_details_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../shared/modules/details/details.component */ "./src/app/shared/modules/details/details.component.ts");
+/* harmony import */ var _app_layout_header_header_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @app/layout/header/header.service */ "./src/app/layout/header/header.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _firestation_view_manual_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./firestation-view-manual.component */ "./src/app/modules/firestation/view/firestation-view-manual.component.ts");
+/* harmony import */ var _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../shared/modules/svg/svg.component */ "./src/app/shared/modules/svg/svg.component.ts");
+/* harmony import */ var _shared_modules_details_details_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../shared/modules/details/details.component */ "./src/app/shared/modules/details/details.component.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -1589,6 +1523,8 @@ var __extends = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+
+
 
 
 
@@ -1627,11 +1563,12 @@ function FireStationViewComponent_div_3_Template(rf, ctx) { if (rf & 1) {
 } }
 var FireStationViewComponent = /** @class */ (function (_super) {
     __extends(FireStationViewComponent, _super);
-    function FireStationViewComponent(injector, activatedRoute, FireStationService, _clientConfigService) {
+    function FireStationViewComponent(injector, activatedRoute, FireStationService, _clientConfigService, headerService) {
         var _this = _super.call(this, injector) || this;
         _this.activatedRoute = activatedRoute;
         _this.FireStationService = FireStationService;
         _this._clientConfigService = _clientConfigService;
+        _this.headerService = headerService;
         _this.id = _this.activatedRoute.snapshot.params.id;
         _this.isLoading = true;
         _this.events = [];
@@ -1650,6 +1587,7 @@ var FireStationViewComponent = /** @class */ (function (_super) {
         var _this = this;
         this.FireStationService.getFull(this.id).subscribe(function (res) {
             if (res && !res.hasOwnProperty('error')) {
+                _this.headerService.updateActiveRouteData((res === null || res === void 0 ? void 0 : res.name) || null);
                 _this.data = res;
                 _this._clientConfigService.getWebClientConfiguration()
                     .subscribe(function (result) {
@@ -1670,7 +1608,7 @@ var FireStationViewComponent = /** @class */ (function (_super) {
             _this.httpError = err.message;
         });
     };
-    FireStationViewComponent.ɵfac = function FireStationViewComponent_Factory(t) { return new (t || FireStationViewComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_firestation_service__WEBPACK_IMPORTED_MODULE_3__["FireStationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_app_shared_service_configuration_service__WEBPACK_IMPORTED_MODULE_6__["ConfigurationService"])); };
+    FireStationViewComponent.ɵfac = function FireStationViewComponent_Factory(t) { return new (t || FireStationViewComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_firestation_service__WEBPACK_IMPORTED_MODULE_3__["FireStationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_app_shared_service_configuration_service__WEBPACK_IMPORTED_MODULE_6__["ConfigurationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_app_layout_header_header_service__WEBPACK_IMPORTED_MODULE_8__["HeaderService"])); };
     FireStationViewComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FireStationViewComponent, selectors: [["app-firestation-view"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([_app_shared_service__WEBPACK_IMPORTED_MODULE_4__["MapboxService"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]], decls: 5, vars: 3, consts: [["class", "m-loader", 4, "ngIf"], [3, "data", "detailsDefinition", 4, "ngIf"], ["class", "m-form-error httpError", 4, "ngIf"], [1, "m-loader"], ["name", "loader"], [3, "data", "detailsDefinition"], [1, "m-form-error", "httpError"]], template: function FireStationViewComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, FireStationViewComponent_div_1_Template, 2, 0, "div", 0);
@@ -1685,7 +1623,7 @@ var FireStationViewComponent = /** @class */ (function (_super) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.data);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.httpError);
-        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _firestation_view_manual_component__WEBPACK_IMPORTED_MODULE_9__["FireStationViewManualComponent"], _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_10__["SvgComponent"], _shared_modules_details_details_component__WEBPACK_IMPORTED_MODULE_11__["DetailsComponent"]], styles: [".detail-view-grid[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  margin-bottom: 12px;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column[_ngcontent-%COMP%] {\n  width: 100%;\n  display: grid;\n  grid-template-columns: 200px 1fr;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column.full-width[_ngcontent-%COMP%] {\n  grid-template-columns: 1fr;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column.float-right[_ngcontent-%COMP%] {\n  grid-template-columns: 1fr 200px;\n  text-align: right;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column[_ngcontent-%COMP%]   .column-2[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-grid-row-title[_ngcontent-%COMP%] {\n  text-transform: uppercase;\n  font-weight: 600;\n  margin-bottom: 8px;\n}\n.detail-view-grid[_ngcontent-%COMP%] {\n  margin: 20px;\n}\n.mgl-map-container[_ngcontent-%COMP%] {\n  height: 500px;\n}\n.mgl-map-container[_ngcontent-%COMP%]   mgl-map[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n}\n.meta-dates[_ngcontent-%COMP%] {\n  justify-content: flex-end;\n  padding-top: 12px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9maXJlc3RhdGlvbi92aWV3L006L3JlcG9zL0RlcGxveVNvbHV0aW9uc0NsaW1hdGVDaGFuZ2UvZHNzX2NjaXBfcHJvdG8vdGEvYW5ndWxhci9zcmMvc3R5bGVzL2VsZW1lbnRzL2RldGFpbC12aWV3LWdyaWQubGVzcyIsInNyYy9hcHAvbW9kdWxlcy9maXJlc3RhdGlvbi92aWV3L006L3JlcG9zL0RlcGxveVNvbHV0aW9uc0NsaW1hdGVDaGFuZ2UvZHNzX2NjaXBfcHJvdG8vdGEvYW5ndWxhci9zcmMvc3R5bGVzL21peGlucy9wb3NpdGlvbi5sZXNzIiwic3JjL2FwcC9tb2R1bGVzL2ZpcmVzdGF0aW9uL3ZpZXcvZmlyZXN0YXRpb24tdmlldy5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvbW9kdWxlcy9maXJlc3RhdGlvbi92aWV3L006L3JlcG9zL0RlcGxveVNvbHV0aW9uc0NsaW1hdGVDaGFuZ2UvZHNzX2NjaXBfcHJvdG8vdGEvYW5ndWxhci9zcmMvYXBwL21vZHVsZXMvZmlyZXN0YXRpb24vdmlldy9maXJlc3RhdGlvbi12aWV3LmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VDVUUsa0JBQUE7RUFDQSxNQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxPQUFBO0VEWkEsYUFBQTtFQUNBLHNCQUFBO0FFR0Y7QUZOQTtFQUtJLGFBQUE7RUFDQSxpQkFBQTtFQUNBLG1CQUFBO0FFSUo7QUZYQTtFQVNLLFdBQUE7RUFDQSxhQUFBO0VBQ0EsZ0NBQUE7QUVLTDtBRkpLO0VBQ0MsMEJBQUE7QUVNTjtBRkpNO0VBQ0UsZ0NBQUE7RUFDQSxpQkFBQTtBRU1SO0FGdkJBO0VBb0JRLGFBQUE7RUFDQSxxQ0FBQTtBRU1SO0FGM0JBO0VBeUJNLHlCQUFBO0VBQ0gsZ0JBQUE7RUFDQSxrQkFBQTtBRUtIO0FDOUJBO0VBQ0UsWUFBQTtBRGdDRjtBQzdCQTtFQUNDLGFBQUE7QUQrQkQ7QUNoQ0E7RUFHRSxXQUFBO0VBQ0EsWUFBQTtBRGdDRjtBQzdCQTtFQUNFLHlCQUFBO0VBQ0EsaUJBQUE7QUQrQkYiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL2ZpcmVzdGF0aW9uL3ZpZXcvZmlyZXN0YXRpb24tdmlldy5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIkBncmlkLXNpemU6IDIwMHB4O1xuXG4uZGV0YWlsLXZpZXctZ3JpZCB7XG4gIC5wb3NpdGlvbihhYnNvbHV0ZSwgQHRvcDogMCwgQHJpZ2h0OiAwLCBAYm90dG9tOiAwLCBAbGVmdDogMCk7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG5cdC5kZXRhaWwtdmlldy1ncmlkLXJvdyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IG5vd3JhcDtcbiAgICBtYXJnaW4tYm90dG9tOiBAc3BhY2luZy0xMjtcbiAgICAuZGV0YWlsLXZpZXctcm93LWNvbHVtbiB7XG4gICAgXHR3aWR0aDogMTAwJTtcblx0ICAgIGRpc3BsYXk6IGdyaWQ7XG4gICAgXHRncmlkLXRlbXBsYXRlLWNvbHVtbnM6IEBncmlkLXNpemUgMWZyO1xuICAgIFx0Ji5mdWxsLXdpZHRoIHtcbiAgICBcdFx0Z3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnI7XG4gICAgXHR9XG4gICAgICAmLmZsb2F0LXJpZ2h0IHtcbiAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnIgQGdyaWQtc2l6ZTtcbiAgICAgICAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gICAgICB9XG4gICAgICAuY29sdW1uLTIge1xuICAgICAgICBkaXNwbGF5OiBncmlkO1xuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgyLCAxZnIpO1xuICAgICAgfVxuICAgIH1cblx0XHQuZGV0YWlsLXZpZXctZ3JpZC1yb3ctdGl0bGUge1xuICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcblx0XHRcdGZvbnQtd2VpZ2h0OiBAZm9udC13ZWlnaHQtc2VtaWJvbGQ7XG5cdFx0XHRtYXJnaW4tYm90dG9tOiBAc3BhY2luZy04O1xuXHRcdH1cblx0fVxufSIsIi8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4vLyBNSVhJTlMgLSBQT1NJVElPTlxuLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblxuLy8gU2hvcnRoYW5kIG1peGluIGZvciBvZmZzZXQgcG9zaXRpb25pbmdcbi8vIEBwYXJhbSB7U3RyaW5nfSBAcG9zaXRpb24gLSBFaXRoZXIgYHJlbGF0aXZlYCwgYGFic29sdXRlYCBvciBgZml4ZWRgXG4vLyBAcGFyYW0ge0xlbmd0aH0gQHRvcCBbbnVsbF0gLSBUb3Agb2Zmc2V0XG4vLyBAcGFyYW0ge0xlbmd0aH0gQHJpZ2h0IFtudWxsXSAtIFJpZ2h0IG9mZnNldFxuLy8gQHBhcmFtIHtMZW5ndGh9IEBib3R0b20gW251bGxdIC0gQm90dG9tIG9mZnNldFxuLy8gQHBhcmFtIHtMZW5ndGh9IEBsZWZ0IFtudWxsXSAtIExlZnQgb2Zmc2V0XG5cbi5wb3NpdGlvbihAcG9zaXRpb24sIEB0b3A6IG51bGwsIEByaWdodDogbnVsbCwgQGJvdHRvbTogbnVsbCwgQGxlZnQ6IG51bGwpIHtcbiAgcG9zaXRpb246IEBwb3NpdGlvbjtcbiAgdG9wOiBAdG9wO1xuICByaWdodDogQHJpZ2h0O1xuICBib3R0b206IEBib3R0b207XG4gIGxlZnQ6IEBsZWZ0O1xufVxuXG4ucG9zaXRpb24tcmVsYXRpdmUtcmVzZXQoKSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgdG9wOiBhdXRvO1xuICByaWdodDogYXV0bztcbiAgYm90dG9tOiBhdXRvO1xuICBsZWZ0OiBhdXRvO1xufVxuIiwiLmRldGFpbC12aWV3LWdyaWQge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgbGVmdDogMDtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogbm93cmFwO1xuICBtYXJnaW4tYm90dG9tOiAxMnB4O1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1yb3ctY29sdW1uIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMjAwcHggMWZyO1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1yb3ctY29sdW1uLmZ1bGwtd2lkdGgge1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmcjtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyAuZGV0YWlsLXZpZXctcm93LWNvbHVtbi5mbG9hdC1yaWdodCB7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDIwMHB4O1xuICB0ZXh0LWFsaWduOiByaWdodDtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyAuZGV0YWlsLXZpZXctcm93LWNvbHVtbiAuY29sdW1uLTIge1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgyLCAxZnIpO1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1ncmlkLXJvdy10aXRsZSB7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIG1hcmdpbi1ib3R0b206IDhweDtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIHtcbiAgbWFyZ2luOiAyMHB4O1xufVxuLm1nbC1tYXAtY29udGFpbmVyIHtcbiAgaGVpZ2h0OiA1MDBweDtcbn1cbi5tZ2wtbWFwLWNvbnRhaW5lciBtZ2wtbWFwIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn1cbi5tZXRhLWRhdGVzIHtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbiAgcGFkZGluZy10b3A6IDEycHg7XG59XG4iLCJAaW1wb3J0IFwiLi8uLi8uLi8uLi8uLi9zdHlsZXMvdmFyaWFibGVzXCI7XG5AaW1wb3J0IFwiLi8uLi8uLi8uLi8uLi9zdHlsZXMvZWxlbWVudHMvZGV0YWlsLXZpZXctZ3JpZFwiO1xuQGltcG9ydCBcIi4vLi4vLi4vLi4vLi4vc3R5bGVzL21peGlucy9wb3NpdGlvblwiO1xuXG4uZGV0YWlsLXZpZXctZ3JpZCB7XG4gIG1hcmdpbjogQHNwYWNpbmctMjA7XG59XG5cbi5tZ2wtbWFwLWNvbnRhaW5lciB7XG5cdGhlaWdodDogNTAwcHg7XG5cdG1nbC1tYXAge1xuXHRcdHdpZHRoOiAxMDAlO1xuXHRcdGhlaWdodDogMTAwJTtcblx0fVxufVxuLm1ldGEtZGF0ZXMge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xuICBwYWRkaW5nLXRvcDogQHNwYWNpbmctMTI7XG59XG4iXX0= */"] });
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"], _firestation_view_manual_component__WEBPACK_IMPORTED_MODULE_10__["FireStationViewManualComponent"], _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_11__["SvgComponent"], _shared_modules_details_details_component__WEBPACK_IMPORTED_MODULE_12__["DetailsComponent"]], styles: [".detail-view-grid[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  margin-bottom: 12px;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column[_ngcontent-%COMP%] {\n  width: 100%;\n  display: grid;\n  grid-template-columns: 200px 1fr;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column.full-width[_ngcontent-%COMP%] {\n  grid-template-columns: 1fr;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column.float-right[_ngcontent-%COMP%] {\n  grid-template-columns: 1fr 200px;\n  text-align: right;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column[_ngcontent-%COMP%]   .column-2[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-grid-row-title[_ngcontent-%COMP%] {\n  text-transform: uppercase;\n  font-weight: 600;\n  margin-bottom: 8px;\n}\n.detail-view-grid[_ngcontent-%COMP%] {\n  margin: 20px;\n}\n.mgl-map-container[_ngcontent-%COMP%] {\n  height: 500px;\n}\n.mgl-map-container[_ngcontent-%COMP%]   mgl-map[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n}\n.meta-dates[_ngcontent-%COMP%] {\n  justify-content: flex-end;\n  padding-top: 12px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9maXJlc3RhdGlvbi92aWV3L006L3JlcG9zL0RlcGxveVNvbHV0aW9uc0NsaW1hdGVDaGFuZ2UvZHNzX2NjaXBfcHJvdG8vZGV2L3RhL2FuZ3VsYXIvc3JjL3N0eWxlcy9lbGVtZW50cy9kZXRhaWwtdmlldy1ncmlkLmxlc3MiLCJzcmMvYXBwL21vZHVsZXMvZmlyZXN0YXRpb24vdmlldy9NOi9yZXBvcy9EZXBsb3lTb2x1dGlvbnNDbGltYXRlQ2hhbmdlL2Rzc19jY2lwX3Byb3RvL2Rldi90YS9hbmd1bGFyL3NyYy9zdHlsZXMvbWl4aW5zL3Bvc2l0aW9uLmxlc3MiLCJzcmMvYXBwL21vZHVsZXMvZmlyZXN0YXRpb24vdmlldy9maXJlc3RhdGlvbi12aWV3LmNvbXBvbmVudC5sZXNzIiwic3JjL2FwcC9tb2R1bGVzL2ZpcmVzdGF0aW9uL3ZpZXcvTTovcmVwb3MvRGVwbG95U29sdXRpb25zQ2xpbWF0ZUNoYW5nZS9kc3NfY2NpcF9wcm90by9kZXYvdGEvYW5ndWxhci9zcmMvYXBwL21vZHVsZXMvZmlyZXN0YXRpb24vdmlldy9maXJlc3RhdGlvbi12aWV3LmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VDVUUsa0JBQUE7RUFDQSxNQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxPQUFBO0VEWkEsYUFBQTtFQUNBLHNCQUFBO0FFR0Y7QUZOQTtFQUtJLGFBQUE7RUFDQSxpQkFBQTtFQUNBLG1CQUFBO0FFSUo7QUZYQTtFQVNLLFdBQUE7RUFDQSxhQUFBO0VBQ0EsZ0NBQUE7QUVLTDtBRkpLO0VBQ0MsMEJBQUE7QUVNTjtBRkpNO0VBQ0UsZ0NBQUE7RUFDQSxpQkFBQTtBRU1SO0FGdkJBO0VBb0JRLGFBQUE7RUFDQSxxQ0FBQTtBRU1SO0FGM0JBO0VBeUJNLHlCQUFBO0VBQ0gsZ0JBQUE7RUFDQSxrQkFBQTtBRUtIO0FDOUJBO0VBQ0UsWUFBQTtBRGdDRjtBQzdCQTtFQUNDLGFBQUE7QUQrQkQ7QUNoQ0E7RUFHRSxXQUFBO0VBQ0EsWUFBQTtBRGdDRjtBQzdCQTtFQUNFLHlCQUFBO0VBQ0EsaUJBQUE7QUQrQkYiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL2ZpcmVzdGF0aW9uL3ZpZXcvZmlyZXN0YXRpb24tdmlldy5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIkBncmlkLXNpemU6IDIwMHB4O1xuXG4uZGV0YWlsLXZpZXctZ3JpZCB7XG4gIC5wb3NpdGlvbihhYnNvbHV0ZSwgQHRvcDogMCwgQHJpZ2h0OiAwLCBAYm90dG9tOiAwLCBAbGVmdDogMCk7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG5cdC5kZXRhaWwtdmlldy1ncmlkLXJvdyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IG5vd3JhcDtcbiAgICBtYXJnaW4tYm90dG9tOiBAc3BhY2luZy0xMjtcbiAgICAuZGV0YWlsLXZpZXctcm93LWNvbHVtbiB7XG4gICAgXHR3aWR0aDogMTAwJTtcblx0ICAgIGRpc3BsYXk6IGdyaWQ7XG4gICAgXHRncmlkLXRlbXBsYXRlLWNvbHVtbnM6IEBncmlkLXNpemUgMWZyO1xuICAgIFx0Ji5mdWxsLXdpZHRoIHtcbiAgICBcdFx0Z3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnI7XG4gICAgXHR9XG4gICAgICAmLmZsb2F0LXJpZ2h0IHtcbiAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnIgQGdyaWQtc2l6ZTtcbiAgICAgICAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gICAgICB9XG4gICAgICAuY29sdW1uLTIge1xuICAgICAgICBkaXNwbGF5OiBncmlkO1xuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgyLCAxZnIpO1xuICAgICAgfVxuICAgIH1cblx0XHQuZGV0YWlsLXZpZXctZ3JpZC1yb3ctdGl0bGUge1xuICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcblx0XHRcdGZvbnQtd2VpZ2h0OiBAZm9udC13ZWlnaHQtc2VtaWJvbGQ7XG5cdFx0XHRtYXJnaW4tYm90dG9tOiBAc3BhY2luZy04O1xuXHRcdH1cblx0fVxufSIsIi8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4vLyBNSVhJTlMgLSBQT1NJVElPTlxuLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblxuLy8gU2hvcnRoYW5kIG1peGluIGZvciBvZmZzZXQgcG9zaXRpb25pbmdcbi8vIEBwYXJhbSB7U3RyaW5nfSBAcG9zaXRpb24gLSBFaXRoZXIgYHJlbGF0aXZlYCwgYGFic29sdXRlYCBvciBgZml4ZWRgXG4vLyBAcGFyYW0ge0xlbmd0aH0gQHRvcCBbbnVsbF0gLSBUb3Agb2Zmc2V0XG4vLyBAcGFyYW0ge0xlbmd0aH0gQHJpZ2h0IFtudWxsXSAtIFJpZ2h0IG9mZnNldFxuLy8gQHBhcmFtIHtMZW5ndGh9IEBib3R0b20gW251bGxdIC0gQm90dG9tIG9mZnNldFxuLy8gQHBhcmFtIHtMZW5ndGh9IEBsZWZ0IFtudWxsXSAtIExlZnQgb2Zmc2V0XG5cbi5wb3NpdGlvbihAcG9zaXRpb24sIEB0b3A6IG51bGwsIEByaWdodDogbnVsbCwgQGJvdHRvbTogbnVsbCwgQGxlZnQ6IG51bGwpIHtcbiAgcG9zaXRpb246IEBwb3NpdGlvbjtcbiAgdG9wOiBAdG9wO1xuICByaWdodDogQHJpZ2h0O1xuICBib3R0b206IEBib3R0b207XG4gIGxlZnQ6IEBsZWZ0O1xufVxuXG4ucG9zaXRpb24tcmVsYXRpdmUtcmVzZXQoKSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgdG9wOiBhdXRvO1xuICByaWdodDogYXV0bztcbiAgYm90dG9tOiBhdXRvO1xuICBsZWZ0OiBhdXRvO1xufVxuIiwiLmRldGFpbC12aWV3LWdyaWQge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgbGVmdDogMDtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogbm93cmFwO1xuICBtYXJnaW4tYm90dG9tOiAxMnB4O1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1yb3ctY29sdW1uIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMjAwcHggMWZyO1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1yb3ctY29sdW1uLmZ1bGwtd2lkdGgge1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmcjtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyAuZGV0YWlsLXZpZXctcm93LWNvbHVtbi5mbG9hdC1yaWdodCB7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDIwMHB4O1xuICB0ZXh0LWFsaWduOiByaWdodDtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyAuZGV0YWlsLXZpZXctcm93LWNvbHVtbiAuY29sdW1uLTIge1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgyLCAxZnIpO1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1ncmlkLXJvdy10aXRsZSB7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIG1hcmdpbi1ib3R0b206IDhweDtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIHtcbiAgbWFyZ2luOiAyMHB4O1xufVxuLm1nbC1tYXAtY29udGFpbmVyIHtcbiAgaGVpZ2h0OiA1MDBweDtcbn1cbi5tZ2wtbWFwLWNvbnRhaW5lciBtZ2wtbWFwIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn1cbi5tZXRhLWRhdGVzIHtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbiAgcGFkZGluZy10b3A6IDEycHg7XG59XG4iLCJAaW1wb3J0IFwiLi8uLi8uLi8uLi8uLi9zdHlsZXMvdmFyaWFibGVzXCI7XG5AaW1wb3J0IFwiLi8uLi8uLi8uLi8uLi9zdHlsZXMvZWxlbWVudHMvZGV0YWlsLXZpZXctZ3JpZFwiO1xuQGltcG9ydCBcIi4vLi4vLi4vLi4vLi4vc3R5bGVzL21peGlucy9wb3NpdGlvblwiO1xuXG4uZGV0YWlsLXZpZXctZ3JpZCB7XG4gIG1hcmdpbjogQHNwYWNpbmctMjA7XG59XG5cbi5tZ2wtbWFwLWNvbnRhaW5lciB7XG5cdGhlaWdodDogNTAwcHg7XG5cdG1nbC1tYXAge1xuXHRcdHdpZHRoOiAxMDAlO1xuXHRcdGhlaWdodDogMTAwJTtcblx0fVxufVxuLm1ldGEtZGF0ZXMge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xuICBwYWRkaW5nLXRvcDogQHNwYWNpbmctMTI7XG59XG4iXX0= */"] });
     return FireStationViewComponent;
 }(_app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_2__["AppComponentBase"]));
 
@@ -1697,7 +1635,7 @@ var FireStationViewComponent = /** @class */ (function (_super) {
                 styleUrls: ['./firestation-view.component.less'],
                 providers: [_app_shared_service__WEBPACK_IMPORTED_MODULE_4__["MapboxService"]]
             }]
-    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] }, { type: _firestation_service__WEBPACK_IMPORTED_MODULE_3__["FireStationService"] }, { type: _app_shared_service_configuration_service__WEBPACK_IMPORTED_MODULE_6__["ConfigurationService"] }]; }, null); })();
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] }, { type: _firestation_service__WEBPACK_IMPORTED_MODULE_3__["FireStationService"] }, { type: _app_shared_service_configuration_service__WEBPACK_IMPORTED_MODULE_6__["ConfigurationService"] }, { type: _app_layout_header_header_service__WEBPACK_IMPORTED_MODULE_8__["HeaderService"] }]; }, null); })();
 
 
 /***/ }),
@@ -1740,17 +1678,11 @@ var DetailViewDefinition = /** @class */ (function (_super) {
                             dataField: 'name',
                             dataType: 'System.String',
                             required: true,
-                            name: {
-                                en: 'Name'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Deploy.WebPortal.FireStations.FireStation.Name',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -1759,17 +1691,11 @@ var DetailViewDefinition = /** @class */ (function (_super) {
                             dataField: 'descriptionShort',
                             dataType: 'System.String',
                             required: true,
-                            name: {
-                                en: 'Description Short'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Deploy.WebPortal.FireStations.FireStation.DescriptionShort',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -1778,17 +1704,11 @@ var DetailViewDefinition = /** @class */ (function (_super) {
                             dataField: 'descriptionFull',
                             dataType: 'System.String',
                             required: true,
-                            name: {
-                                en: 'Description Full'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Deploy.WebPortal.FireStations.FireStation.DescriptionFull',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -1797,29 +1717,19 @@ var DetailViewDefinition = /** @class */ (function (_super) {
                             dataField: 'creatorUserName',
                             dataType: 'System.String',
                             required: false,
-                            name: {
-                                en: 'Creator User Name'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Deploy.WebPortal.FireStations.FireStation.CreatorUserName',
+                            description: ''
                         },
                         {
                             itemType: 'view',
                             dataField: 'creationTime',
                             dataType: 'System.DateTime',
                             required: false,
-                            name: {
-                                en: 'Creation Time'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Deploy.WebPortal.FireStations.FireStation.CreationTime',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -1828,29 +1738,19 @@ var DetailViewDefinition = /** @class */ (function (_super) {
                             dataField: 'lastModifierUserName',
                             dataType: 'System.String',
                             required: false,
-                            name: {
-                                en: 'Last Modifier User Name'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Deploy.WebPortal.FireStations.FireStation.LastModifierUserName',
+                            description: ''
                         },
                         {
                             itemType: 'view',
                             dataField: 'lastModificationTime',
                             dataType: 'System.DateTime?',
                             required: false,
-                            name: {
-                                en: 'Last Modification Time'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Deploy.WebPortal.FireStations.FireStation.LastModificationTime',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -1864,26 +1764,16 @@ var DetailViewDefinition = /** @class */ (function (_super) {
                             provinceDataField: 'province',
                             postalCodeDataField: 'postalCode',
                             required: true,
-                            name: {
-                                en: 'Address'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Deploy.WebPortal.FireStations.FireStation.Address',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 }
             ],
             id: 'FireStation-detailview',
-            name: {
-                en: ''
-            },
-            description: {
-                en: ''
-            }
+            name: 'Deploy.WebPortal.FireStations.FireStation.',
+            description: ''
         };
         return _this;
     }

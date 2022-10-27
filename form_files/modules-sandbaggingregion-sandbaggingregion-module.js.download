@@ -39,17 +39,11 @@ var FormDefinition = /** @class */ (function (_super) {
                             dataType: 'System.String',
                             span: 2,
                             required: true,
-                            name: {
-                                en: 'Name'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Name',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -59,17 +53,11 @@ var FormDefinition = /** @class */ (function (_super) {
                             dataType: 'System.String',
                             span: 2,
                             required: true,
-                            name: {
-                                en: 'Description Short'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'DescriptionShort',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -79,17 +67,11 @@ var FormDefinition = /** @class */ (function (_super) {
                             dataType: 'HTML',
                             span: 2,
                             required: true,
-                            name: {
-                                en: 'Description Full'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'DescriptionFull',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -98,29 +80,19 @@ var FormDefinition = /** @class */ (function (_super) {
                             dataField: 'latitute',
                             dataType: 'System.Double',
                             required: false,
-                            name: {
-                                en: 'Latitute'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Latitute',
+                            description: ''
                         },
                         {
                             itemType: 'textarea',
                             dataField: 'longitude',
                             dataType: 'System.Double',
                             required: false,
-                            name: {
-                                en: 'Longitude'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Longitude',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -128,37 +100,23 @@ var FormDefinition = /** @class */ (function (_super) {
                             itemType: 'button',
                             buttonType: 'reset',
                             required: false,
-                            name: {
-                                en: 'Reset'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Reset',
+                            description: ''
                         },
                         {
                             itemType: 'button',
                             buttonType: 'submit',
                             required: false,
-                            name: {
-                                en: 'Save'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Save',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 }
             ],
             id: 'SandbaggingRegion-webform',
-            name: {
-                en: 'Sandbagging Region Form'
-            },
-            description: {
-                en: ''
-            }
+            name: 'SandbaggingRegion Form',
+            description: ''
         };
         return _this;
     }
@@ -433,7 +391,7 @@ var SandbaggingRegionCreateEditComponent = /** @class */ (function (_super) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.formDefinition);
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.modalShow);
-        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"], _sandbaggingregion_create_edit_manual_component__WEBPACK_IMPORTED_MODULE_10__["SandbaggingRegionCreateEditManualComponent"], _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_11__["SvgComponent"], _shared_modules_form_form_component__WEBPACK_IMPORTED_MODULE_12__["FormComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgClass"], _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_13__["ModalComponent"]], styles: [".mapbox-container[_ngcontent-%COMP%] {\n  position: relative;\n  height: 500px;\n}\n.mapbox-container[_ngcontent-%COMP%]   mgl-map[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zYW5kYmFnZ2luZ3JlZ2lvbi9jcmVhdGUtZWRpdC9NOi9yZXBvcy9EZXBsb3lTb2x1dGlvbnNDbGltYXRlQ2hhbmdlL2Rzc19jY2lwX3Byb3RvL3RhL2FuZ3VsYXIvc3JjL2FwcC9tb2R1bGVzL3NhbmRiYWdnaW5ncmVnaW9uL2NyZWF0ZS1lZGl0L3NhbmRiYWdnaW5ncmVnaW9uLWNyZWF0ZS1lZGl0LmNvbXBvbmVudC5sZXNzIiwic3JjL2FwcC9tb2R1bGVzL3NhbmRiYWdnaW5ncmVnaW9uL2NyZWF0ZS1lZGl0L3NhbmRiYWdnaW5ncmVnaW9uLWNyZWF0ZS1lZGl0LmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Msa0JBQUE7RUFDQSxhQUFBO0FDQ0Q7QURIQTtFQUlFLFdBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7QUNFRiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvc2FuZGJhZ2dpbmdyZWdpb24vY3JlYXRlLWVkaXQvc2FuZGJhZ2dpbmdyZWdpb24tY3JlYXRlLWVkaXQuY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWFwYm94LWNvbnRhaW5lciB7XG5cdHBvc2l0aW9uOiByZWxhdGl2ZTtcblx0aGVpZ2h0OiA1MDBweDtcblx0bWdsLW1hcCB7XG5cdFx0d2lkdGg6IDEwMCU7XG5cdFx0aGVpZ2h0OiAxMDAlO1xuXHRcdHBvc2l0aW9uOiBhYnNvbHV0ZTtcblx0fVxufVxuIiwiLm1hcGJveC1jb250YWluZXIge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGhlaWdodDogNTAwcHg7XG59XG4ubWFwYm94LWNvbnRhaW5lciBtZ2wtbWFwIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgcG9zaXRpb246IGFic29sdXRlO1xufVxuIl19 */"] });
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"], _sandbaggingregion_create_edit_manual_component__WEBPACK_IMPORTED_MODULE_10__["SandbaggingRegionCreateEditManualComponent"], _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_11__["SvgComponent"], _shared_modules_form_form_component__WEBPACK_IMPORTED_MODULE_12__["FormComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgClass"], _shared_modules_modal_modal_component__WEBPACK_IMPORTED_MODULE_13__["ModalComponent"]], styles: [".mapbox-container[_ngcontent-%COMP%] {\n  position: relative;\n  height: 500px;\n}\n.mapbox-container[_ngcontent-%COMP%]   mgl-map[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zYW5kYmFnZ2luZ3JlZ2lvbi9jcmVhdGUtZWRpdC9NOi9yZXBvcy9EZXBsb3lTb2x1dGlvbnNDbGltYXRlQ2hhbmdlL2Rzc19jY2lwX3Byb3RvL2Rldi90YS9hbmd1bGFyL3NyYy9hcHAvbW9kdWxlcy9zYW5kYmFnZ2luZ3JlZ2lvbi9jcmVhdGUtZWRpdC9zYW5kYmFnZ2luZ3JlZ2lvbi1jcmVhdGUtZWRpdC5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvbW9kdWxlcy9zYW5kYmFnZ2luZ3JlZ2lvbi9jcmVhdGUtZWRpdC9zYW5kYmFnZ2luZ3JlZ2lvbi1jcmVhdGUtZWRpdC5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNDLGtCQUFBO0VBQ0EsYUFBQTtBQ0NEO0FESEE7RUFJRSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0FDRUYiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3NhbmRiYWdnaW5ncmVnaW9uL2NyZWF0ZS1lZGl0L3NhbmRiYWdnaW5ncmVnaW9uLWNyZWF0ZS1lZGl0LmNvbXBvbmVudC5sZXNzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hcGJveC1jb250YWluZXIge1xuXHRwb3NpdGlvbjogcmVsYXRpdmU7XG5cdGhlaWdodDogNTAwcHg7XG5cdG1nbC1tYXAge1xuXHRcdHdpZHRoOiAxMDAlO1xuXHRcdGhlaWdodDogMTAwJTtcblx0XHRwb3NpdGlvbjogYWJzb2x1dGU7XG5cdH1cbn1cbiIsIi5tYXBib3gtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBoZWlnaHQ6IDUwMHB4O1xufVxuLm1hcGJveC1jb250YWluZXIgbWdsLW1hcCB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbn1cbiJdfQ== */"] });
     return SandbaggingRegionCreateEditComponent;
 }(_app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_3__["AppComponentBase"]));
 
@@ -824,7 +782,7 @@ var SandbaggingRegionListComponent = /** @class */ (function (_super) {
         _this.tableColumnStyle = 'repeat(3, minmax(100px, 1fr)) repeat(1, 300px)';
         var tableDefinition = new _table_definition__WEBPACK_IMPORTED_MODULE_1__["default"]();
         _this.tableDefinition = tableDefinition.getDefinition();
-        _this.tableTitle = _this.l('Sandbagging Region');
+        _this.tableTitle = _this.l('SandbaggingRegion');
         return _this;
     }
     SandbaggingRegionListComponent.prototype.getList = function (filters) {
@@ -908,34 +866,22 @@ var TableDefinition = /** @class */ (function (_super) {
                     route: '/sandbaggingregion/create',
                     icon: 'new',
                     id: 'datatable-SandbaggingRegion-action-new',
-                    name: {
-                        en: 'new'
-                    },
-                    description: {
-                        en: ''
-                    }
+                    name: 'new',
+                    description: ''
                 },
                 {
                     route: '/sandbaggingregion/export',
                     icon: 'export',
                     id: 'datatable-SandbaggingRegion-action-export',
-                    name: {
-                        en: 'Export'
-                    },
-                    description: {
-                        en: ''
-                    }
+                    name: 'Export',
+                    description: ''
                 },
                 {
                     route: '/sandbaggingregion/import',
                     icon: 'import',
                     id: 'datatable-SandbaggingRegion-action-import',
-                    name: {
-                        en: 'Import'
-                    },
-                    description: {
-                        en: ''
-                    }
+                    name: 'Import',
+                    description: ''
                 }
             ],
             columns: [
@@ -945,25 +891,17 @@ var TableDefinition = /** @class */ (function (_super) {
                     dataType: 'System.String',
                     actions: [],
                     id: 'datatable-SandbaggingRegion-column-Name',
-                    name: {
-                        en: 'Name'
-                    },
-                    description: {
-                        en: ''
-                    }
+                    name: 'Name',
+                    description: ''
                 },
                 {
                     sortable: false,
                     dataField: 'descriptionShort',
                     dataType: 'System.String',
                     actions: [],
-                    id: 'datatable-SandbaggingRegion-column-Description Short',
-                    name: {
-                        en: 'Description Short'
-                    },
-                    description: {
-                        en: ''
-                    }
+                    id: 'datatable-SandbaggingRegion-column-DescriptionShort',
+                    name: 'DescriptionShort',
+                    description: ''
                 },
                 {
                     sortable: false,
@@ -972,32 +910,20 @@ var TableDefinition = /** @class */ (function (_super) {
                             route: 'sandbaggingregion/edit/{{id}}',
                             icon: 'edit',
                             id: 'datatable-SandbaggingRegion-column--action-edit',
-                            name: {
-                                en: 'edit'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'edit',
+                            description: ''
                         },
                         {
                             route: '',
                             icon: 'delete-solid',
                             id: 'datatable-SandbaggingRegion-column--action-delete',
-                            name: {
-                                en: 'delete'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'delete',
+                            description: ''
                         }
                     ],
                     id: 'datatable-SandbaggingRegion-column-',
-                    name: {
-                        en: ''
-                    },
-                    description: {
-                        en: ''
-                    }
+                    name: '',
+                    description: ''
                 }
             ],
             emptyState: {
@@ -1006,28 +932,16 @@ var TableDefinition = /** @class */ (function (_super) {
                     route: '/sandbaggingregion/import',
                     icon: 'import',
                     id: 'datatable-SandbaggingRegion-action-import',
-                    name: {
-                        en: 'Import'
-                    },
-                    description: {
-                        en: ''
-                    }
+                    name: 'Import',
+                    description: ''
                 },
                 id: 'SandbaggingRegion-datatable-emptystate',
-                name: {
-                    en: 'Add Sandbagging'
-                },
-                description: {
-                    en: 'Add Sandbagging Region in your area'
-                }
+                name: 'AddSandbagging',
+                description: 'AddSandbaggingRegionInYourArea'
             },
             id: 'SandbaggingRegion-datatable',
-            name: {
-                en: 'Sandbagging Region List'
-            },
-            description: {
-                en: ''
-            }
+            name: 'SandbaggingRegionList',
+            description: ''
         };
         return _this;
     }
@@ -1070,12 +984,12 @@ var childRoutes = [
     {
         path: '',
         component: _list_sandbaggingregion_list_component__WEBPACK_IMPORTED_MODULE_3__["SandbaggingRegionListComponent"],
-        data: { isCreate: true }
+        data: { name: 'SandbaggingRegion', isCreate: true }
     },
     {
         path: 'create',
         component: _create_edit_sandbaggingregion_create_edit_component__WEBPACK_IMPORTED_MODULE_5__["SandbaggingRegionCreateEditComponent"],
-        data: { isCreate: true }
+        data: { name: 'SandbaggingRegion Form', isCreate: true }
     },
     {
         path: 'edit/:id',
@@ -1086,6 +1000,7 @@ var childRoutes = [
         path: 'import',
         component: _import_import_component__WEBPACK_IMPORTED_MODULE_6__["ImportComponent"],
         data: {
+            name: 'SandbaggingRegionImport',
             parent: 'sandbaggingregion'
         }
     },
@@ -1093,6 +1008,7 @@ var childRoutes = [
         path: 'export',
         component: _export_export_component__WEBPACK_IMPORTED_MODULE_7__["ExportComponent"],
         data: {
+            name: 'SandbaggingRegionExport',
             parent: 'sandbaggingregion'
         }
     },
@@ -1691,7 +1607,7 @@ var SandbaggingRegionViewComponent = /** @class */ (function (_super) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.data);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.httpError);
-        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _sandbaggingregion_view_manual_component__WEBPACK_IMPORTED_MODULE_9__["SandbaggingRegionViewManualComponent"], _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_10__["SvgComponent"], _shared_modules_details_details_component__WEBPACK_IMPORTED_MODULE_11__["DetailsComponent"]], styles: [".detail-view-grid[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  margin-bottom: 12px;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column[_ngcontent-%COMP%] {\n  width: 100%;\n  display: grid;\n  grid-template-columns: 200px 1fr;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column.full-width[_ngcontent-%COMP%] {\n  grid-template-columns: 1fr;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column.float-right[_ngcontent-%COMP%] {\n  grid-template-columns: 1fr 200px;\n  text-align: right;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column[_ngcontent-%COMP%]   .column-2[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-grid-row-title[_ngcontent-%COMP%] {\n  text-transform: uppercase;\n  font-weight: 600;\n  margin-bottom: 8px;\n}\n.detail-view-grid[_ngcontent-%COMP%] {\n  margin: 20px;\n}\n.mgl-map-container[_ngcontent-%COMP%] {\n  height: 500px;\n}\n.mgl-map-container[_ngcontent-%COMP%]   mgl-map[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n}\n.meta-dates[_ngcontent-%COMP%] {\n  justify-content: flex-end;\n  padding-top: 12px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zYW5kYmFnZ2luZ3JlZ2lvbi92aWV3L006L3JlcG9zL0RlcGxveVNvbHV0aW9uc0NsaW1hdGVDaGFuZ2UvZHNzX2NjaXBfcHJvdG8vdGEvYW5ndWxhci9zcmMvc3R5bGVzL2VsZW1lbnRzL2RldGFpbC12aWV3LWdyaWQubGVzcyIsInNyYy9hcHAvbW9kdWxlcy9zYW5kYmFnZ2luZ3JlZ2lvbi92aWV3L006L3JlcG9zL0RlcGxveVNvbHV0aW9uc0NsaW1hdGVDaGFuZ2UvZHNzX2NjaXBfcHJvdG8vdGEvYW5ndWxhci9zcmMvc3R5bGVzL21peGlucy9wb3NpdGlvbi5sZXNzIiwic3JjL2FwcC9tb2R1bGVzL3NhbmRiYWdnaW5ncmVnaW9uL3ZpZXcvc2FuZGJhZ2dpbmdyZWdpb24tdmlldy5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvbW9kdWxlcy9zYW5kYmFnZ2luZ3JlZ2lvbi92aWV3L006L3JlcG9zL0RlcGxveVNvbHV0aW9uc0NsaW1hdGVDaGFuZ2UvZHNzX2NjaXBfcHJvdG8vdGEvYW5ndWxhci9zcmMvYXBwL21vZHVsZXMvc2FuZGJhZ2dpbmdyZWdpb24vdmlldy9zYW5kYmFnZ2luZ3JlZ2lvbi12aWV3LmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VDVUUsa0JBQUE7RUFDQSxNQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxPQUFBO0VEWkEsYUFBQTtFQUNBLHNCQUFBO0FFR0Y7QUZOQTtFQUtJLGFBQUE7RUFDQSxpQkFBQTtFQUNBLG1CQUFBO0FFSUo7QUZYQTtFQVNLLFdBQUE7RUFDQSxhQUFBO0VBQ0EsZ0NBQUE7QUVLTDtBRkpLO0VBQ0MsMEJBQUE7QUVNTjtBRkpNO0VBQ0UsZ0NBQUE7RUFDQSxpQkFBQTtBRU1SO0FGdkJBO0VBb0JRLGFBQUE7RUFDQSxxQ0FBQTtBRU1SO0FGM0JBO0VBeUJNLHlCQUFBO0VBQ0gsZ0JBQUE7RUFDQSxrQkFBQTtBRUtIO0FDOUJBO0VBQ0UsWUFBQTtBRGdDRjtBQzdCQTtFQUNDLGFBQUE7QUQrQkQ7QUNoQ0E7RUFHRSxXQUFBO0VBQ0EsWUFBQTtBRGdDRjtBQzdCQTtFQUNFLHlCQUFBO0VBQ0EsaUJBQUE7QUQrQkYiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3NhbmRiYWdnaW5ncmVnaW9uL3ZpZXcvc2FuZGJhZ2dpbmdyZWdpb24tdmlldy5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIkBncmlkLXNpemU6IDIwMHB4O1xuXG4uZGV0YWlsLXZpZXctZ3JpZCB7XG4gIC5wb3NpdGlvbihhYnNvbHV0ZSwgQHRvcDogMCwgQHJpZ2h0OiAwLCBAYm90dG9tOiAwLCBAbGVmdDogMCk7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG5cdC5kZXRhaWwtdmlldy1ncmlkLXJvdyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IG5vd3JhcDtcbiAgICBtYXJnaW4tYm90dG9tOiBAc3BhY2luZy0xMjtcbiAgICAuZGV0YWlsLXZpZXctcm93LWNvbHVtbiB7XG4gICAgXHR3aWR0aDogMTAwJTtcblx0ICAgIGRpc3BsYXk6IGdyaWQ7XG4gICAgXHRncmlkLXRlbXBsYXRlLWNvbHVtbnM6IEBncmlkLXNpemUgMWZyO1xuICAgIFx0Ji5mdWxsLXdpZHRoIHtcbiAgICBcdFx0Z3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnI7XG4gICAgXHR9XG4gICAgICAmLmZsb2F0LXJpZ2h0IHtcbiAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnIgQGdyaWQtc2l6ZTtcbiAgICAgICAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gICAgICB9XG4gICAgICAuY29sdW1uLTIge1xuICAgICAgICBkaXNwbGF5OiBncmlkO1xuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgyLCAxZnIpO1xuICAgICAgfVxuICAgIH1cblx0XHQuZGV0YWlsLXZpZXctZ3JpZC1yb3ctdGl0bGUge1xuICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcblx0XHRcdGZvbnQtd2VpZ2h0OiBAZm9udC13ZWlnaHQtc2VtaWJvbGQ7XG5cdFx0XHRtYXJnaW4tYm90dG9tOiBAc3BhY2luZy04O1xuXHRcdH1cblx0fVxufSIsIi8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4vLyBNSVhJTlMgLSBQT1NJVElPTlxuLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblxuLy8gU2hvcnRoYW5kIG1peGluIGZvciBvZmZzZXQgcG9zaXRpb25pbmdcbi8vIEBwYXJhbSB7U3RyaW5nfSBAcG9zaXRpb24gLSBFaXRoZXIgYHJlbGF0aXZlYCwgYGFic29sdXRlYCBvciBgZml4ZWRgXG4vLyBAcGFyYW0ge0xlbmd0aH0gQHRvcCBbbnVsbF0gLSBUb3Agb2Zmc2V0XG4vLyBAcGFyYW0ge0xlbmd0aH0gQHJpZ2h0IFtudWxsXSAtIFJpZ2h0IG9mZnNldFxuLy8gQHBhcmFtIHtMZW5ndGh9IEBib3R0b20gW251bGxdIC0gQm90dG9tIG9mZnNldFxuLy8gQHBhcmFtIHtMZW5ndGh9IEBsZWZ0IFtudWxsXSAtIExlZnQgb2Zmc2V0XG5cbi5wb3NpdGlvbihAcG9zaXRpb24sIEB0b3A6IG51bGwsIEByaWdodDogbnVsbCwgQGJvdHRvbTogbnVsbCwgQGxlZnQ6IG51bGwpIHtcbiAgcG9zaXRpb246IEBwb3NpdGlvbjtcbiAgdG9wOiBAdG9wO1xuICByaWdodDogQHJpZ2h0O1xuICBib3R0b206IEBib3R0b207XG4gIGxlZnQ6IEBsZWZ0O1xufVxuXG4ucG9zaXRpb24tcmVsYXRpdmUtcmVzZXQoKSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgdG9wOiBhdXRvO1xuICByaWdodDogYXV0bztcbiAgYm90dG9tOiBhdXRvO1xuICBsZWZ0OiBhdXRvO1xufVxuIiwiLmRldGFpbC12aWV3LWdyaWQge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgbGVmdDogMDtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogbm93cmFwO1xuICBtYXJnaW4tYm90dG9tOiAxMnB4O1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1yb3ctY29sdW1uIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMjAwcHggMWZyO1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1yb3ctY29sdW1uLmZ1bGwtd2lkdGgge1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmcjtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyAuZGV0YWlsLXZpZXctcm93LWNvbHVtbi5mbG9hdC1yaWdodCB7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDIwMHB4O1xuICB0ZXh0LWFsaWduOiByaWdodDtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyAuZGV0YWlsLXZpZXctcm93LWNvbHVtbiAuY29sdW1uLTIge1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgyLCAxZnIpO1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1ncmlkLXJvdy10aXRsZSB7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIG1hcmdpbi1ib3R0b206IDhweDtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIHtcbiAgbWFyZ2luOiAyMHB4O1xufVxuLm1nbC1tYXAtY29udGFpbmVyIHtcbiAgaGVpZ2h0OiA1MDBweDtcbn1cbi5tZ2wtbWFwLWNvbnRhaW5lciBtZ2wtbWFwIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn1cbi5tZXRhLWRhdGVzIHtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbiAgcGFkZGluZy10b3A6IDEycHg7XG59XG4iLCJAaW1wb3J0IFwiLi8uLi8uLi8uLi8uLi9zdHlsZXMvdmFyaWFibGVzXCI7XG5AaW1wb3J0IFwiLi8uLi8uLi8uLi8uLi9zdHlsZXMvZWxlbWVudHMvZGV0YWlsLXZpZXctZ3JpZFwiO1xuQGltcG9ydCBcIi4vLi4vLi4vLi4vLi4vc3R5bGVzL21peGlucy9wb3NpdGlvblwiO1xuXG4uZGV0YWlsLXZpZXctZ3JpZCB7XG4gIG1hcmdpbjogQHNwYWNpbmctMjA7XG59XG5cbi5tZ2wtbWFwLWNvbnRhaW5lciB7XG5cdGhlaWdodDogNTAwcHg7XG5cdG1nbC1tYXAge1xuXHRcdHdpZHRoOiAxMDAlO1xuXHRcdGhlaWdodDogMTAwJTtcblx0fVxufVxuLm1ldGEtZGF0ZXMge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xuICBwYWRkaW5nLXRvcDogQHNwYWNpbmctMTI7XG59XG4iXX0= */"] });
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _sandbaggingregion_view_manual_component__WEBPACK_IMPORTED_MODULE_9__["SandbaggingRegionViewManualComponent"], _shared_modules_svg_svg_component__WEBPACK_IMPORTED_MODULE_10__["SvgComponent"], _shared_modules_details_details_component__WEBPACK_IMPORTED_MODULE_11__["DetailsComponent"]], styles: [".detail-view-grid[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  margin-bottom: 12px;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column[_ngcontent-%COMP%] {\n  width: 100%;\n  display: grid;\n  grid-template-columns: 200px 1fr;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column.full-width[_ngcontent-%COMP%] {\n  grid-template-columns: 1fr;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column.float-right[_ngcontent-%COMP%] {\n  grid-template-columns: 1fr 200px;\n  text-align: right;\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-row-column[_ngcontent-%COMP%]   .column-2[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n}\n.detail-view-grid[_ngcontent-%COMP%]   .detail-view-grid-row[_ngcontent-%COMP%]   .detail-view-grid-row-title[_ngcontent-%COMP%] {\n  text-transform: uppercase;\n  font-weight: 600;\n  margin-bottom: 8px;\n}\n.detail-view-grid[_ngcontent-%COMP%] {\n  margin: 20px;\n}\n.mgl-map-container[_ngcontent-%COMP%] {\n  height: 500px;\n}\n.mgl-map-container[_ngcontent-%COMP%]   mgl-map[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n}\n.meta-dates[_ngcontent-%COMP%] {\n  justify-content: flex-end;\n  padding-top: 12px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zYW5kYmFnZ2luZ3JlZ2lvbi92aWV3L006L3JlcG9zL0RlcGxveVNvbHV0aW9uc0NsaW1hdGVDaGFuZ2UvZHNzX2NjaXBfcHJvdG8vZGV2L3RhL2FuZ3VsYXIvc3JjL3N0eWxlcy9lbGVtZW50cy9kZXRhaWwtdmlldy1ncmlkLmxlc3MiLCJzcmMvYXBwL21vZHVsZXMvc2FuZGJhZ2dpbmdyZWdpb24vdmlldy9NOi9yZXBvcy9EZXBsb3lTb2x1dGlvbnNDbGltYXRlQ2hhbmdlL2Rzc19jY2lwX3Byb3RvL2Rldi90YS9hbmd1bGFyL3NyYy9zdHlsZXMvbWl4aW5zL3Bvc2l0aW9uLmxlc3MiLCJzcmMvYXBwL21vZHVsZXMvc2FuZGJhZ2dpbmdyZWdpb24vdmlldy9zYW5kYmFnZ2luZ3JlZ2lvbi12aWV3LmNvbXBvbmVudC5sZXNzIiwic3JjL2FwcC9tb2R1bGVzL3NhbmRiYWdnaW5ncmVnaW9uL3ZpZXcvTTovcmVwb3MvRGVwbG95U29sdXRpb25zQ2xpbWF0ZUNoYW5nZS9kc3NfY2NpcF9wcm90by9kZXYvdGEvYW5ndWxhci9zcmMvYXBwL21vZHVsZXMvc2FuZGJhZ2dpbmdyZWdpb24vdmlldy9zYW5kYmFnZ2luZ3JlZ2lvbi12aWV3LmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VDVUUsa0JBQUE7RUFDQSxNQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxPQUFBO0VEWkEsYUFBQTtFQUNBLHNCQUFBO0FFR0Y7QUZOQTtFQUtJLGFBQUE7RUFDQSxpQkFBQTtFQUNBLG1CQUFBO0FFSUo7QUZYQTtFQVNLLFdBQUE7RUFDQSxhQUFBO0VBQ0EsZ0NBQUE7QUVLTDtBRkpLO0VBQ0MsMEJBQUE7QUVNTjtBRkpNO0VBQ0UsZ0NBQUE7RUFDQSxpQkFBQTtBRU1SO0FGdkJBO0VBb0JRLGFBQUE7RUFDQSxxQ0FBQTtBRU1SO0FGM0JBO0VBeUJNLHlCQUFBO0VBQ0gsZ0JBQUE7RUFDQSxrQkFBQTtBRUtIO0FDOUJBO0VBQ0UsWUFBQTtBRGdDRjtBQzdCQTtFQUNDLGFBQUE7QUQrQkQ7QUNoQ0E7RUFHRSxXQUFBO0VBQ0EsWUFBQTtBRGdDRjtBQzdCQTtFQUNFLHlCQUFBO0VBQ0EsaUJBQUE7QUQrQkYiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3NhbmRiYWdnaW5ncmVnaW9uL3ZpZXcvc2FuZGJhZ2dpbmdyZWdpb24tdmlldy5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIkBncmlkLXNpemU6IDIwMHB4O1xuXG4uZGV0YWlsLXZpZXctZ3JpZCB7XG4gIC5wb3NpdGlvbihhYnNvbHV0ZSwgQHRvcDogMCwgQHJpZ2h0OiAwLCBAYm90dG9tOiAwLCBAbGVmdDogMCk7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG5cdC5kZXRhaWwtdmlldy1ncmlkLXJvdyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IG5vd3JhcDtcbiAgICBtYXJnaW4tYm90dG9tOiBAc3BhY2luZy0xMjtcbiAgICAuZGV0YWlsLXZpZXctcm93LWNvbHVtbiB7XG4gICAgXHR3aWR0aDogMTAwJTtcblx0ICAgIGRpc3BsYXk6IGdyaWQ7XG4gICAgXHRncmlkLXRlbXBsYXRlLWNvbHVtbnM6IEBncmlkLXNpemUgMWZyO1xuICAgIFx0Ji5mdWxsLXdpZHRoIHtcbiAgICBcdFx0Z3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnI7XG4gICAgXHR9XG4gICAgICAmLmZsb2F0LXJpZ2h0IHtcbiAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnIgQGdyaWQtc2l6ZTtcbiAgICAgICAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gICAgICB9XG4gICAgICAuY29sdW1uLTIge1xuICAgICAgICBkaXNwbGF5OiBncmlkO1xuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgyLCAxZnIpO1xuICAgICAgfVxuICAgIH1cblx0XHQuZGV0YWlsLXZpZXctZ3JpZC1yb3ctdGl0bGUge1xuICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcblx0XHRcdGZvbnQtd2VpZ2h0OiBAZm9udC13ZWlnaHQtc2VtaWJvbGQ7XG5cdFx0XHRtYXJnaW4tYm90dG9tOiBAc3BhY2luZy04O1xuXHRcdH1cblx0fVxufSIsIi8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4vLyBNSVhJTlMgLSBQT1NJVElPTlxuLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblxuLy8gU2hvcnRoYW5kIG1peGluIGZvciBvZmZzZXQgcG9zaXRpb25pbmdcbi8vIEBwYXJhbSB7U3RyaW5nfSBAcG9zaXRpb24gLSBFaXRoZXIgYHJlbGF0aXZlYCwgYGFic29sdXRlYCBvciBgZml4ZWRgXG4vLyBAcGFyYW0ge0xlbmd0aH0gQHRvcCBbbnVsbF0gLSBUb3Agb2Zmc2V0XG4vLyBAcGFyYW0ge0xlbmd0aH0gQHJpZ2h0IFtudWxsXSAtIFJpZ2h0IG9mZnNldFxuLy8gQHBhcmFtIHtMZW5ndGh9IEBib3R0b20gW251bGxdIC0gQm90dG9tIG9mZnNldFxuLy8gQHBhcmFtIHtMZW5ndGh9IEBsZWZ0IFtudWxsXSAtIExlZnQgb2Zmc2V0XG5cbi5wb3NpdGlvbihAcG9zaXRpb24sIEB0b3A6IG51bGwsIEByaWdodDogbnVsbCwgQGJvdHRvbTogbnVsbCwgQGxlZnQ6IG51bGwpIHtcbiAgcG9zaXRpb246IEBwb3NpdGlvbjtcbiAgdG9wOiBAdG9wO1xuICByaWdodDogQHJpZ2h0O1xuICBib3R0b206IEBib3R0b207XG4gIGxlZnQ6IEBsZWZ0O1xufVxuXG4ucG9zaXRpb24tcmVsYXRpdmUtcmVzZXQoKSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgdG9wOiBhdXRvO1xuICByaWdodDogYXV0bztcbiAgYm90dG9tOiBhdXRvO1xuICBsZWZ0OiBhdXRvO1xufVxuIiwiLmRldGFpbC12aWV3LWdyaWQge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgbGVmdDogMDtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogbm93cmFwO1xuICBtYXJnaW4tYm90dG9tOiAxMnB4O1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1yb3ctY29sdW1uIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMjAwcHggMWZyO1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1yb3ctY29sdW1uLmZ1bGwtd2lkdGgge1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmcjtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyAuZGV0YWlsLXZpZXctcm93LWNvbHVtbi5mbG9hdC1yaWdodCB7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDIwMHB4O1xuICB0ZXh0LWFsaWduOiByaWdodDtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIC5kZXRhaWwtdmlldy1ncmlkLXJvdyAuZGV0YWlsLXZpZXctcm93LWNvbHVtbiAuY29sdW1uLTIge1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgyLCAxZnIpO1xufVxuLmRldGFpbC12aWV3LWdyaWQgLmRldGFpbC12aWV3LWdyaWQtcm93IC5kZXRhaWwtdmlldy1ncmlkLXJvdy10aXRsZSB7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIG1hcmdpbi1ib3R0b206IDhweDtcbn1cbi5kZXRhaWwtdmlldy1ncmlkIHtcbiAgbWFyZ2luOiAyMHB4O1xufVxuLm1nbC1tYXAtY29udGFpbmVyIHtcbiAgaGVpZ2h0OiA1MDBweDtcbn1cbi5tZ2wtbWFwLWNvbnRhaW5lciBtZ2wtbWFwIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn1cbi5tZXRhLWRhdGVzIHtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbiAgcGFkZGluZy10b3A6IDEycHg7XG59XG4iLCJAaW1wb3J0IFwiLi8uLi8uLi8uLi8uLi9zdHlsZXMvdmFyaWFibGVzXCI7XG5AaW1wb3J0IFwiLi8uLi8uLi8uLi8uLi9zdHlsZXMvZWxlbWVudHMvZGV0YWlsLXZpZXctZ3JpZFwiO1xuQGltcG9ydCBcIi4vLi4vLi4vLi4vLi4vc3R5bGVzL21peGlucy9wb3NpdGlvblwiO1xuXG4uZGV0YWlsLXZpZXctZ3JpZCB7XG4gIG1hcmdpbjogQHNwYWNpbmctMjA7XG59XG5cbi5tZ2wtbWFwLWNvbnRhaW5lciB7XG5cdGhlaWdodDogNTAwcHg7XG5cdG1nbC1tYXAge1xuXHRcdHdpZHRoOiAxMDAlO1xuXHRcdGhlaWdodDogMTAwJTtcblx0fVxufVxuLm1ldGEtZGF0ZXMge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xuICBwYWRkaW5nLXRvcDogQHNwYWNpbmctMTI7XG59XG4iXX0= */"] });
     return SandbaggingRegionViewComponent;
 }(_app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_2__["AppComponentBase"]));
 
@@ -1746,17 +1662,11 @@ var DetailViewDefinition = /** @class */ (function (_super) {
                             dataField: 'name',
                             dataType: 'System.String',
                             required: true,
-                            name: {
-                                en: 'Name'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Name',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -1765,17 +1675,11 @@ var DetailViewDefinition = /** @class */ (function (_super) {
                             dataField: 'descriptionShort',
                             dataType: 'System.String',
                             required: true,
-                            name: {
-                                en: 'Description Short'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'DescriptionShort',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -1784,17 +1688,11 @@ var DetailViewDefinition = /** @class */ (function (_super) {
                             dataField: 'descriptionFull',
                             dataType: 'System.String',
                             required: true,
-                            name: {
-                                en: 'Description Full'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'DescriptionFull',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -1803,29 +1701,19 @@ var DetailViewDefinition = /** @class */ (function (_super) {
                             dataField: 'creatorUserName',
                             dataType: 'System.String',
                             required: false,
-                            name: {
-                                en: 'Creator User Name'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'CreatorUserName',
+                            description: ''
                         },
                         {
                             itemType: 'view',
                             dataField: 'creationTime',
                             dataType: 'System.DateTime',
                             required: false,
-                            name: {
-                                en: 'Creation Time'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'CreationTime',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -1834,29 +1722,19 @@ var DetailViewDefinition = /** @class */ (function (_super) {
                             dataField: 'lastModifierUserName',
                             dataType: 'System.String',
                             required: false,
-                            name: {
-                                en: 'Last Modifier User Name'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'LastModifierUserName',
+                            description: ''
                         },
                         {
                             itemType: 'view',
                             dataField: 'lastModificationTime',
                             dataType: 'System.DateTime?',
                             required: false,
-                            name: {
-                                en: 'Last Modification Time'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'LastModificationTime',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 },
                 {
                     items: [
@@ -1865,38 +1743,24 @@ var DetailViewDefinition = /** @class */ (function (_super) {
                             dataField: 'latitute',
                             dataType: 'System.Double',
                             required: false,
-                            name: {
-                                en: 'Latitute'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Latitute',
+                            description: ''
                         },
                         {
                             itemType: 'view',
                             dataField: 'longitude',
                             dataType: 'System.Double',
                             required: false,
-                            name: {
-                                en: 'Longitude'
-                            },
-                            description: {
-                                en: ''
-                            }
+                            name: 'Longitude',
+                            description: ''
                         }
                     ],
-                    description: {
-                        en: ''
-                    }
+                    description: ''
                 }
             ],
             id: 'SandbaggingRegion-detailview',
-            name: {
-                en: ''
-            },
-            description: {
-                en: ''
-            }
+            name: '',
+            description: ''
         };
         return _this;
     }

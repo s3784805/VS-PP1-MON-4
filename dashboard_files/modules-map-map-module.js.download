@@ -1,0 +1,741 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["modules-map-map-module"],{
+
+/***/ "./src/app/modules/map/map-routing.module.ts":
+/*!***************************************************!*\
+  !*** ./src/app/modules/map/map-routing.module.ts ***!
+  \***************************************************/
+/*! exports provided: MapRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapRoutingModule", function() { return MapRoutingModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _map_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./map.component */ "./src/app/modules/map/map.component.ts");
+
+
+
+
+
+var routes = [
+    {
+        path: '',
+        component: _map_component__WEBPACK_IMPORTED_MODULE_2__["MapComponent"]
+    }
+];
+var MapRoutingModule = /** @class */ (function () {
+    function MapRoutingModule() {
+    }
+    MapRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: MapRoutingModule });
+    MapRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function MapRoutingModule_Factory(t) { return new (t || MapRoutingModule)(); }, imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]] });
+    return MapRoutingModule;
+}());
+
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](MapRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MapRoutingModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)],
+                exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/map/map.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/modules/map/map.component.ts ***!
+  \**********************************************/
+/*! exports provided: MapComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapComponent", function() { return MapComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _app_shared_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @app/shared/service */ "./src/app/shared/service/index.ts");
+/* harmony import */ var _map_definition__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./map.definition */ "./src/app/modules/map/map.definition.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _shared_modules_map_map_display_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared/modules/map/map-display.component */ "./src/app/shared/modules/map/map-display.component.ts");
+
+
+
+
+
+
+function MapComponent_app_map_display_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-map-display", 1);
+} if (rf & 2) {
+    var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("mapDefinition", ctx_r0.mapDefinition);
+} }
+var MapComponent = /** @class */ (function () {
+    function MapComponent() {
+    }
+    MapComponent.prototype.ngOnInit = function () {
+        this.mapDefinition = new _map_definition__WEBPACK_IMPORTED_MODULE_2__["default"]();
+    };
+    MapComponent.ɵfac = function MapComponent_Factory(t) { return new (t || MapComponent)(); };
+    MapComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MapComponent, selectors: [["app-map"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([_app_shared_service__WEBPACK_IMPORTED_MODULE_1__["MapboxService"]])], decls: 1, vars: 1, consts: [[3, "mapDefinition", 4, "ngIf"], [3, "mapDefinition"]], template: function MapComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, MapComponent_app_map_display_0_Template, 1, 1, "app-map-display", 0);
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.mapDefinition);
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _shared_modules_map_map_display_component__WEBPACK_IMPORTED_MODULE_4__["MapDisplayComponent"]], styles: [".mapbox-container[_ngcontent-%COMP%] {\n  position: relative;\n  height: calc(100vh - 100px);\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%] {\n  position: absolute;\n  z-index: 1;\n  max-height: calc(100vh - 100px);\n  white-space: nowrap;\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: column;\n  margin-left: 4px;\n  margin-top: 4px;\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  border-radius: 16px;\n  position: relative;\n  margin: 4px;\n  background: var(--primary-color) !important;\n  height: auto;\n  border: 5px solid #5e6064;\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button.active[_ngcontent-%COMP%], .mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:hover {\n  background: var(--primary-color-hover);\n  border-color: #ffffff;\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button.active[_ngcontent-%COMP%]     app-svg svg, .mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:hover     app-svg svg {\n  opacity: 1;\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:hover   .popover[_ngcontent-%COMP%] {\n  visibility: visible;\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]     app-svg svg {\n  opacity: 0.5;\n  height: 25px;\n  width: 25px;\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]   .popover[_ngcontent-%COMP%] {\n  margin-left: 57px;\n}\n.mapbox-container[_ngcontent-%COMP%]   .map-container[_ngcontent-%COMP%] {\n  width: 100%;\n  height: calc(100vh - 60px);\n  position: absolute;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9tYXAvTTovcmVwb3MvRGVwbG95U29sdXRpb25zQ2xpbWF0ZUNoYW5nZS9kc3NfY2NpcF9wcm90by9kZXYvdGEvYW5ndWxhci9zcmMvYXBwL21vZHVsZXMvbWFwL21hcC5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvbW9kdWxlcy9tYXAvbWFwLmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUtBO0VBQ0Msa0JBQUE7RUFDQSwyQkFBQTtBQ0pEO0FERUE7RUFLRSxrQkFBQTtFQUNNLFVBQUE7RUFDQSwrQkFBQTtFQUNBLG1CQUFBO0VBQ0EsYUFBQTtFQUNBLGVBQUE7RUFDQSxzQkFBQTtFQUNBLGdCQUFBO0VBQ0EsZUFBQTtBQ0pSO0FEVEE7RUFlRyxtQkFBQTtFQUNBLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLDJDQUFBO0VBQ0EsWUFBQTtFQWlCQSx5QkFBQTtBQ25CSDtBREdHOztFQUVDLHNDQUFBO0VBQ1kscUJBQUE7QUNEaEI7QURGRzs7RUFNRyxVQUFBO0FDQU47QURLRztFQUVFLG1CQUFBO0FDSkw7QUQ3QkE7RUF1Q0ssWUFBQTtFQUNBLFlBQUE7RUFDRSxXQUFBO0FDUFA7QURsQ0E7RUE2Q0ksaUJBQUE7QUNSSjtBRHJDQTtFQW1ERSxXQUFBO0VBQ0EsMEJBQUE7RUFDQSxrQkFBQTtBQ1hGIiwiZmlsZSI6InNyYy9hcHAvbW9kdWxlcy9tYXAvbWFwLmNvbXBvbmVudC5sZXNzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnLi8uLi8uLi8uLi9zdHlsZXMvdmFyaWFibGVzJztcbkBpbXBvcnQgXCIuLy4uLy4uLy4uL3N0eWxlcy9taXhpbnMvZm9udC1zaXplXCI7XG5AaW1wb3J0IFwiLi8uLi8uLi8uLi9zdHlsZXMvbWl4aW5zL3Bvc2l0aW9uXCI7XG5AaW1wb3J0IFwiLi8uLi8uLi8uLi9zdHlsZXMvbWl4aW5zL3NoYXBlc1wiO1xuXG4ubWFwYm94LWNvbnRhaW5lciB7XG5cdHBvc2l0aW9uOiByZWxhdGl2ZTtcblx0aGVpZ2h0OiBjYWxjKDEwMHZoIC0gQHNwYWNpbmctMTAwKTtcblxuXHQuYnV0dG9uLWdyb3VwIHtcblx0XHRwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHotaW5kZXg6IEB6aS1wbHVzLW9uZTtcbiAgICAgICAgbWF4LWhlaWdodDogY2FsYygxMDB2aCAtIEBzcGFjaW5nLTEwMCk7XG4gICAgICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGZsZXgtd3JhcDogd3JhcDtcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDRweDtcbiAgICAgICAgbWFyZ2luLXRvcDogNHB4O1xuXHRcdGJ1dHRvbiB7XG5cdFx0XHRib3JkZXItcmFkaXVzOiBAc3BhY2luZy0xNjtcblx0XHRcdHBvc2l0aW9uOiByZWxhdGl2ZTtcblx0XHRcdG1hcmdpbjogQHNwYWNpbmctNDtcblx0XHRcdGJhY2tncm91bmQ6IHZhcigtLXByaW1hcnktY29sb3IpICFpbXBvcnRhbnQ7XG5cdFx0XHRoZWlnaHQ6IGF1dG87XG5cdFx0XHQmLmFjdGl2ZSxcblx0XHRcdCY6aG92ZXIge1xuXHRcdFx0XHRiYWNrZ3JvdW5kOiB2YXIoLS1wcmltYXJ5LWNvbG9yLWhvdmVyKTtcbiAgICAgICAgICAgICAgICBib3JkZXItY29sb3I6IEBjb2xvci13aGl0ZTtcblx0XHRcdFx0OjpuZy1kZWVwIGFwcC1zdmcge1xuXHRcdFx0XHRcdHN2ZyB7XG5cdFx0XHRcdFx0XHRvcGFjaXR5OiAxO1xuXHRcdFx0XHRcdH1cblx0XHRcdFx0fVxuXG5cdFx0XHR9XG5cdFx0XHQmOmhvdmVyIHtcblx0XHRcdFx0LnBvcG92ZXIge1xuXHRcdFx0XHRcdHZpc2liaWxpdHk6IHZpc2libGU7XG5cdFx0XHRcdH1cblx0XHRcdH1cblx0XHRcdGJvcmRlcjogNXB4IHNvbGlkIEBjb2xvci1ncmV5LTQwMDtcblx0XHRcdDo6bmctZGVlcCBhcHAtc3ZnIHtcblx0XHRcdFx0c3ZnIHtcblx0XHRcdFx0XHRvcGFjaXR5OiAuNTtcblx0XHRcdFx0XHRoZWlnaHQ6IDI1cHg7XG4gICAgXHRcdFx0d2lkdGg6IDI1cHg7XG5cdFx0XHRcdH1cblx0XHRcdH1cblx0XHRcdC5wb3BvdmVyIHtcblx0XHRcdFx0bWFyZ2luLWxlZnQ6IDU3cHg7XG5cdFx0XHR9XG5cdFx0fVxuXHR9XG5cblx0Lm1hcC1jb250YWluZXIge1xuXHRcdHdpZHRoOiAxMDAlO1xuXHRcdGhlaWdodDogY2FsYygxMDB2aCAtIEBzcGFjaW5nLTYwKTtcblx0XHRwb3NpdGlvbjogYWJzb2x1dGU7XG5cdH1cblxufVxuIiwiLm1hcGJveC1jb250YWluZXIge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGhlaWdodDogY2FsYygxMDB2aCAtIDEwMHB4KTtcbn1cbi5tYXBib3gtY29udGFpbmVyIC5idXR0b24tZ3JvdXAge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHotaW5kZXg6IDE7XG4gIG1heC1oZWlnaHQ6IGNhbGMoMTAwdmggLSAxMDBweCk7XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogd3JhcDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgbWFyZ2luLWxlZnQ6IDRweDtcbiAgbWFyZ2luLXRvcDogNHB4O1xufVxuLm1hcGJveC1jb250YWluZXIgLmJ1dHRvbi1ncm91cCBidXR0b24ge1xuICBib3JkZXItcmFkaXVzOiAxNnB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIG1hcmdpbjogNHB4O1xuICBiYWNrZ3JvdW5kOiB2YXIoLS1wcmltYXJ5LWNvbG9yKSAhaW1wb3J0YW50O1xuICBoZWlnaHQ6IGF1dG87XG4gIGJvcmRlcjogNXB4IHNvbGlkICM1ZTYwNjQ7XG59XG4ubWFwYm94LWNvbnRhaW5lciAuYnV0dG9uLWdyb3VwIGJ1dHRvbi5hY3RpdmUsXG4ubWFwYm94LWNvbnRhaW5lciAuYnV0dG9uLWdyb3VwIGJ1dHRvbjpob3ZlciB7XG4gIGJhY2tncm91bmQ6IHZhcigtLXByaW1hcnktY29sb3ItaG92ZXIpO1xuICBib3JkZXItY29sb3I6ICNmZmZmZmY7XG59XG4ubWFwYm94LWNvbnRhaW5lciAuYnV0dG9uLWdyb3VwIGJ1dHRvbi5hY3RpdmUgOjpuZy1kZWVwIGFwcC1zdmcgc3ZnLFxuLm1hcGJveC1jb250YWluZXIgLmJ1dHRvbi1ncm91cCBidXR0b246aG92ZXIgOjpuZy1kZWVwIGFwcC1zdmcgc3ZnIHtcbiAgb3BhY2l0eTogMTtcbn1cbi5tYXBib3gtY29udGFpbmVyIC5idXR0b24tZ3JvdXAgYnV0dG9uOmhvdmVyIC5wb3BvdmVyIHtcbiAgdmlzaWJpbGl0eTogdmlzaWJsZTtcbn1cbi5tYXBib3gtY29udGFpbmVyIC5idXR0b24tZ3JvdXAgYnV0dG9uIDo6bmctZGVlcCBhcHAtc3ZnIHN2ZyB7XG4gIG9wYWNpdHk6IDAuNTtcbiAgaGVpZ2h0OiAyNXB4O1xuICB3aWR0aDogMjVweDtcbn1cbi5tYXBib3gtY29udGFpbmVyIC5idXR0b24tZ3JvdXAgYnV0dG9uIC5wb3BvdmVyIHtcbiAgbWFyZ2luLWxlZnQ6IDU3cHg7XG59XG4ubWFwYm94LWNvbnRhaW5lciAubWFwLWNvbnRhaW5lciB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IGNhbGMoMTAwdmggLSA2MHB4KTtcbiAgcG9zaXRpb246IGFic29sdXRlO1xufVxuIl19 */"] });
+    return MapComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MapComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-map',
+                templateUrl: './map.component.html',
+                styleUrls: ['./map.component.less'],
+                providers: [_app_shared_service__WEBPACK_IMPORTED_MODULE_1__["MapboxService"]]
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/map/map.definition.ts":
+/*!***********************************************!*\
+  !*** ./src/app/modules/map/map.definition.ts ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _app_shared_class_map_definition_core_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @app/shared/class/map-definition-core.class */ "./src/app/shared/class/map-definition-core.class.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+var MapDefinition = /** @class */ (function (_super) {
+    __extends(MapDefinition, _super);
+    function MapDefinition() {
+        var _this = _super.call(this) || this;
+        _this.definition = [
+            {
+                icon: 'sack',
+                source: {
+                    type: 'api',
+                    location: '/api/services/app/SandbaggingRegion/GetAllDetail'
+                },
+                layer: {
+                    type: 'marker',
+                    style: {
+                        color: '#D5A956',
+                        radius: 0,
+                        size: '0.08'
+                    }
+                },
+                id: 'page-Map-map-sandbaggingRegion',
+                name: 'SandbaggingRegion'
+            },
+            {
+                icon: 'fire-station',
+                source: {
+                    type: 'api',
+                    location: '/api/services/app/FireStation/GetAllDetail'
+                },
+                layer: {
+                    type: 'marker',
+                    style: {
+                        color: '#B42222',
+                        radius: 0,
+                        size: '0.1'
+                    }
+                },
+                popover: [
+                    {
+                        data: 'Name',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-fireStation-popover-Name',
+                        name: 'Name'
+                    },
+                    {
+                        data: 'DescriptionShort',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-fireStation-popover-Description',
+                        name: 'Description'
+                    },
+                    {
+                        data: 'phone',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-fireStation-popover-PhoneNumber',
+                        name: 'PhoneNumber'
+                    },
+                    {
+                        data: 'address',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-fireStation-popover-Address',
+                        name: 'Address'
+                    }
+                ],
+                id: 'page-Map-map-fireStation',
+                name: 'FireStation'
+            },
+            {
+                icon: 'shelter',
+                source: {
+                    type: 'api',
+                    location: '/api/services/app/EmergencyResourceCentre/GetAllDetail'
+                },
+                layer: {
+                    type: 'circle',
+                    style: {
+                        color: '#32B44C',
+                        radius: 15,
+                        size: ''
+                    }
+                },
+                popover: [
+                    {
+                        data: 'Name',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-emergencyResourceCentre-popover-Name',
+                        name: 'Name'
+                    },
+                    {
+                        data: 'DescriptionShort',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-emergencyResourceCentre-popover-Description',
+                        name: 'Description'
+                    },
+                    {
+                        data: 'phone',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-emergencyResourceCentre-popover-PhoneNumber',
+                        name: 'PhoneNumber'
+                    }
+                ],
+                id: 'page-Map-map-emergencyResourceCentre',
+                name: 'EmergencyResourceCentre'
+            },
+            {
+                icon: 'restaurant',
+                source: {
+                    type: 'api',
+                    location: '/api/services/app/FoodBank/GetAllDetail'
+                },
+                layer: {
+                    type: 'circle',
+                    style: {
+                        color: '#AA9E39',
+                        radius: 15,
+                        size: ''
+                    }
+                },
+                popover: [
+                    {
+                        data: 'Name',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-foodBank-popover-Name',
+                        name: 'Name'
+                    },
+                    {
+                        data: 'DescriptionShort',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-foodBank-popover-Description',
+                        name: 'Description'
+                    }
+                ],
+                id: 'page-Map-map-foodBank',
+                name: 'FoodBank'
+            },
+            {
+                icon: 'gas-station',
+                source: {
+                    type: 'api',
+                    location: '/api/services/app/GasStation/GetAllDetail'
+                },
+                layer: {
+                    type: 'circle',
+                    style: {
+                        color: '#554C00',
+                        radius: 15,
+                        size: ''
+                    }
+                },
+                popover: [
+                    {
+                        data: 'Name',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-gasStation-popover-Name',
+                        name: 'Name'
+                    },
+                    {
+                        data: 'DescriptionShort',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-gasStation-popover-Description',
+                        name: 'Description'
+                    },
+                    {
+                        data: 'phone',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-gasStation-popover-PhoneNumber',
+                        name: 'PhoneNumber'
+                    }
+                ],
+                id: 'page-Map-map-gasStation',
+                name: 'GasStation'
+            },
+            {
+                icon: 'first-aid-kit',
+                source: {
+                    type: 'api',
+                    location: '/api/services/app/HealthcareFacility/GetAllDetail'
+                },
+                layer: {
+                    type: 'circle',
+                    style: {
+                        color: '#492E74',
+                        radius: 15,
+                        size: ''
+                    }
+                },
+                popover: [
+                    {
+                        data: 'Name',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-healthcareFacility-popover-Name',
+                        name: 'Name'
+                    },
+                    {
+                        data: 'DescriptionShort',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-healthcareFacility-popover-Description',
+                        name: 'Description'
+                    },
+                    {
+                        data: 'phone',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-healthcareFacility-popover-PhoneNumber',
+                        name: 'PhoneNumber'
+                    }
+                ],
+                id: 'page-Map-map-healthcareFacility',
+                name: 'HealthcareFacility'
+            },
+            {
+                icon: 'hospital-building',
+                source: {
+                    type: 'api',
+                    location: '/api/services/app/Hospital/GetAllDetail'
+                },
+                layer: {
+                    type: 'circle',
+                    style: {
+                        color: '#1A053A',
+                        radius: 15,
+                        size: ''
+                    }
+                },
+                popover: [
+                    {
+                        data: 'Name',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-hospital-popover-Name',
+                        name: 'Name'
+                    },
+                    {
+                        data: 'DescriptionShort',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-hospital-popover-Description',
+                        name: 'Description'
+                    },
+                    {
+                        data: 'phone',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-hospital-popover-PhoneNumber',
+                        name: 'PhoneNumber'
+                    }
+                ],
+                id: 'page-Map-map-hospital',
+                name: 'Hospital'
+            },
+            {
+                icon: 'hydro-power',
+                source: {
+                    type: 'api',
+                    location: '/api/services/app/HydroCompany/GetAllDetail'
+                },
+                layer: {
+                    type: 'circle',
+                    style: {
+                        color: '',
+                        radius: 15,
+                        size: ''
+                    }
+                },
+                popover: [
+                    {
+                        data: 'Name',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-hydroCompany-popover-Name',
+                        name: 'Name'
+                    },
+                    {
+                        data: 'DescriptionShort',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-hydroCompany-popover-Description',
+                        name: 'Description'
+                    }
+                ],
+                id: 'page-Map-map-hydroCompany',
+                name: 'HydroCompany'
+            },
+            {
+                icon: 'green-earth',
+                source: {
+                    type: 'api',
+                    location: '/api/services/app/SustainabilityGroup/GetAllDetail'
+                },
+                layer: {
+                    type: 'circle',
+                    style: {
+                        color: '#4C0017',
+                        radius: 15,
+                        size: ''
+                    }
+                },
+                popover: [
+                    {
+                        data: 'Name',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-sustainabilityGroup-popover-Name',
+                        name: 'Name'
+                    },
+                    {
+                        data: 'DescriptionShort',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-sustainabilityGroup-popover-Description',
+                        name: 'Description'
+                    }
+                ],
+                id: 'page-Map-map-sustainabilityGroup',
+                name: 'SustainabilityGroup'
+            },
+            {
+                icon: 'police-station',
+                source: {
+                    type: 'api',
+                    location: '/api/services/app/PoliceStation/GetAllDetail'
+                },
+                layer: {
+                    type: 'circle',
+                    style: {
+                        color: '#803315',
+                        radius: 15,
+                        size: ''
+                    }
+                },
+                popover: [
+                    {
+                        data: 'Name',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-policeStation-popover-Name',
+                        name: 'Name'
+                    },
+                    {
+                        data: 'DescriptionShort',
+                        dataType: 'System.String',
+                        id: 'page-Map-map-policeStation-popover-Description',
+                        name: 'Description'
+                    }
+                ],
+                id: 'page-Map-map-policeStation',
+                name: 'PoliceStation'
+            }
+        ];
+        return _this;
+    }
+    return MapDefinition;
+}(_app_shared_class_map_definition_core_class__WEBPACK_IMPORTED_MODULE_0__["MapDefinitionCore"]));
+/* harmony default export */ __webpack_exports__["default"] = (MapDefinition);
+
+
+/***/ }),
+
+/***/ "./src/app/modules/map/map.module.ts":
+/*!*******************************************!*\
+  !*** ./src/app/modules/map/map.module.ts ***!
+  \*******************************************/
+/*! exports provided: MapModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapModule", function() { return MapModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _map_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./map-routing.module */ "./src/app/modules/map/map-routing.module.ts");
+/* harmony import */ var _map_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./map.component */ "./src/app/modules/map/map.component.ts");
+/* harmony import */ var _app_shared_modules__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @app/shared/modules */ "./src/app/shared/modules/index.ts");
+/* harmony import */ var _app_shared_modules_map_map_display_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @app/shared/modules/map/map-display.module */ "./src/app/shared/modules/map/map-display.module.ts");
+
+
+
+
+// Reusable modules
+
+
+
+var MapModule = /** @class */ (function () {
+    function MapModule() {
+    }
+    MapModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: MapModule });
+    MapModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function MapModule_Factory(t) { return new (t || MapModule)(); }, imports: [[
+                _app_shared_modules_map_map_display_module__WEBPACK_IMPORTED_MODULE_5__["MapDisplayModule"],
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _map_routing_module__WEBPACK_IMPORTED_MODULE_2__["MapRoutingModule"],
+                _app_shared_modules__WEBPACK_IMPORTED_MODULE_4__["SvgModule"]
+            ]] });
+    return MapModule;
+}());
+
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](MapModule, { declarations: [_map_component__WEBPACK_IMPORTED_MODULE_3__["MapComponent"]], imports: [_app_shared_modules_map_map_display_module__WEBPACK_IMPORTED_MODULE_5__["MapDisplayModule"],
+        _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+        _map_routing_module__WEBPACK_IMPORTED_MODULE_2__["MapRoutingModule"],
+        _app_shared_modules__WEBPACK_IMPORTED_MODULE_4__["SvgModule"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MapModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                declarations: [_map_component__WEBPACK_IMPORTED_MODULE_3__["MapComponent"]],
+                imports: [
+                    _app_shared_modules_map_map_display_module__WEBPACK_IMPORTED_MODULE_5__["MapDisplayModule"],
+                    _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                    _map_routing_module__WEBPACK_IMPORTED_MODULE_2__["MapRoutingModule"],
+                    _app_shared_modules__WEBPACK_IMPORTED_MODULE_4__["SvgModule"]
+                ]
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/shared/modules/map/map-display.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/shared/modules/map/map-display.component.ts ***!
+  \*************************************************************/
+/*! exports provided: MapDisplayComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapDisplayComponent", function() { return MapDisplayComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _app_shared_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @app/shared/class */ "./src/app/shared/class/index.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _mapbox_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mapbox.service */ "./src/app/shared/modules/map/mapbox.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _svg_svg_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../svg/svg.component */ "./src/app/shared/modules/svg/svg.component.ts");
+/* harmony import */ var _shared_common_pipes_localize_pipe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @shared/common/pipes/localize.pipe */ "./src/app/shared/common/pipes/localize.pipe.ts");
+
+
+
+
+
+
+
+
+
+function MapDisplayComponent_div_2_ng_container_3_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainer"](0);
+} }
+var _c0 = function (a0) { return { label: a0 }; };
+function MapDisplayComponent_div_2_Template(rf, ctx) { if (rf & 1) {
+    var _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function MapDisplayComponent_div_2_Template_button_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r6); var data_r3 = ctx.$implicit; var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r5.onButtonClick(data_r3.id); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "app-svg", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, MapDisplayComponent_div_2_ng_container_3_Template, 1, 0, "ng-container", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](4, "localize");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var data_r3 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    var _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("active", data_r3.isActive);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵattribute"]("aria-label", data_r3.name);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("name", data_r3.icon);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](8, _c0, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](4, 6, data_r3.name)));
+} }
+function MapDisplayComponent_ng_template_4_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var label_r7 = ctx.label;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](label_r7);
+} }
+var MapDisplayComponent = /** @class */ (function () {
+    function MapDisplayComponent(mapboxService) {
+        this.mapboxService = mapboxService;
+        this.sectionStyling = {
+            padding: '',
+            margin: ''
+        };
+    }
+    MapDisplayComponent.prototype.ngOnInit = function () {
+        var _a;
+        this.buildMetaData();
+        this.updateMap(this.mapDefinitionInterface[this.mapDefinitionInterface[0].id]);
+        this.sectionEl = document.getElementById('main-section');
+        this.sectionStyling.padding = this.sectionEl.style.padding;
+        this.sectionStyling.margin = this.sectionEl.style.margin;
+        this.sectionEl.style.padding = 0;
+        this.sectionEl.style.margin = 0;
+        (_a = this.mapboxService.map) === null || _a === void 0 ? void 0 : _a.resize();
+    };
+    MapDisplayComponent.prototype.updateMap = function (source) {
+        var _this = this;
+        this.mapboxService.buildMap(source);
+        this.mapboxService.mapEventListener
+            .pipe((Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function () {
+            _this.mapboxService.map.on('load', function () {
+                var _a, _b;
+                _this.onButtonClick((_b = (_a = _this.mapDefinitionInterface) === null || _a === void 0 ? void 0 : _a[0]) === null || _b === void 0 ? void 0 : _b.id);
+            });
+        }))).subscribe();
+    };
+    MapDisplayComponent.prototype.onButtonClick = function (type) {
+        this.toggleSource(type);
+    };
+    MapDisplayComponent.prototype.removeSource = function (source) {
+        this.mapboxService.removeSource(source);
+    };
+    MapDisplayComponent.prototype.toggleSource = function (type) {
+        var source = this.mapDefinitionInterface.find(function (el) { return type === el.id; });
+        var isSourceExist = this.mapboxService.map.getSource(source.id);
+        if (isSourceExist) {
+            source.isActive = false;
+            this.removeSource(source);
+        }
+        else {
+            source['isActive'] = true;
+            this.addNewSource(source);
+        }
+    };
+    MapDisplayComponent.prototype.addNewSource = function (newSource) {
+        var _this = this;
+        this.mapboxService.addSource(newSource.id, newSource)
+            .subscribe(function (res) {
+            _this.mapboxService.addLayer(newSource);
+        }, function (err) { return console.log(err); });
+    };
+    MapDisplayComponent.prototype.buildMetaData = function () {
+        this.mapDefinitionInterface = this.mapDefinition.getDefinition();
+    };
+    MapDisplayComponent.prototype.ngOnDestroy = function () {
+        this.sectionEl.removeAttribute('paint');
+        this.sectionEl.style.padding = this.sectionStyling.padding;
+        this.sectionEl.style.margin = this.sectionStyling.margin;
+    };
+    MapDisplayComponent.ɵfac = function MapDisplayComponent_Factory(t) { return new (t || MapDisplayComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_mapbox_service__WEBPACK_IMPORTED_MODULE_3__["MapboxService"])); };
+    MapDisplayComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MapDisplayComponent, selectors: [["app-map-display"]], inputs: { mapDefinition: "mapDefinition" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([_mapbox_service__WEBPACK_IMPORTED_MODULE_3__["MapboxService"]])], decls: 6, vars: 1, consts: [[1, "mapbox-container", "m-form-input"], [1, "button-group"], ["class", "p-4", 4, "ngFor", "ngForOf"], ["id", "map", 1, "map-container"], ["popupLabel", ""], [1, "p-4"], ["type", "button", 1, "m-button", "m-button-icon", 3, "click"], [3, "name"], [4, "ngTemplateOutlet", "ngTemplateOutletContext"], [1, "popover", "popover-label"]], template: function MapDisplayComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, MapDisplayComponent_div_2_Template, 5, 10, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, MapDisplayComponent_ng_template_4_Template, 3, 1, "ng-template", null, 4, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.mapDefinitionInterface);
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], _svg_svg_component__WEBPACK_IMPORTED_MODULE_5__["SvgComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgTemplateOutlet"]], pipes: [_shared_common_pipes_localize_pipe__WEBPACK_IMPORTED_MODULE_6__["LocalizePipe"]], styles: [".mapbox-container[_ngcontent-%COMP%] {\n  position: relative;\n  height: 100%;\n  margin: 0px !important;\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%] {\n  position: absolute;\n  z-index: 1;\n  width: 80vw;\n  max-width: 80vw;\n  white-space: nowrap;\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: row;\n  justify-content: start;\n  align-items: flex-start;\n  padding-top: 8px;\n  padding-left: 8px;\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  border-radius: 16px;\n  position: relative;\n  margin: 0;\n  background: var(--primary-color) !important;\n  height: auto;\n  width: 48px;\n  border: 5px solid #5e6064;\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button.active[_ngcontent-%COMP%], .mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:hover {\n  background: var(--primary-color-hover);\n  border-color: #ffffff;\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button.active.m-button-icon[_ngcontent-%COMP%]   app-svg[_ngcontent-%COMP%]   svg[_ngcontent-%COMP%], .mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:hover.m-button-icon   app-svg[_ngcontent-%COMP%]   svg[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:hover   .popover[_ngcontent-%COMP%] {\n  visibility: visible;\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]     app-svg svg {\n  opacity: 0.5;\n  height: 25px;\n  width: 25px;\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]   .popover[_ngcontent-%COMP%] {\n  visibility: hidden;\n  align-items: center;\n  background: #5e6064;\n  border-radius: 4px;\n  display: flex;\n  position: absolute;\n  width: -webkit-max-content;\n  width: -moz-max-content;\n  width: max-content;\n  z-index: 999;\n  min-height: 44px;\n  left: 0;\n  bottom: calc((44px + 16px) * -1);\n}\n.mapbox-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]   .popover[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  display: block;\n  margin: 10px;\n  text-transform: capitalize;\n}\n.mapbox-container[_ngcontent-%COMP%]   .map-container[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL21vZHVsZXMvbWFwL006L3JlcG9zL0RlcGxveVNvbHV0aW9uc0NsaW1hdGVDaGFuZ2UvZHNzX2NjaXBfcHJvdG8vZGV2L3RhL2FuZ3VsYXIvc3JjL2FwcC9zaGFyZWQvbW9kdWxlcy9tYXAvbWFwLWRpc3BsYXkuY29tcG9uZW50Lmxlc3MiLCJzcmMvYXBwL3NoYXJlZC9tb2R1bGVzL21hcC9tYXAtZGlzcGxheS5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFLQTtFQUNDLGtCQUFBO0VBQ0EsWUFBQTtFQUNBLHNCQUFBO0FDSkQ7QURDQTtFQU1FLGtCQUFBO0VBQ0EsVUFBQTtFQUNBLFdBQUE7RUFDQSxlQUFBO0VBQ0EsbUJBQUE7RUFDQSxhQUFBO0VBQ0EsZUFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7RUFDQSx1QkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7QUNKRjtBRGJBO0VBb0JHLG1CQUFBO0VBQ0Esa0JBQUE7RUFDQSxTQUFBO0VBQ0EsMkNBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtFQW1CQSx5QkFBQTtBQ3RCSDtBREtHOztFQUVDLHNDQUFBO0VBQ0EscUJBQUE7QUNISjtBREtJOztFQUNDLFVBQUE7QUNGTDtBRE1HO0VBRUUsbUJBQUE7QUNMTDtBRGxDQTtFQWdESyxZQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7QUNYTDtBRHZDQTtFQXVESSxrQkFBQTtFQUNBLG1CQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLGFBQUE7RUFDQSxrQkFBQTtFQUNBLDBCQUFBO0VBQ0EsdUJBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxnQkFBQTtFQUNBLE9BQUE7RUFDRSxnQ0FBQTtBQ2JOO0FEdERBO0VBc0VLLGNBQUE7RUFDQSxZQUFBO0VBQ0EsMEJBQUE7QUNiTDtBRDNEQTtFQWdGRSxXQUFBO0VBRUEsWUFBQTtFQUNBLGtCQUFBO0FDbkJGIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL21vZHVsZXMvbWFwL21hcC1kaXNwbGF5LmNvbXBvbmVudC5sZXNzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnLi8uLi8uLi8uLi8uLi9zdHlsZXMvdmFyaWFibGVzLmxlc3MnO1xuQGltcG9ydCBcIi4vLi4vLi4vLi4vLi4vc3R5bGVzL21peGlucy9mb250LXNpemVcIjtcbkBpbXBvcnQgXCIuLy4uLy4uLy4uLy4uL3N0eWxlcy9taXhpbnMvcG9zaXRpb25cIjtcbkBpbXBvcnQgXCIuLy4uLy4uLy4uLy4uL3N0eWxlcy9taXhpbnMvc2hhcGVzXCI7XG5cbi5tYXBib3gtY29udGFpbmVyIHtcblx0cG9zaXRpb246IHJlbGF0aXZlO1xuXHRoZWlnaHQ6IDEwMCU7XG5cdG1hcmdpbjogMHB4ICFpbXBvcnRhbnQ7XG5cblx0LmJ1dHRvbi1ncm91cCB7XG5cdFx0cG9zaXRpb246IGFic29sdXRlO1xuXHRcdHotaW5kZXg6IEB6aS1wbHVzLW9uZTtcblx0XHR3aWR0aDogODB2dztcblx0XHRtYXgtd2lkdGg6IDgwdnc7XG5cdFx0d2hpdGUtc3BhY2U6IG5vd3JhcDtcblx0XHRkaXNwbGF5OiBmbGV4O1xuXHRcdGZsZXgtd3JhcDogd3JhcDtcblx0XHRmbGV4LWRpcmVjdGlvbjogcm93O1xuXHRcdGp1c3RpZnktY29udGVudDogc3RhcnQ7XG5cdFx0YWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7XG5cdFx0cGFkZGluZy10b3A6IDhweDtcblx0XHRwYWRkaW5nLWxlZnQ6IDhweDtcblxuXHRcdGJ1dHRvbiB7XG5cdFx0XHRib3JkZXItcmFkaXVzOiBAc3BhY2luZy0xNjtcblx0XHRcdHBvc2l0aW9uOiByZWxhdGl2ZTtcblx0XHRcdG1hcmdpbjogMDtcblx0XHRcdGJhY2tncm91bmQ6IHZhcigtLXByaW1hcnktY29sb3IpICFpbXBvcnRhbnQ7XG5cdFx0XHRoZWlnaHQ6IGF1dG87XG5cdFx0XHR3aWR0aDogNDhweDtcblxuXHRcdFx0Ji5hY3RpdmUsXG5cdFx0XHQmOmhvdmVyIHtcblx0XHRcdFx0YmFja2dyb3VuZDogdmFyKC0tcHJpbWFyeS1jb2xvci1ob3Zlcik7XG5cdFx0XHRcdGJvcmRlci1jb2xvcjogQGNvbG9yLXdoaXRlO1xuXG5cdFx0XHRcdCYubS1idXR0b24taWNvbiBhcHAtc3ZnIHN2ZyB7XG5cdFx0XHRcdFx0b3BhY2l0eTogMTtcblx0XHRcdFx0fVxuXHRcdFx0fVxuXG5cdFx0XHQmOmhvdmVyIHtcblx0XHRcdFx0LnBvcG92ZXIge1xuXHRcdFx0XHRcdHZpc2liaWxpdHk6IHZpc2libGU7XG5cdFx0XHRcdFx0Ly8gZGlzcGxheTogaW5pdGlhbDtcblx0XHRcdFx0fVxuXHRcdFx0fVxuXG5cdFx0XHRib3JkZXI6IDVweCBzb2xpZCBAY29sb3ItZ3JleS00MDA7XG5cblx0XHRcdDo6bmctZGVlcCBhcHAtc3ZnIHtcblx0XHRcdFx0c3ZnIHtcblx0XHRcdFx0XHRvcGFjaXR5OiAuNTtcblx0XHRcdFx0XHRoZWlnaHQ6IDI1cHg7XG5cdFx0XHRcdFx0d2lkdGg6IDI1cHg7XG5cdFx0XHRcdH1cblx0XHRcdH1cblxuXHRcdFx0LnBvcG92ZXIge1xuXHRcdFx0XHR2aXNpYmlsaXR5OiBoaWRkZW47XG5cdFx0XHRcdGFsaWduLWl0ZW1zOiBjZW50ZXI7XG5cdFx0XHRcdGJhY2tncm91bmQ6ICM1ZTYwNjQ7XG5cdFx0XHRcdGJvcmRlci1yYWRpdXM6IDRweDtcblx0XHRcdFx0ZGlzcGxheTogZmxleDtcblx0XHRcdFx0cG9zaXRpb246IGFic29sdXRlO1xuXHRcdFx0XHR3aWR0aDogLXdlYmtpdC1tYXgtY29udGVudDtcblx0XHRcdFx0d2lkdGg6IC1tb3otbWF4LWNvbnRlbnQ7XG5cdFx0XHRcdHdpZHRoOiBtYXgtY29udGVudDtcblx0XHRcdFx0ei1pbmRleDogOTk5O1xuXHRcdFx0XHRtaW4taGVpZ2h0OiA0NHB4O1xuXHRcdFx0XHRsZWZ0OiAwO1xuICAgIFx0XHRib3R0b206IGNhbGMoKDQ0cHggKyAxNnB4KSAqIC0xKTtcblxuXHRcdFx0XHRzcGFuIHtcblx0XHRcdFx0XHRkaXNwbGF5OiBibG9jaztcblx0XHRcdFx0XHRtYXJnaW46IDEwcHg7XG5cdFx0XHRcdFx0dGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7XG5cdFx0XHRcdH1cblx0XHRcdH1cblxuXHRcdH1cblx0fVxuXG5cdC5tYXAtY29udGFpbmVyIHtcblx0XHR3aWR0aDogMTAwJTtcblx0XHQvLyBoZWlnaHQ6IGNhbGMoMTAwdmggLSBAc3BhY2luZy02MCk7XG5cdFx0aGVpZ2h0OiAxMDAlO1xuXHRcdHBvc2l0aW9uOiBhYnNvbHV0ZTtcblx0fVxuXG59IiwiLm1hcGJveC1jb250YWluZXIge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGhlaWdodDogMTAwJTtcbiAgbWFyZ2luOiAwcHggIWltcG9ydGFudDtcbn1cbi5tYXBib3gtY29udGFpbmVyIC5idXR0b24tZ3JvdXAge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHotaW5kZXg6IDE7XG4gIHdpZHRoOiA4MHZ3O1xuICBtYXgtd2lkdGg6IDgwdnc7XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogd3JhcDtcbiAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAganVzdGlmeS1jb250ZW50OiBzdGFydDtcbiAgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7XG4gIHBhZGRpbmctdG9wOiA4cHg7XG4gIHBhZGRpbmctbGVmdDogOHB4O1xufVxuLm1hcGJveC1jb250YWluZXIgLmJ1dHRvbi1ncm91cCBidXR0b24ge1xuICBib3JkZXItcmFkaXVzOiAxNnB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIG1hcmdpbjogMDtcbiAgYmFja2dyb3VuZDogdmFyKC0tcHJpbWFyeS1jb2xvcikgIWltcG9ydGFudDtcbiAgaGVpZ2h0OiBhdXRvO1xuICB3aWR0aDogNDhweDtcbiAgYm9yZGVyOiA1cHggc29saWQgIzVlNjA2NDtcbn1cbi5tYXBib3gtY29udGFpbmVyIC5idXR0b24tZ3JvdXAgYnV0dG9uLmFjdGl2ZSxcbi5tYXBib3gtY29udGFpbmVyIC5idXR0b24tZ3JvdXAgYnV0dG9uOmhvdmVyIHtcbiAgYmFja2dyb3VuZDogdmFyKC0tcHJpbWFyeS1jb2xvci1ob3Zlcik7XG4gIGJvcmRlci1jb2xvcjogI2ZmZmZmZjtcbn1cbi5tYXBib3gtY29udGFpbmVyIC5idXR0b24tZ3JvdXAgYnV0dG9uLmFjdGl2ZS5tLWJ1dHRvbi1pY29uIGFwcC1zdmcgc3ZnLFxuLm1hcGJveC1jb250YWluZXIgLmJ1dHRvbi1ncm91cCBidXR0b246aG92ZXIubS1idXR0b24taWNvbiBhcHAtc3ZnIHN2ZyB7XG4gIG9wYWNpdHk6IDE7XG59XG4ubWFwYm94LWNvbnRhaW5lciAuYnV0dG9uLWdyb3VwIGJ1dHRvbjpob3ZlciAucG9wb3ZlciB7XG4gIHZpc2liaWxpdHk6IHZpc2libGU7XG59XG4ubWFwYm94LWNvbnRhaW5lciAuYnV0dG9uLWdyb3VwIGJ1dHRvbiA6Om5nLWRlZXAgYXBwLXN2ZyBzdmcge1xuICBvcGFjaXR5OiAwLjU7XG4gIGhlaWdodDogMjVweDtcbiAgd2lkdGg6IDI1cHg7XG59XG4ubWFwYm94LWNvbnRhaW5lciAuYnV0dG9uLWdyb3VwIGJ1dHRvbiAucG9wb3ZlciB7XG4gIHZpc2liaWxpdHk6IGhpZGRlbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgYmFja2dyb3VuZDogIzVlNjA2NDtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBkaXNwbGF5OiBmbGV4O1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHdpZHRoOiAtd2Via2l0LW1heC1jb250ZW50O1xuICB3aWR0aDogLW1vei1tYXgtY29udGVudDtcbiAgd2lkdGg6IG1heC1jb250ZW50O1xuICB6LWluZGV4OiA5OTk7XG4gIG1pbi1oZWlnaHQ6IDQ0cHg7XG4gIGxlZnQ6IDA7XG4gIGJvdHRvbTogY2FsYygoNDRweCArIDE2cHgpICogLTEpO1xufVxuLm1hcGJveC1jb250YWluZXIgLmJ1dHRvbi1ncm91cCBidXR0b24gLnBvcG92ZXIgc3BhbiB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBtYXJnaW46IDEwcHg7XG4gIHRleHQtdHJhbnNmb3JtOiBjYXBpdGFsaXplO1xufVxuLm1hcGJveC1jb250YWluZXIgLm1hcC1jb250YWluZXIge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG59XG4iXX0= */"] });
+    return MapDisplayComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MapDisplayComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-map-display',
+                templateUrl: './map-display.component.html',
+                styleUrls: ['./map-display.component.less'],
+                providers: [_mapbox_service__WEBPACK_IMPORTED_MODULE_3__["MapboxService"]]
+            }]
+    }], function () { return [{ type: _mapbox_service__WEBPACK_IMPORTED_MODULE_3__["MapboxService"] }]; }, { mapDefinition: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+
+
+/***/ }),
+
+/***/ "./src/app/shared/modules/map/map-display.module.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/shared/modules/map/map-display.module.ts ***!
+  \**********************************************************/
+/*! exports provided: MapDisplayModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapDisplayModule", function() { return MapDisplayModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _map_display_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./map-display.component */ "./src/app/shared/modules/map/map-display.component.ts");
+/* harmony import */ var _app_shared_modules__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @app/shared/modules */ "./src/app/shared/modules/index.ts");
+/* harmony import */ var _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @app/shared/utils/utils.module */ "./src/app/shared/utils/utils.module.ts");
+
+
+
+// Reusable modules
+
+
+
+var MapDisplayModule = /** @class */ (function () {
+    function MapDisplayModule() {
+    }
+    MapDisplayModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: MapDisplayModule });
+    MapDisplayModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function MapDisplayModule_Factory(t) { return new (t || MapDisplayModule)(); }, imports: [[
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_4__["UtilsModule"],
+                _app_shared_modules__WEBPACK_IMPORTED_MODULE_3__["SvgModule"]
+            ]] });
+    return MapDisplayModule;
+}());
+
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](MapDisplayModule, { declarations: [_map_display_component__WEBPACK_IMPORTED_MODULE_2__["MapDisplayComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+        _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_4__["UtilsModule"],
+        _app_shared_modules__WEBPACK_IMPORTED_MODULE_3__["SvgModule"]], exports: [_map_display_component__WEBPACK_IMPORTED_MODULE_2__["MapDisplayComponent"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MapDisplayModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                declarations: [_map_display_component__WEBPACK_IMPORTED_MODULE_2__["MapDisplayComponent"]],
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                    _app_shared_utils_utils_module__WEBPACK_IMPORTED_MODULE_4__["UtilsModule"],
+                    _app_shared_modules__WEBPACK_IMPORTED_MODULE_3__["SvgModule"]
+                ],
+                exports: [_map_display_component__WEBPACK_IMPORTED_MODULE_2__["MapDisplayComponent"]]
+            }]
+    }], null, null); })();
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=modules-map-map-module.js.map
