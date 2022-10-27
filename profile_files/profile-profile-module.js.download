@@ -39,10 +39,9 @@ var FormDefinition = /** @class */ (function (_super) {
                             itemType: 'input',
                             dataField: 'firstName',
                             dataType: 'System.String',
+                            span: 2,
                             required: true,
-                            name: {
-                                en: 'First Name'
-                            }
+                            name: 'FirstName'
                         }
                     ]
                 },
@@ -52,10 +51,9 @@ var FormDefinition = /** @class */ (function (_super) {
                             itemType: 'input',
                             dataField: 'lastName',
                             dataType: 'System.String',
+                            span: 2,
                             required: true,
-                            name: {
-                                en: 'Last Name'
-                            }
+                            name: 'LastName'
                         }
                     ]
                 },
@@ -70,10 +68,9 @@ var FormDefinition = /** @class */ (function (_super) {
                             cityDataField: 'addrCity',
                             provinceDataField: 'addrState',
                             postalCodeDataField: 'addrPostalCodeZip',
+                            span: 2,
                             required: false,
-                            name: {
-                                en: 'Address'
-                            }
+                            name: 'Address',
                         }
                     ]
                 },
@@ -83,10 +80,9 @@ var FormDefinition = /** @class */ (function (_super) {
                             itemType: 'input',
                             dataField: 'addrUnit',
                             dataType: 'System.String',
+                            span: 2,
                             required: false,
-                            name: {
-                                en: 'Apartment, suite, etc'
-                            }
+                            name: 'ApartmentSuiteEtc'
                         }
                     ]
                 },
@@ -97,10 +93,9 @@ var FormDefinition = /** @class */ (function (_super) {
                             dataField: 'email',
                             dataType: 'System.String',
                             validators: [_shared_helpers_helpers__WEBPACK_IMPORTED_MODULE_0__["customEmailValidator"]],
+                            span: 2,
                             required: true,
-                            name: {
-                                en: 'Email'
-                            }
+                            name: 'Email'
                         }
                     ]
                 },
@@ -110,10 +105,9 @@ var FormDefinition = /** @class */ (function (_super) {
                             itemType: 'input',
                             dataField: 'phone',
                             dataType: 'System.String',
+                            span: 2,
                             required: false,
-                            name: {
-                                en: 'Phone'
-                            }
+                            name: 'Phone'
                         },
                     ]
                 },
@@ -132,10 +126,9 @@ var FormDefinition = /** @class */ (function (_super) {
                                 'Medicine',
                                 'Transportation'
                             ],
+                            span: 2,
                             required: false,
-                            name: {
-                                en: 'Which industry do you work in?'
-                            }
+                            name: 'WhichIndustryDoYouWorkIn'
                         }
                     ]
                 },
@@ -154,10 +147,9 @@ var FormDefinition = /** @class */ (function (_super) {
                                 'Medicine',
                                 'Transportation'
                             ],
+                            span: 2,
                             required: false,
-                            name: {
-                                en: 'What is your role'
-                            }
+                            name: 'WhatIsYourRole'
                         }
                     ]
                 },
@@ -167,10 +159,9 @@ var FormDefinition = /** @class */ (function (_super) {
                             itemType: 'input',
                             dataField: 'company',
                             dataType: 'System.String',
+                            span: 2,
                             required: false,
-                            name: {
-                                en: 'Company'
-                            }
+                            name: 'Company'
                         },
                     ]
                 },
@@ -180,10 +171,9 @@ var FormDefinition = /** @class */ (function (_super) {
                             itemType: 'textarea',
                             dataField: 'howDidYouHearAboutUs',
                             dataType: 'System.String',
+                            span: 2,
                             required: false,
-                            name: {
-                                en: 'How did you hear about us?'
-                            }
+                            name: 'HowDidYouHearAboutUs'
                         }
                     ]
                 },
@@ -193,26 +183,20 @@ var FormDefinition = /** @class */ (function (_super) {
                             itemType: 'button',
                             buttonType: 'reset',
                             required: false,
-                            name: {
-                                en: 'UNDO'
-                            }
+                            name: 'Undo'
                         },
                         {
                             itemType: 'button',
                             buttonType: 'submit',
                             required: false,
                             // formValidEnabled: true,
-                            name: {
-                                en: 'SAVE'
-                            }
+                            name: 'Save',
                         }
                     ]
                 },
             ],
             id: 'profile-webform',
-            name: {
-                en: 'Profile'
-            }
+            name: 'Profile'
         };
         return _this;
     }
@@ -463,7 +447,7 @@ var ProfileComponent = /** @class */ (function (_super) {
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.formDefinition && ctx.editData);
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.displayError != "");
-        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _shared_modules_form_form_component__WEBPACK_IMPORTED_MODULE_9__["FormComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgClass"]], styles: [".form-container {\n  margin: auto;\n  width: auto;\n  max-width: 680px;\n  padding: 20px;\n}\napp-form .grid-row.row-5,\napp-form .grid-row.row-6,\napp-form .grid-row.row-7,\napp-form .grid-row.row-8 {\n  width: 65%;\n}\napp-form .grid-row.row-8 .grid-column-12 {\n  width: 600px;\n}\napp-form .grid-row.row-9 {\n  display: block;\n}\n.error-message {\n  margin: 12px 0;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zZXR0aW5ncy9wcm9maWxlL006L3JlcG9zL0RlcGxveVNvbHV0aW9uc0NsaW1hdGVDaGFuZ2UvZHNzX2NjaXBfcHJvdG8vdGEvYW5ndWxhci9zcmMvYXBwL21vZHVsZXMvc2V0dGluZ3MvcHJvZmlsZS9wcm9maWxlLmNvbXBvbmVudC5sZXNzIiwic3JjL2FwcC9tb2R1bGVzL3NldHRpbmdzL3Byb2ZpbGUvcHJvZmlsZS5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNJLFlBQUE7RUFDQSxXQUFBO0VBQ0EsZ0JBQUE7RUFDQSxhQUFBO0FDREo7QURRUTs7OztFQUlJLFVBQUE7QUNOWjtBRFNRO0VBRVEsWUFBQTtBQ1JoQjtBRFlRO0VBQ0ksY0FBQTtBQ1ZaO0FEZ0JBO0VBQ0ksY0FBQTtBQ2RKIiwiZmlsZSI6InNyYy9hcHAvbW9kdWxlcy9zZXR0aW5ncy9wcm9maWxlL3Byb2ZpbGUuY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0ICcuLi8uLi8uLi8uLi9zdHlsZXMvdmFyaWFibGVzLmxlc3MnO1xuXG4uZm9ybS1jb250YWluZXIge1xuICAgIG1hcmdpbjogYXV0bztcbiAgICB3aWR0aDogYXV0bztcbiAgICBtYXgtd2lkdGg6IDY4MHB4O1xuICAgIHBhZGRpbmc6IEBzcGFjaW5nLTIwO1xufVxuXG5hcHAtZm9ybSB7XG5cbiAgICAuZ3JpZC1yb3cge1xuXG4gICAgICAgICYucm93LTUsXG4gICAgICAgICYucm93LTYsXG4gICAgICAgICYucm93LTcsXG4gICAgICAgICYucm93LTgge1xuICAgICAgICAgICAgd2lkdGg6IDY1JVxuICAgICAgICB9XG5cbiAgICAgICAgJi5yb3ctOCB7XG4gICAgICAgICAgICAuZ3JpZC1jb2x1bW4tMTIge1xuICAgICAgICAgICAgICAgIHdpZHRoOiA2MDBweDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuXG4gICAgICAgICYucm93LTkge1xuICAgICAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgIH1cbiAgICB9XG5cbn1cblxuLmVycm9yLW1lc3NhZ2Uge1xuICAgIG1hcmdpbjogQHNwYWNpbmctMTIgMDtcbn1cblxuLy8gfSIsIi5mb3JtLWNvbnRhaW5lciB7XG4gIG1hcmdpbjogYXV0bztcbiAgd2lkdGg6IGF1dG87XG4gIG1heC13aWR0aDogNjgwcHg7XG4gIHBhZGRpbmc6IDIwcHg7XG59XG5hcHAtZm9ybSAuZ3JpZC1yb3cucm93LTUsXG5hcHAtZm9ybSAuZ3JpZC1yb3cucm93LTYsXG5hcHAtZm9ybSAuZ3JpZC1yb3cucm93LTcsXG5hcHAtZm9ybSAuZ3JpZC1yb3cucm93LTgge1xuICB3aWR0aDogNjUlO1xufVxuYXBwLWZvcm0gLmdyaWQtcm93LnJvdy04IC5ncmlkLWNvbHVtbi0xMiB7XG4gIHdpZHRoOiA2MDBweDtcbn1cbmFwcC1mb3JtIC5ncmlkLXJvdy5yb3ctOSB7XG4gIGRpc3BsYXk6IGJsb2NrO1xufVxuLmVycm9yLW1lc3NhZ2Uge1xuICBtYXJnaW46IDEycHggMDtcbn1cbiJdfQ== */"], encapsulation: 2 });
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _shared_modules_form_form_component__WEBPACK_IMPORTED_MODULE_9__["FormComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgClass"]], styles: [".form-container {\n  margin: auto;\n  width: auto;\n  max-width: 680px;\n  padding: 20px;\n}\napp-form .grid-row.row-5,\napp-form .grid-row.row-6,\napp-form .grid-row.row-7,\napp-form .grid-row.row-8 {\n  width: 65%;\n}\napp-form .grid-row.row-8 .grid-column-12 {\n  width: 600px;\n}\napp-form .grid-row.row-9 {\n  display: block;\n}\n.error-message {\n  margin: 12px 0;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zZXR0aW5ncy9wcm9maWxlL006L3JlcG9zL0RlcGxveVNvbHV0aW9uc0NsaW1hdGVDaGFuZ2UvZHNzX2NjaXBfcHJvdG8vZGV2L3RhL2FuZ3VsYXIvc3JjL2FwcC9tb2R1bGVzL3NldHRpbmdzL3Byb2ZpbGUvcHJvZmlsZS5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvbW9kdWxlcy9zZXR0aW5ncy9wcm9maWxlL3Byb2ZpbGUuY29tcG9uZW50Lmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDSSxZQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0VBQ0EsYUFBQTtBQ0RKO0FEUVE7Ozs7RUFJSSxVQUFBO0FDTlo7QURTUTtFQUVRLFlBQUE7QUNSaEI7QURZUTtFQUNJLGNBQUE7QUNWWjtBRGdCQTtFQUNJLGNBQUE7QUNkSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvc2V0dGluZ3MvcHJvZmlsZS9wcm9maWxlLmNvbXBvbmVudC5sZXNzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnLi4vLi4vLi4vLi4vc3R5bGVzL3ZhcmlhYmxlcy5sZXNzJztcblxuLmZvcm0tY29udGFpbmVyIHtcbiAgICBtYXJnaW46IGF1dG87XG4gICAgd2lkdGg6IGF1dG87XG4gICAgbWF4LXdpZHRoOiA2ODBweDtcbiAgICBwYWRkaW5nOiBAc3BhY2luZy0yMDtcbn1cblxuYXBwLWZvcm0ge1xuXG4gICAgLmdyaWQtcm93IHtcblxuICAgICAgICAmLnJvdy01LFxuICAgICAgICAmLnJvdy02LFxuICAgICAgICAmLnJvdy03LFxuICAgICAgICAmLnJvdy04IHtcbiAgICAgICAgICAgIHdpZHRoOiA2NSVcbiAgICAgICAgfVxuXG4gICAgICAgICYucm93LTgge1xuICAgICAgICAgICAgLmdyaWQtY29sdW1uLTEyIHtcbiAgICAgICAgICAgICAgICB3aWR0aDogNjAwcHg7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cblxuICAgICAgICAmLnJvdy05IHtcbiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICB9XG4gICAgfVxuXG59XG5cbi5lcnJvci1tZXNzYWdlIHtcbiAgICBtYXJnaW46IEBzcGFjaW5nLTEyIDA7XG59XG5cbi8vIH0iLCIuZm9ybS1jb250YWluZXIge1xuICBtYXJnaW46IGF1dG87XG4gIHdpZHRoOiBhdXRvO1xuICBtYXgtd2lkdGg6IDY4MHB4O1xuICBwYWRkaW5nOiAyMHB4O1xufVxuYXBwLWZvcm0gLmdyaWQtcm93LnJvdy01LFxuYXBwLWZvcm0gLmdyaWQtcm93LnJvdy02LFxuYXBwLWZvcm0gLmdyaWQtcm93LnJvdy03LFxuYXBwLWZvcm0gLmdyaWQtcm93LnJvdy04IHtcbiAgd2lkdGg6IDY1JTtcbn1cbmFwcC1mb3JtIC5ncmlkLXJvdy5yb3ctOCAuZ3JpZC1jb2x1bW4tMTIge1xuICB3aWR0aDogNjAwcHg7XG59XG5hcHAtZm9ybSAuZ3JpZC1yb3cucm93LTkge1xuICBkaXNwbGF5OiBibG9jaztcbn1cbi5lcnJvci1tZXNzYWdlIHtcbiAgbWFyZ2luOiAxMnB4IDA7XG59XG4iXX0= */"], encapsulation: 2 });
     return ProfileComponent;
 }(_app_shared_common_app_component_base__WEBPACK_IMPORTED_MODULE_2__["AppComponentBase"]));
 
